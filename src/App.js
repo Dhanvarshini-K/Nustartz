@@ -26,18 +26,22 @@ import Header from "./screens/Header/Header.tsx";
 import Home from "./screens/Home/HomePage.tsx";
 import { Services } from "./screens/Services/Services.tsx";
 import { AboutUs } from "./screens/AboutUs/AboutUs.tsx";
+import { Review } from "./screens/Reviews/Reviews.tsx";
 
 const App = () => {
   return (
+    <div className="App">
     <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/aboutUs" element={<AboutUs/>}/>
+        <Route path="/review" element={<Review/>}/>
       </Routes>
       <Footer />
     </Router>
+    </div>
   );
 };
 

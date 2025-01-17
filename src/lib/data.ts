@@ -231,3 +231,27 @@ export const leaders = [
         image: "https://c.animaapp.com/Wb1ZWYyD/img/mike-1@2x.png",
     },
 ];
+
+export const solutions = [
+    {
+        title: "Problem faced in Sales force",
+        description:
+            "At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise.",
+        image:
+            "https://c.animaapp.com/bvljseyz/img/how-problem-management-works-1.png",
+    },
+    {
+        title: "Problem faced in Sales force",
+        description:
+            "At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise.",
+        image:
+            "https://c.animaapp.com/bvljseyz/img/be-part-of-the-solution-not-the-problem-1.png",
+    },
+    {
+        title: "Problem faced in Sales force",
+        description:
+            "At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise.",
+        image:
+            "https://c.animaapp.com/bvljseyz/img/what-are-problem-solving-skills-jpg-1.png",
+    },
+];

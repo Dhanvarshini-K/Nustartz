@@ -9,8 +9,15 @@ import {
 import { Button } from "../../components/ui/button.tsx";
 import { Card, CardContent } from "../../components/ui/card.tsx";
 import { deliverySteps, values } from "../../lib/data.ts";
+import { Review } from "../Reviews/Reviews.tsx";
+import { useNavigate } from "react-router-dom";
 
 const Home = (): JSX.Element => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/review");
+  };
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -122,7 +129,10 @@ const Home = (): JSX.Element => {
             ))}
           </div>
 
-          <Button className="bg-variable-collection-brand-purple-duplicate text-white px-8 py-4 rounded-[10px] flex items-center gap-4">
+          <Button
+            className="bg-variable-collection-brand-purple-duplicate text-red px-8 py-4 rounded-[10px] flex items-center gap-4"
+            onClick={handleClick}
+          >
             LEARN MORE
             <ArrowRightCircleIcon className="h-6 w-6" />
           </Button>
