@@ -25,6 +25,7 @@ import Footer from "./screens/Footer/Footer.tsx";
 import Header from "./screens/Header/Header.tsx";
 import Home from "./screens/Home/HomePage.tsx";
 import { Services } from "./screens/Services/Services.tsx";
+import { AboutUs } from "./screens/AboutUs/AboutUs.tsx";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/aboutUs" element={<AboutUs/>}/>
       </Routes>
       <Footer />
     </Router>

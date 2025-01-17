@@ -3,7 +3,7 @@ export const navigationLinks = [
     { title: "Insights", active: false, url: "" },
     { title: "Services", active: false, url: "/services" },
     { title: "Careers", active: false, url: "" },
-    { title: "About us", active: false, url: "" },
+    { title: "About us", active: false, url: "/aboutUs" },
 ];
 
 export const blogPosts = [
@@ -171,5 +171,63 @@ export const caseStudies = [
         number: "01",
         description:
             "At NuStartz, we understand that starting and scaling a tech business requires the right resources, guidance, and support. That's why we offer additional services, including financial management, legal consulting, business strategy, customer support solutions, and more",
+    },
+];
+
+
+// Data for board members
+export const boardMembers = [
+    {
+        name: "Ben John",
+        role: "Vice President, Microsoft AI Former CTO, Xandr",
+        image: "https://c.animaapp.com/Wb1ZWYyD/img/ben-bg-1@2x.png",
+    },
+    {
+        name: "Sumer Jabri",
+        role: "CTO, Crafter CMS Former CEO, Rivet Logic (acquired by Capgemini)",
+        image: "https://c.animaapp.com/Wb1ZWYyD/img/summer-1@2x.png",
+    },
+    {
+        name: "Igor Shindel",
+        role: "Former CIO, Appnexus CTO Coach for Tech Leaders",
+        image: "https://c.animaapp.com/Wb1ZWYyD/img/igor-1@2x.png",
+    },
+];
+
+// Data for founders
+export const founders = [
+    {
+        name: "Siva",
+        role: "Founder",
+        image: "https://c.animaapp.com/Wb1ZWYyD/img/siva-1@2x.png",
+    },
+    {
+        name: "Steve",
+        role: "COO & Co Founder",
+        image: "https://c.animaapp.com/Wb1ZWYyD/img/steve-4-1@2x.png",
+    },
+];
+
+// Data for leaders
+export const leaders = [
+    {
+        name: "Nagaraj",
+        role: "Director of Operations",
+        image: "https://c.animaapp.com/Wb1ZWYyD/img/nagaraj-1@2x.png",
+    },
+    {
+        name: "Suresh",
+        role: "Director of Engineering",
+        image: "https://c.animaapp.com/Wb1ZWYyD/img/suresh-1@2x.png",
+    },
+    {
+        name: "Sujith",
+        role: "Business Development Manager",
+        image: "https://c.animaapp.com/Wb1ZWYyD/img/sujith-1@2x.png",
+    },
+    {
+        name: "Michael Barnabas",
+        role: "Brand Manager",
+        image: "https://c.animaapp.com/Wb1ZWYyD/img/mike-1@2x.png",
     },
 ];
