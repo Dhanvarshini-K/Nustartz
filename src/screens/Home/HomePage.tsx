@@ -22,7 +22,7 @@ const Home = (): JSX.Element => {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative bg-[#282828] bg-opacity-10 min-h-screen pt-24 px-4">
-        <div className="container grid grid-cols-2 gap-12 items-center">
+        <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-6xl font-bold bg-gradient-to-b from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent">
               Crafting the future of Startups.

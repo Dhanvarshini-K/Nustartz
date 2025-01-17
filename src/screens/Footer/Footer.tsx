@@ -4,7 +4,7 @@ import { navigationLinks } from "../../lib/data.ts";
 const Footer = () => {
   return (
     <footer className="bg-[#ecebf4] py-12 px-10">
-      <div className="container grid md:grid-cols-4 gap-8 xs:grid-cols-1">
+      <div className="container grid md:grid-cols-4 gap-8 sm:grid-cols-1">
         <div>
           <img
             src="https://c.animaapp.com/4qACV4pp/img/logo.png"
@@ -23,15 +23,15 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-wrap">
-          <div className="space-y-4">
-            <p className="text-2xl text-variable-collection-gray00-duplicate">
+        <div className="flex flex-col gap-3">
+          <div className="space-y-4 flex items-start flex-col">
+            <p className="text-xl text-variable-collection-gray00-duplicate">
               Website - www.nustartz.com
             </p>
-            <p className="text-2xl text-variable-collection-gray00-duplicate">
+            <p className="text-xl text-variable-collection-gray00-duplicate">
               Email - contact@NuStartz.com
             </p>
-            <p className="text-2xl text-variable-collection-gray00-duplicate">
+            <p className="text-xl text-variable-collection-gray00-duplicate">
               Mobile - (+1) 732-983-1325
             </p>
           </div>
