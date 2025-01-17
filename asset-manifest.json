@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Nustartz/static/css/main.772bd35f.css",
+    "main.js": "/Nustartz/static/js/main.1afdbbf9.js",
+    "static/js/488.634b3666.chunk.js": "/Nustartz/static/js/488.634b3666.chunk.js",
+    "index.html": "/Nustartz/index.html",
+    "main.772bd35f.css.map": "/Nustartz/static/css/main.772bd35f.css.map",
+    "main.1afdbbf9.js.map": "/Nustartz/static/js/main.1afdbbf9.js.map",
+    "488.634b3666.chunk.js.map": "/Nustartz/static/js/488.634b3666.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.772bd35f.css",
+    "static/js/main.1afdbbf9.js"
+  ]
+}
