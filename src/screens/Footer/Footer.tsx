@@ -12,7 +12,7 @@ const Footer = () => {
             className="h-16 mb-4"
           />
         </div>
-        <div className="flex gap-28 flex-wrap">
+        <div className="flex gap-28 flex-wrap pr-60">
           <div className="space-y-4 ">
             {navigationLinks.map((link) => (
               <div key={link.title} className="text-3xl text-Gray">
