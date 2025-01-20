@@ -1,9 +1,9 @@
 export const navigationLinks = [
-    { title: "Home", active: true, url: "/" },
-    { title: "Insights", active: false, url: "" },
-    { title: "Services", active: false, url: "/services" },
-    { title: "Careers", active: false, url: "" },
-    { title: "About us", active: false, url: "/aboutUs" },
+    { title: "Home", url: "/" },
+    { title: "Insights", url: "/insights" },
+    { title: "Services", url: "/services" },
+    { title: "Careers", url: "/careers" },
+    { title: "About us", url: "/aboutUs" },
 ];
 
 export const blogPosts = [

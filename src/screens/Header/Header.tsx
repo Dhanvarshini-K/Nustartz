@@ -1,17 +1,18 @@
 import React from "react";
-
+import { Link, useLocation } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
 } from "../../components/ui/navigation-menu.tsx";
 import { navigationLinks } from "../../lib/data.ts";
 
 const Header = () => {
+  const location = useLocation();
+
   return (
     <header className="fixed top-0 w-full bg-white shadow-md z-50">
-      <div className="container flex items-center justify-between py-4">
+      <div className="container flex items-center justify-between py-4 px-10">
         <img
           src="https://c.animaapp.com/4qACV4pp/img/logo.png"
           alt="NuStartz Logo"
@@ -20,20 +21,25 @@ const Header = () => {
 
         <NavigationMenu>
           <NavigationMenuList>
-            {navigationLinks.map((link) => (
-              <NavigationMenuItem key={link.title}>
-                <NavigationMenuLink
-                  className={`px-4 py-2 text-xl ${
-                    link.active
-                      ? "text-variable-collection-brand-purple-duplicate font-bold"
-                      : "text-variable-collection-gray00-duplicate"
-                  }`}
-                  href={link.url}
+            {navigationLinks.map((link) => {
+              const isActive = location.pathname === link.url;
+
+              return (
+                <NavigationMenuItem
+                  key={link.title}
+                  className="hidden md:block"
                 >
-                  {link.title}
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            ))}
+                  <Link
+                    to={link.url}
+                    className={`px-4 py-2 text-xl ${
+                      isActive ? "text-BrandPurple font-bold" : "text-Gray"
+                    }`}
+                  >
+                    {link.title}
+                  </Link>
+                </NavigationMenuItem>
+              );
+            })}
           </NavigationMenuList>
         </NavigationMenu>
       </div>
