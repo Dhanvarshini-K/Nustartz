@@ -151,19 +151,19 @@ const Home = (): JSX.Element => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-[#f5f9ff] py-24 px-6  ">
+      <section className="bg-[#f5f9ff] py-24 px-6 lg:px-60 ">
         <div className="container">
           <h2 className="text-4xl md:text-8xl font-bold text-DarkGrey text-center mb-16">
             Testimonials
           </h2>
 
           <Card className="bg-DarkGrey text-white rounded-[20px] overflow-hidden">
-            <CardContent className="p-0 flex flex-wrap md:flex-nowrap border border-red-500">
+            <CardContent className="p-0 flex flex-wrap md:flex-nowrap">
               <div className="relative">
                 <img
                   src="https://c.animaapp.com/4qACV4pp/img/charlesdeluvio-lks7vei-eag-unsplash-1.png"
                   alt="Testimonial"
-                  className="w-full h-full object-cover border border-red-500"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent" />
               </div>
