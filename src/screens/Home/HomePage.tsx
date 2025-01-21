@@ -76,7 +76,7 @@ const Home = (): JSX.Element => {
               className="flex justify-center px-10 md:px-24  items-center"
             >
               {index % 2 === 0 ? (
-                <div className="flex 2xl:gap-60 items-center flex-wrap md:flex-nowrap">
+                <div className="flex 2xl:gap-60 items-center flex-wrap lg:flex-nowrap">
                   <div className="space-y-8">
                     <h3 className="text-8xl font-medium text-BrandPurple">
                       {step.title}
@@ -94,11 +94,11 @@ const Home = (): JSX.Element => {
                   </div>
                 </div>
               ) : (
-                <div className="flex 2xl:gap-60 items-center flex-wrap md:flex-nowrap">
+                <div className="flex 2xl:gap-60 items-center flex-wrap lg:flex-nowrap">
                   <img
                     src={step.image}
                     alt={step.title}
-                    className=" w-400px md:w-[584px] md:h-[584px]"
+                    className=" w-400px md:w-[420px] md:h-[584px]"
                   />
                   <div className="space-y-8">
                     <h3 className="text-8xl font-medium text-BrandPurple">
