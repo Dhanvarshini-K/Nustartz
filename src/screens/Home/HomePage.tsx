@@ -151,7 +151,7 @@ const Home = (): JSX.Element => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-[#f5f9ff] py-24 px-6 lg:px-60 ">
+      <section className="bg-[#f5f9ff] py-24 px-6 2xl:px-60 ">
         <div className="container">
           <h2 className="text-4xl md:text-8xl font-bold text-DarkGrey text-center mb-16">
             Testimonials
