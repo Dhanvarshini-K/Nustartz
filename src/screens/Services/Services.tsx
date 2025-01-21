@@ -16,7 +16,7 @@ export const Services = (): JSX.Element => {
     <div className="bg-white flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="pt-24 bg-[#282828] bg-opacity-10 px-10 md:px-40">
-        <div className="container flex flex-wrap justify-between gap-8 py-24">
+        <div className="container flex flex-wrap md:flex-nowrap justify-between gap-8 py-24">
           <div className="flex flex-col gap-8">
             <h1 className="text-8xl font-bold text-ParaGrey leading-tight lg:w-[528px]">
               Your one stop shop for success.
