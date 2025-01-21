@@ -15,10 +15,10 @@ export const Services = (): JSX.Element => {
   return (
     <div className="bg-white flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pt-24 bg-[#282828] bg-opacity-10 px-40">
+      <section className="pt-24 bg-[#282828] bg-opacity-10 px-10 md:px-40">
         <div className="container flex flex-wrap justify-between gap-8 py-24">
           <div className="flex flex-col gap-8">
-            <h1 className="text-8xl font-bold text-ParaGrey leading-tight w-[528px]">
+            <h1 className="text-8xl font-bold text-ParaGrey leading-tight lg:w-[528px]">
               Your one stop shop for success.
             </h1>
           </div>
@@ -33,7 +33,7 @@ export const Services = (): JSX.Element => {
       </section>
 
       {/* Services Section */}
-      <section className="bg-GhostWhite py-24 px-28 ">
+      <section className="bg-GhostWhite py-24 px-10 lg:px-28 ">
         <div className="container flex justify-around flex-wrap">
           <div className="flex items-start gap-4 mb-16">
             <Package2Icon className="w-10 h-10" />
@@ -59,8 +59,8 @@ export const Services = (): JSX.Element => {
       {/* Tech Hub Section */}
       <section className="py-24">
         <div className="container">
-          <div className="flex justify-between gap-16 mb-24 px-40 flex-wrap">
-            <div className="flex flex-col  justify-center gap-8 w-[720px]">
+          <div className="flex justify-between gap-16 mb-24 px-10 lg:px-40 flex-wrap">
+            <div className="flex flex-col  justify-center gap-8 lg:w-[720px]">
               <h2 className="text-5xl font-semibold text-ParaGrey">
                 Everything a Tech Startup Needs
               </h2>
@@ -79,21 +79,21 @@ export const Services = (): JSX.Element => {
               <img
                 src="https://c.animaapp.com/AqDNkT34/img/8o2a5279-1.png"
                 alt="Office space"
-                className="w-[717px] h-[424px] lg:w-[700px] lg:h-[400px] object-cover"
+                className="w-[300px] h-[200px] lg:w-[700px] lg:h-[400px] object-cover"
               />
               <img
                 src="https://c.animaapp.com/AqDNkT34/img/screenshot-2024-11-07-at-6-38-55-pm-1.png"
                 alt="Office space"
-                className="w-[717px] h-[422px] lg:w-[700px] lg:h-[400px] object-cover"
+                className="w-[300px] h-[200px] lg:w-[700px] lg:h-[400px] object-cover"
               />
             </div>
           </div>
 
-          <div className="bg-GhostWhite px-40 py-24">
+          <div className="bg-GhostWhite px-10 lg:px-40 py-24">
             <h2 className="text-5xl font-semibold text-ParaGrey mb-16">
               Tech Fusion Hub
             </h2>
-            <p className="text-6xl text-Gray mb-16 max-w-3xl">
+            <p className="text-3xl md:text-6xl text-Gray mb-16 max-w-3xl">
               We focus on providing the right tool for product innovation and
               digital communication.
             </p>
@@ -128,7 +128,7 @@ export const Services = (): JSX.Element => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-24 px-40">
+      <section className="py-24 px-10 lg:px-40">
         <div className="container">
           <h2 className="text-5xl font-semibold text-ParaGrey mb-16">
             Case Studies

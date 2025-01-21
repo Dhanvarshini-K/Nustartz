@@ -19,17 +19,17 @@ export const AboutUs = (): JSX.Element => {
       </section>
 
       {/* Board of Advisors */}
-      <section className="container py-20 px-10 lg:px-40">
+      <section className="container py-20 px-10 xl:px-40">
         <h2 className="text-5xl font-bold text-ParaGrey text-center mb-16">
           Board Of Advisors
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {boardMembers.map((member) => (
             <Card key={member.name} className="rounded-[20px] shadow-shadow-l">
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-[370px] object-cover rounded-t-[20px]"
+                className="w-full h-[430px] object-cover rounded-t-[20px]"
               />
               <CardContent className="p-9">
                 <h3 className="text-4xl font-bold text-LightPurple mb-2">

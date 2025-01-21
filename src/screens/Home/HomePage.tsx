@@ -5,6 +5,7 @@ import { Button } from "../../components/ui/button.tsx";
 import { Card, CardContent } from "../../components/ui/card.tsx";
 import { deliverySteps, values } from "../../lib/data.ts";
 import { useNavigate } from "react-router-dom";
+import CraftingImage from "../../assets/CraftingImage.png";
 
 const Home = (): JSX.Element => {
   const navigate = useNavigate();
@@ -15,8 +16,8 @@ const Home = (): JSX.Element => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-[#282828] bg-opacity-10 min-h-screen pt-24 px-10 md:px-24">
-        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="relative bg-[#282828] bg-opacity-10 min-h-screen pt-24 px-10 lg:px-10 md:px-24 ">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 justify-items-center items-center pt-16 pb-10 md:pb-44">
           <div className="space-y-8  text-start md:w-[515px]">
             <h1 className="text-8xl font-bold bg-gradient-to-b from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none">
               Crafting the future of Startups.
@@ -36,24 +37,24 @@ const Home = (): JSX.Element => {
 
           <div className="relative">
             <img
-              src="https://c.animaapp.com/4qACV4pp/img/austin-distel-rxpthowuvge-unsplash-1@2x.png"
+              src={CraftingImage}
               alt="Hero"
-              className="w-full h-auto"
+              className="md:w-[371px] lg:w-[600px]  xl:w-[750px] object-cover"
             />
 
-            <Card className="absolute top-0 sm:top-6 lg:top-10 md:top-40 left-0 bg-[#90dbf6] border-8 border-white shadow-lg rounded-[30px] w-20 h-20 md:w-28 md:h-28">
+            <Card className="absolute -left-10 -top-10 sm:top-6 sm:-left-24 lg:top-10 lg:-left-32 md:top-6 md:-left-32  xl:top-18 xl:-left-32 bg-[#90dbf6] border-8 border-white shadow-lg rounded-[30px] w-20 h-20 md:w-28 md:h-28 ">
               <CardContent className="p-1 md:p-5">
                 <DollarSignIcon className="h-14 w-14 text-white" />
               </CardContent>
             </Card>
 
-            <Card className="absolute bottom-1 left-2 sm:bottom-12 sm:left-10 lg:bottom-8 lg:left-0 md:bottom-14 md:left-14 bg-[#f8a8fe] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
+            <Card className="absolute -bottom-10 -left-8 sm:-bottom-10 sm:-left-10 lg:-bottom-10 lg:-left-10 md:-bottom-16 md:-left-14 xl:-bottom-5 xl:-left-10 bg-[#f8a8fe] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
               <CardContent className="p-1 md:p-5">
                 <RocketIcon className="h-20 w-20 text-white" />
               </CardContent>
             </Card>
 
-            <Card className="absolute top-0 right-4 sm:top-16 sm:right-10 lg:top-10 lg:right-10 md:top-16 md:right-20 bg-[#72dfb3] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
+            <Card className="absolute -top-10 -right-6 sm:-top-10 sm:-right-10 lg:-top-12 lg:-right-10 md:-top-12 md:-right-20 xl:-right-0 xl:-top-10 bg-[#72dfb3] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
               <CardContent className="p-1 md:p-5">
                 <LeafIcon className="h-20 w-20 text-white" />
               </CardContent>
@@ -76,7 +77,7 @@ const Home = (): JSX.Element => {
               className="flex justify-center px-10 md:px-24  items-center"
             >
               {index % 2 === 0 ? (
-                <div className="flex 2xl:gap-60 items-center flex-wrap lg:flex-nowrap">
+                <div className="flex 2xl:gap-60 items-center flex-wrap lg:flex-nowrap justify-center">
                   <div className="space-y-8">
                     <h3 className="text-8xl font-medium text-BrandPurple">
                       {step.title}
@@ -94,7 +95,7 @@ const Home = (): JSX.Element => {
                   </div>
                 </div>
               ) : (
-                <div className="flex 2xl:gap-60 items-center flex-wrap lg:flex-nowrap">
+                <div className="flex 2xl:gap-60 items-center flex-wrap lg:flex-nowrap justify-center">
                   <img
                     src={step.image}
                     alt={step.title}
