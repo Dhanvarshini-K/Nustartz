@@ -29,7 +29,7 @@ export const AboutUs = (): JSX.Element => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-[430px] object-cover rounded-t-[20px]"
+                className="w-full h-auto 2xl:h-[430px] object-cover rounded-t-[20px]"
               />
               <CardContent className="p-9">
                 <h3 className="text-4xl font-bold text-LightPurple mb-2">

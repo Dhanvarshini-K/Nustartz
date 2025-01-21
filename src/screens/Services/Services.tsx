@@ -59,7 +59,7 @@ export const Services = (): JSX.Element => {
       {/* Tech Hub Section */}
       <section className="py-24">
         <div className="container">
-          <div className="flex justify-between gap-16 mb-24 px-10 lg:px-40 flex-wrap">
+          <div className="flex justify-between gap-16 mb-24 px-10 lg:px-40 flex-wrap lg:flex-nowrap">
             <div className="flex flex-col  justify-center gap-8 lg:w-[720px]">
               <h2 className="text-5xl font-semibold text-ParaGrey">
                 Everything a Tech Startup Needs
