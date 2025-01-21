@@ -9,11 +9,11 @@ export const AboutUs = (): JSX.Element => {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-[920px] bg-[#282828] bg-opacity-10">
+      <section className="relative lg:h-[920px] bg-[#282828] bg-opacity-10">
         <img
           src="https://c.animaapp.com/Wb1ZWYyD/img/thumbnail-1.png"
           alt="Hero"
-          className="w-full h-full object-cover"
+          className="w-full h-96 lg:w-full lg:h-full object-cover"
         />
         <div className="absolute bottom-0 w-full h-[584px] bg-gradient-to-b from-transparent to-white" />
       </section>
