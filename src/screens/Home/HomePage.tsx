@@ -5,7 +5,7 @@ import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { deliverySteps, values } from "../../lib/data";
 import { useNavigate } from "react-router-dom";
-import { images } from "../../assets/craftingImage.png";
+import { IMAGES } from "../../themes";
 
 const Home = (): JSX.Element => {
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ const Home = (): JSX.Element => {
 
           <div className="relative">
             <img
-              src={images}
+              src={IMAGES.craftingImage}
               alt="Hero"
               className="md:w-[371px] lg:w-[600px]  xl:w-[750px] object-cover"
             />
