@@ -1,5 +1,5 @@
 const IMAGES = {
-    craftingImage: "../../assests/CraftingImage.png"
+    craftingImage: require('../assets/CraftingImage.png')
 }
 
-export { IMAGES }
+export default IMAGES
