@@ -1,5 +1,5 @@
 import React from "react";
-import { navigationLinks } from "../../lib/data.ts";
+import { navigationLinks } from "../../lib/data";
 
 const Footer = () => {
   return (

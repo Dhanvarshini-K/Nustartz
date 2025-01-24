@@ -1,9 +1,9 @@
 import React, { JSX } from "react";
 import { ArrowRightCircleIcon, ArrowUpRightFromCircleIcon } from "lucide-react";
-import { Button } from "../../components/ui/button.tsx";
-import { Card, CardContent } from "../../components/ui/card.tsx";
-import { Input } from "../../components/ui/input.tsx";
-import { solutions } from "../../lib/data.ts";
+import { Button } from "../../components/ui/button";
+import { Card, CardContent } from "../../components/ui/card";
+import { Input } from "../../components/ui/input";
+import { solutions } from "../../lib/data";
 
 export const Review = (): JSX.Element => {
   return (

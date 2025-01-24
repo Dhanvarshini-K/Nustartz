@@ -1,9 +1,9 @@
 import React, { JSX } from "react";
 import { ArrowRight } from "lucide-react";
-import { Button } from "../../components/ui/button.tsx";
-import { Card, CardContent } from "../../components/ui/card.tsx";
-import { Input } from "../../components/ui/input.tsx";
-import { boardMembers, founders, leaders } from "../../lib/data.ts";
+import { Card, CardContent } from "../../components/ui/card";
+import { Input } from "../../components/ui/input";
+import { boardMembers, founders, leaders } from "../../lib/data";
+import { Button } from "../../components/ui/button";
 
 export const AboutUs = (): JSX.Element => {
   return (

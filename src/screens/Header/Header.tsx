@@ -4,8 +4,8 @@ import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
-} from "../../components/ui/navigation-menu.tsx";
-import { navigationLinks } from "../../lib/data.ts";
+} from "../../components/ui/navigation-menu";
+import { navigationLinks } from "../../lib/data";
 
 const Header = () => {
   const location = useLocation();

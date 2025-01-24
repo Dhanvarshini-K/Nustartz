@@ -1,17 +1,17 @@
 import React, { JSX } from "react";
 import { ArrowRightCircleIcon } from "lucide-react";
-import { Button } from "../../components/ui/button.tsx";
-import { Card, CardContent } from "../../components/ui/card.tsx";
+import { Button } from "../../components/ui/button";
+import { Card, CardContent } from "../../components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "../../components/ui/carousel.tsx";
-import { Input } from "../../components/ui/input.tsx";
-import { Separator } from "../../components/ui/separator.tsx";
-import { nuStartzNews, startupNews } from "../../lib/data.ts";
+} from "../../components/ui/carousel";
+import { Input } from "../../components/ui/input";
+import { Separator } from "../../components/ui/separator";
+import { nuStartzNews, startupNews } from "../../lib/data";
 
 export const News = (): JSX.Element => {
   return (

@@ -4,13 +4,13 @@ import {
   ArrowRightCircleIcon,
   SendHorizonalIcon,
 } from "lucide-react";
-import { Button } from "../../components/ui/button.tsx";
-import { Card, CardContent } from "../../components/ui/card.tsx";
-import { Input } from "../../components/ui/input.tsx";
+import { Button } from "../../components/ui/button";
+import { Card, CardContent } from "../../components/ui/card";
+import { Input } from "../../components/ui/input";
 
-import { Separator } from "../../components/ui/separator.tsx";
-import { Tabs, TabsList, TabsTrigger } from "../../components/ui/tabs.tsx";
-import { blogPosts } from "../../lib/data.ts";
+import { Separator } from "../../components/ui/separator";
+import { Tabs, TabsList, TabsTrigger } from "../../components/ui/tabs";
+import { blogPosts } from "../../lib/data";
 
 export const Blogs = (): JSX.Element => {
   return (

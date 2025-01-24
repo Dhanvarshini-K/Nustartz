@@ -5,11 +5,11 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../components/ui/accordion.tsx";
-import { Button } from "../../components/ui/button.tsx";
-import { Card, CardContent } from "../../components/ui/card.tsx";
-import { Separator } from "../../components/ui/separator.tsx";
-import { caseStudies, services, techServices } from "../../lib/data.ts";
+} from "../../components/ui/accordion";
+import { Button } from "../../components/ui/button";
+import { Card, CardContent } from "../../components/ui/card";
+import { Separator } from "../../components/ui/separator";
+import { caseStudies, services, techServices } from "../../lib/data";
 
 export const Services = (): JSX.Element => {
   return (
