@@ -7,6 +7,7 @@ import Home from "./screens/Home/HomePage";
 import { Services } from "./screens/Services/Services";
 import { AboutUs } from "./screens/AboutUs/AboutUs";
 import { Review } from "./screens/Reviews/Reviews";
+import {Blogs} from "./screens/Blogs/Blogs"
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/aboutUs" element={<AboutUs/>}/>
         <Route path="/review" element={<Review/>}/>
+        <Route path="/insights" element={<Blogs/>}/>
       </Routes>
       <Footer />
     </Router>

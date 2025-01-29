@@ -17,23 +17,6 @@ export const News = (): JSX.Element => {
   return (
     <div className="bg-white">
       <main className="container pt-24 px-4">
-        <div className="flex gap-8 mb-4">
-          <Button variant="ghost" className="text-gray-400 text-3xl font-bold">
-            Blogs
-          </Button>
-          <Button
-            variant="ghost"
-            className="text-purple-600 text-3xl font-bold"
-          >
-            News
-          </Button>
-          <Button variant="ghost" className="text-gray-400 text-3xl font-bold">
-            Events
-          </Button>
-        </div>
-
-        <Separator className="mb-8" />
-
         <section>
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-medium text-blue-900">

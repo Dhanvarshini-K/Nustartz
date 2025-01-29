@@ -16,7 +16,8 @@ module.exports = {
      Lavender :'#d2ccff',
      LightLavender:"#ECEBF4",
      LightPurple:'#8A6EFF',
-     NickelGrey:"#727272"
+     NickelGrey:"#727272",
+     ChineseSilver:"#CDCDCD"
     },
     fontSize: {
       '2xs': '0.625rem' /* 10px */,

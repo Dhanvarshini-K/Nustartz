@@ -24,7 +24,7 @@ const Footer = () => {
             <div className="space-y-4 flex items-start flex-col">
               <p className="text-3xl text-Gray">Website - www.nustartz.com</p>
               <p className="text-3xl text-Gray">Email - contact@NuStartz.com</p>
-              <p className="text-3xl text-Gray">Mobile - (+1) 9150751785</p>
+              <p className="text-3xl text-Gray">Mobile - (+1) 732-983-1325</p>
             </div>
 
             <div className="flex gap-4 ">
