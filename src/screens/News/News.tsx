@@ -9,10 +9,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../components/ui/carousel";
-import { Input } from "../../components/ui/input";
 import { nuStartzNews, startupNews } from "../../lib/data";
 import IMAGES from "../../themes";
+import { StartupNews } from "../StartUpNews.tsx/StartUpNews";
+import { useNavigate } from "react-router-dom";
 export const News = (): JSX.Element => {
+  const navigate = useNavigate();
+  const navigateToStartUpNews = () => {
+    navigate("/startUpNews");
+  };
   return (
     <div className="bg-white">
       <main className="container px-4">
@@ -20,9 +25,9 @@ export const News = (): JSX.Element => {
           <h1 className="text-6xl font-bold text-DarkGrey">News</h1>
 
           <Carousel>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center ">
               <div className="flex  mb-8">
-                <h2 className="text-4xl font-medium text-BrandBlueHeavy">
+                <h2 className="text-2xl sm:text-4xl font-medium text-BrandBlueHeavy">
                   NuStartz News
                 </h2>
               </div>
@@ -59,7 +64,7 @@ export const News = (): JSX.Element => {
           <Carousel>
             <div className="flex justify-between items-center">
               <div className="flex  mb-8">
-                <h2 className="text-4xl font-medium text-BrandBlueHeavy">
+                <h2 className="text-2xl sm:text-4xl font-medium text-BrandBlueHeavy">
                   Startup News
                 </h2>
               </div>
@@ -72,7 +77,10 @@ export const News = (): JSX.Element => {
             <CarouselContent>
               {startupNews.map((news, index) => (
                 <CarouselItem key={index} className="md:basis-1/3">
-                  <Card className="relative overflow-hidden rounded-xl">
+                  <Card
+                    className="relative overflow-hidden rounded-xl cursor-pointer"
+                    onClick={navigateToStartUpNews}
+                  >
                     <div
                       className="h-[440px] bg-cover bg-center"
                       style={{

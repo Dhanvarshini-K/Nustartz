@@ -1,6 +1,6 @@
 export const navigationLinks = [
     { title: "Home", url: "/" },
-    { title: "Insights", url: '/insights' },
+    { title: "Insights", url: "/insights" },
     { title: "Services", url: "/services" },
     { title: "About us", url: "/aboutUs" },
 ];
@@ -208,7 +208,6 @@ export const caseStudies = [
     },
 ];
 
-
 // Data for board members
 export const boardMembers = [
     {
@@ -270,7 +269,7 @@ export const solutions = [
     {
         title: "Problem faced in Sales force",
         description:
-            "At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise.",
+            "At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise. At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise. At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise.At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise. At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise. At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise.At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise. At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise. At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise.",
         image:
             "https://c.animaapp.com/bvljseyz/img/how-problem-management-works-1.png",
     },
@@ -287,5 +286,44 @@ export const solutions = [
             "At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise.",
         image:
             "https://c.animaapp.com/bvljseyz/img/what-are-problem-solving-skills-jpg-1.png",
+    },
+];
+
+export const events = [
+    {
+        id: 1,
+        title: "Event 1",
+        description: "There are many variati of passages of engineer",
+        image: "https://c.animaapp.com/B4qMk3zV/img/r-1l2173-1@2x.png",
+    },
+    {
+        id: 2,
+        title: "Event 2",
+        description: "There are many variati of passages of engineer",
+        image: "https://c.animaapp.com/B4qMk3zV/img/r-1l2890-1@2x.png",
+    },
+    {
+        id: 3,
+        title: "Event 3",
+        description: "There are many variati of passages of engineer",
+        image: "https://c.animaapp.com/B4qMk3zV/img/8o2a6903-1@2x.png",
+    },
+    {
+        id: 1,
+        title: "Event 1",
+        description: "There are many variati of passages of engineer",
+        image: "https://c.animaapp.com/B4qMk3zV/img/r-1l2173-1@2x.png",
+    },
+    {
+        id: 2,
+        title: "Event 2",
+        description: "There are many variati of passages of engineer",
+        image: "https://c.animaapp.com/B4qMk3zV/img/r-1l2890-1@2x.png",
+    },
+    {
+        id: 3,
+        title: "Event 3",
+        description: "There are many variati of passages of engineer",
+        image: "https://c.animaapp.com/B4qMk3zV/img/8o2a6903-1@2x.png",
     },
 ];

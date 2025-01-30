@@ -8,6 +8,8 @@ import { Services } from "./screens/Services/Services";
 import { AboutUs } from "./screens/AboutUs/AboutUs";
 import { Review } from "./screens/Reviews/Reviews";
 import {Blogs} from "./screens/Blogs/Blogs"
+import {ContactUs} from "./screens/ContactUs/ContactUs"
+import { StartupNews } from "./screens/StartUpNews.tsx/StartUpNews";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         <Route path="/aboutUs" element={<AboutUs/>}/>
         <Route path="/review" element={<Review/>}/>
         <Route path="/insights" element={<Blogs/>}/>
+        <Route path="/contactUs" element={<ContactUs/>}/>
+        <Route path="/startUpNews" element={<StartupNews/>}/>
       </Routes>
       <Footer />
     </Router>

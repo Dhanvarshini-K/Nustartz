@@ -1,5 +1,5 @@
-import React, { JSX, useState } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { JSX, useState } from "react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { Input } from "../../components/ui/input";
@@ -20,6 +20,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../components/ui/carousel";
+import { Events } from "../Events/Events";
 
 export const Blogs = (): JSX.Element => {
   const [active, setActive] = useState("blogs");
@@ -30,7 +31,7 @@ export const Blogs = (): JSX.Element => {
     <div className="bg-white">
       <main className="container pt-32 px-4">
         <Tabs defaultValue="blogs">
-          <TabsList className="mb-4 w-full overflow-x-auto md:w-auto md:overflow-hidden xl:mx-14">
+          <TabsList className="mb-4 w-full  md:w-auto md:overflow-hidden xl:mx-14">
             <TabsTrigger
               value="blogs"
               className={` text-3xl font-bold p-5 lg:p-10 ${
@@ -65,9 +66,9 @@ export const Blogs = (): JSX.Element => {
           <TabsContent value="blogs">
             <div id="blogs">
               <Carousel>
-                <div className="flex justify-between items-center">
+                <div className=" flex justify-between md:items-center">
                   <div className="flex items-center justify-between mb-12 xl:mx-20">
-                    <h1 className="text-6xl font-bold text-DarkGrey">
+                    <h1 className="text-2xl sm:text-6xl font-bold text-DarkGrey">
                       Nustartz Blog Posts
                     </h1>
                   </div>
@@ -76,21 +77,25 @@ export const Blogs = (): JSX.Element => {
                     <CarouselNext />
                   </div>
                 </div>
-
-                <div className="flex xl:mx-20">
+                <div className="flex xl:mx-20 relative ">
                   <CarouselContent>
                     {blogPosts.map((post, index) => (
-                      <CarouselItem key={index} className="md:basis-1/3">
+                      <CarouselItem
+                        key={index}
+                        className="xs:basis-1/2 sm:basis-1/2 md:basis-1/3  2xl:basis-1/4 3xl:basis-1/4"
+                      >
                         <Card className="relative rounded-xl border-none">
                           <div
-                            className={`h-[300px] w-[426px] md:h-[340px] xl:w-[500px] lg:w-[440px] 2xl:w-[520px] rounded-[20px] ${post.bgColor}`}
+                            className={`w-[288px] h-[300px]  xl:h-[341px] xl:w-[364px] 2xl:w-[320px] rounded-[20px] ${post.bgColor}`}
                           ></div>
-                          <Card className=" absolute w-80 top-96 left-20 border-red-500">
-                            <CardContent className="absolute bottom-0 p-6 pt-6 pb-8 bg-white rounded-2xl border-none">
-                              <h3 className="text-2xl font-bold text-variable-collection-brand-blue-heavy mb-2">
+                          <Card className="absolute w-72 h-32 bottom-4 lg:w-60 lg:right-8 lg:-bottom-10 xl:w-72 xl:-right-2  2xl:-bottom-10 2xl:w-72 2xl:right-24   border-none shadow-lg">
+                            <CardContent className="p-6 pt-6 pb-8 bg-white rounded-2xl shadow border-b-6">
+                              <h3 className="text-2xl font-bold text-BrandBlueHeavy mb-2">
                                 {post.title}
                               </h3>
-                              <p className="text-md">{post.description}</p>
+                              <p className="text-md text-NickelGrey">
+                                {post.description}
+                              </p>
                             </CardContent>
                           </Card>
                         </Card>
@@ -104,7 +109,9 @@ export const Blogs = (): JSX.Element => {
           <TabsContent value="news">
             <News />
           </TabsContent>
-          <TabsContent value="events"></TabsContent>
+          <TabsContent value="events">
+            <Events />
+          </TabsContent>
         </Tabs>
 
         <section className="container py-16 md:px-10  ">

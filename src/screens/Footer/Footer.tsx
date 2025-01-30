@@ -1,7 +1,11 @@
 import React from "react";
 import { navigationLinks } from "../../lib/data";
+import { NavigationMenuItem } from "@radix-ui/react-navigation-menu";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  const active = location.pathname === "/contactUs";
   return (
     <footer className="bg-LightLavender py-12 px-20">
       <div className="flex justify-between flex-wrap gap-20">
@@ -14,11 +18,32 @@ const Footer = () => {
         </div>
         <div className="flex gap-28 flex-wrap lg:pr-60">
           <div className="space-y-4 ">
-            {navigationLinks.map((link) => (
-              <div key={link.title} className="text-3xl text-Gray">
-                {link.title}
-              </div>
-            ))}
+            {navigationLinks.map((link) => {
+              const isActive = location.pathname === link.url;
+
+              return (
+                <div key={link.title}>
+                  <Link
+                    to={link.url}
+                    className={`px-4 py-2 text-xl ${
+                      isActive ? "text-BrandPurple font-bold" : "text-Gray"
+                    }`}
+                  >
+                    {link.title}
+                  </Link>
+                </div>
+              );
+            })}
+            <div>
+              <Link
+                to="/contactUs"
+                className={`px-4 py-2 text-xl  ${
+                  active ? "text-BrandPurple font-bold" : "text-Gray"
+                }`}
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
           <div className="flex flex-col gap-6">
             <div className="space-y-4 flex items-start flex-col">
