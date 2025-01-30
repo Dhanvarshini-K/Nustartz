@@ -1,7 +1,12 @@
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowLeftCircleIcon,
+  ArrowRight,
+  ArrowRightCircleIcon,
+} from "lucide-react";
 import * as React from "react";
 
 import { cn } from "../../lib/utils";
@@ -204,17 +209,18 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute  h-8 w-8 rounded-full",
-        orientation === "horizontal"
-          ? "-left-12 top-1/2 -translate-y-1/2"
-          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+        "absolute h-8 w-8 rounded-full transition-colors duration-200",
+        "bg-gray-200 text-gray-800 hover:bg-purple-600 hover:text-white",
+        "active:bg-purple-700 active:text-white",
+        "disabled:bg-gray-300 disabled:text-gray-500",
+        orientation === "horizontal" ? "right-10" : "",
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeftCircleIcon className="h-4 w-4" />
+      <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -233,17 +239,17 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "h-8 w-8 rounded-full",
-        orientation === "horizontal"
-          ? "-right-12 top-1/2 -translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+        "h-8 w-8 rounded-full transition-colors duration-200",
+        "bg-gray-200 text-gray-800 hover:bg-purple-600 hover:text-white", // Default + hover state
+        "active:bg-purple-700 active:text-white", // Click state
+        "disabled:bg-gray-300 disabled:text-gray-500", // Disabled state
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRightCircleIcon className="h-4 w-4" />
+      <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
     </Button>
   );

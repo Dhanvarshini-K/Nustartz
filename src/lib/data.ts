@@ -24,6 +24,24 @@ export const blogPosts = [
         description: "There are many variati of passages of engineer",
         bgColor: "bg-[#f7d1d1]",
     },
+    {
+        id: 4,
+        title: "Blog 4",
+        description: "There are many variati of passages of engineer",
+        bgColor: "bg-[#92e3a9]",
+    },
+    {
+        id: 5,
+        title: "Blog 5",
+        description: "There are many variati of passages of engineer",
+        bgColor: "bg-[#bcf9f8]",
+    },
+    {
+        id: 6,
+        title: "Blog 6",
+        description: "There are many variati of passages of engineer",
+        bgColor: "bg-[#f7d1d1]",
+    },
 ];
 
 // How We Deliver Data
@@ -65,6 +83,23 @@ export const values = [
 ];
 
 export const nuStartzNews = [
+    {
+        date: "Wednesday, 09 - Oct 2024",
+        title: "NuStartz at IndiaFirst Startup Expo & Conclave 2024",
+        image: "https://c.animaapp.com/U7DHvE2g/img/1719942828387-2@2x.png",
+    },
+    {
+        date: "Wednesday, 09 - Oct 2024",
+        title: "NuStartz Wins Best Startup Knowledge Provider Award",
+        image:
+            "https://c.animaapp.com/U7DHvE2g/img/whatsapp-image-2024-07-02-at-22-34-28--1--1@2x.png",
+    },
+    {
+        date: "Wednesday, 09 - Oct 2024",
+        title: "NuStartz Shines at the NY Tech Meetup",
+        image:
+            "https://c.animaapp.com/U7DHvE2g/img/whatsapp-image-2024-11-22-at-23-25-51-1@2x.png",
+    },
     {
         date: "Wednesday, 09 - Oct 2024",
         title: "NuStartz at IndiaFirst Startup Expo & Conclave 2024",
