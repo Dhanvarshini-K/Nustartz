@@ -78,7 +78,7 @@ export const Blogs = (): JSX.Element => {
                   </div>
                 </div>
                 <div className="flex xl:mx-20 relative ">
-                  <CarouselContent>
+                  <CarouselContent carouselClassName="h-[400px]">
                     {blogPosts.map((post, index) => (
                       <CarouselItem
                         key={index}

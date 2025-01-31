@@ -30,7 +30,10 @@ export const Events = (): JSX.Element => {
               </div>
             </div>
             <div className="flex">
-              <CarouselContent className="border rounded-full">
+              <CarouselContent
+                className="border rounded-full"
+                carouselClassName="h-[600px]"
+              >
                 {events.map((event, index) => (
                   <CarouselItem key={index} className="md:basis-1/3">
                     <Card key={event.id} className="border-none shadow-md">
