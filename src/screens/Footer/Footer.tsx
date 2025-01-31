@@ -1,6 +1,4 @@
-import React from "react";
 import { navigationLinks } from "../../lib/data";
-import { NavigationMenuItem } from "@radix-ui/react-navigation-menu";
 import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {

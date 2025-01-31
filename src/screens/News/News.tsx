@@ -1,6 +1,4 @@
 import { JSX } from "react";
-import { ArrowRight, ArrowRightCircleIcon } from "lucide-react";
-import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import {
   Carousel,
@@ -11,7 +9,6 @@ import {
 } from "../../components/ui/carousel";
 import { nuStartzNews, startupNews } from "../../lib/data";
 import IMAGES from "../../themes";
-import { StartupNews } from "../StartUpNews.tsx/StartUpNews";
 import { useNavigate } from "react-router-dom";
 export const News = (): JSX.Element => {
   const navigate = useNavigate();

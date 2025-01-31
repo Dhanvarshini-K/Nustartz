@@ -1,5 +1,4 @@
 import { JSX } from "react";
-import { Card, CardContent } from "../../components/ui/card";
 
 export const StartupNews = (): JSX.Element => {
   return (

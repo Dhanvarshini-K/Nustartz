@@ -1,5 +1,4 @@
 import { JSX } from "react";
-import { useWindowWidth } from "../Events/breakpoints";
 import { Card, CardContent } from "../../components/ui/card";
 import { events } from "../../lib/data";
 import {
@@ -11,8 +10,6 @@ import {
 } from "../../components/ui/carousel";
 
 export const Events = (): JSX.Element => {
-  const screenWidth = useWindowWidth();
-
   return (
     <div className="w-full flex flex-row justify-center bg-white">
       <div className="w-full  relative">
