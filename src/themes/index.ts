@@ -20,6 +20,10 @@ const IMAGES = {
     creativity: require('../assets/Creativity.png'),
     strength: require('../assets/Strength.png'),
     progress: require('../assets/Progress.png'),
+    serviceImage: require('../assets/ServiceHeroImage.png'),
+    serviceIcon: require('../assets/ServiceIcon.png'),
+    techStartupImage1: require('../assets/TechStartupImage1.png'),
+    techStartupImage2: require('../assets/TechStartupImage2.png'),
 }
 
 

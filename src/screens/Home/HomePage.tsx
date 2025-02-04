@@ -217,11 +217,12 @@ const Home = (): JSX.Element => {
             {HomePageSectionsEnum.startupPortFolio}
           </h2>
           <div className="flex justify-center items-center gap-12 flex-wrap">
-            {startupPortfolioData.map((project) => (
+            {startupPortfolioData.map((project, index) => (
               <img
                 src={project}
                 alt="Startup-Portfolio-Projects"
                 className="lg:w-[250px] w-[200px]"
+                key={index}
               />
             ))}
           </div>
@@ -235,11 +236,12 @@ const Home = (): JSX.Element => {
             {HomePageSectionsEnum.partners}
           </h2>
           <div className="flex justify-center items-center gap-12 flex-wrap">
-            {ourPartners.map((partner) => (
+            {ourPartners.map((partner, index) => (
               <img
                 src={partner}
                 alt="Our-Partners"
                 className="lg:w-[250px] w-[200px]"
+                key={index}
               />
             ))}
           </div>

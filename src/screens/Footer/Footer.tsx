@@ -27,7 +27,7 @@ const Footer = () => {
             className="h-16 mb-4"
           />
         </div>
-        <div className="flex gap-28 flex-wrap lg:pr-60">
+        <div className="flex gap-10 md:gap-28 flex-wrap lg:pr-60">
           <div className="space-y-4 ">
             {navigationLinks.map((link) => {
               const isActive = location.pathname === link.url;
@@ -47,13 +47,13 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-6">
             <div className="space-y-2 flex items-start flex-col">
-              {footerData.map((data) => (
-                <p className="text-lg md:text-3xl text-Gray">{data}</p>
+              {footerData.map((data,index) => (
+                <p className="text-lg md:text-3xl text-Gray" key={index}>{data}</p>
               ))}
             </div>
             <div className="flex gap-4 ">
-              {socialMediaLinks.map((link) => (
-                <img src={link} alt="SocialMedia" className="w-8" />
+              {socialMediaLinks.map((link, index) => (
+                <img src={link} alt="SocialMedia" className="w-8" key={index}/>
               ))}
             </div>
           </div>
