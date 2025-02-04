@@ -1,5 +1,13 @@
+* {
+  font-family: 'Sequel Sans', sans-serif;
+}
 
 img, .container {
   max-width: 100%;
   height: auto;
+}
+
+.section-container {
+  max-width: 1400px;
+  margin: 0 auto;
 }

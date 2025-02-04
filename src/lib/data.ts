@@ -2,7 +2,8 @@ export const navigationLinks = [
     { title: "Home", url: "/" },
     { title: "Insights", url: "/insights" },
     { title: "Services", url: "/services" },
-    { title: "About us", url: "/aboutUs" },
+    { title: "Contact us", url: "/contact-us"},
+    { title: "About us", url: "/about-us" },
 ];
 
 export const blogPosts = [
@@ -41,44 +42,6 @@ export const blogPosts = [
         title: "Blog 6",
         description: "There are many variati of passages of engineer",
         bgColor: "bg-[#f7d1d1]",
-    },
-];
-
-// How We Deliver Data
-export const deliverySteps = [
-    {
-        title: "Build",
-        description:
-            "We kickstart your growth by building dedicated teams tailored to your product, technology, and marketing needs. From assembling skilled developers and tech support to strategizing your branding, we handle team setup, product development, and infrastructure—all aligned with your vision to set a strong foundation for success.",
-        image: "https://c.animaapp.com/4qACV4pp/img/construction-crane-amico-1.svg",
-    },
-    {
-        title: "Operate",
-        description:
-            "With your team and projects in place, we manage day-to-day operations, ensuring seamless coordination across development, tech support, and marketing. Our expert oversight optimizes team performance and project outcomes, so you can focus on strategic decisions while we handle the execution and drive your vision forward.",
-        image: "https://c.animaapp.com/4qACV4pp/img/company-amico-1.png",
-    },
-    {
-        title: "Transfer",
-        description:
-            "When your startup is ready to take full control, we seamlessly transfer the team, knowledge, and processes to you. Our comprehensive handover, including training and ongoing support, ensures that your team can confidently manage and scale operations independently as your own.",
-        image: "https://c.animaapp.com/4qACV4pp/img/port-amico-1.png",
-    },
-];
-
-// Values Data
-export const values = [
-    {
-        title: "Innovate",
-        icon: "https://c.animaapp.com/4qACV4pp/img/creativity--1--1@2x.png",
-    },
-    {
-        title: "Empower",
-        icon: "https://c.animaapp.com/4qACV4pp/img/mental-strength-1@2x.png",
-    },
-    {
-        title: "Thrive",
-        icon: "https://c.animaapp.com/4qACV4pp/img/progress-1@2x.png",
     },
 ];
 
