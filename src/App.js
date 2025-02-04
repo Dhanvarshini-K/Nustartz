@@ -10,12 +10,14 @@ import { Review } from "./screens/Reviews/Reviews";
 import {Blogs} from "./screens/Blogs/Blogs"
 import {ContactUs} from "./screens/ContactUs/ContactUs"
 import { StartupNews } from "./screens/StartUpNews.tsx/StartUpNews";
+import {ScrollToTop} from "./customHooks/ScrollToTop"
 
 const App = () => {
   return (
     <div className="App">
     <Router>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />

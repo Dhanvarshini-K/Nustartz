@@ -27,6 +27,10 @@ const Home = (): JSX.Element => {
   const handleClick = () => {
     navigate("/review");
   };
+
+  const navigateToContactUsPage = () => {
+    navigate("/contact-us");
+  }
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -39,7 +43,7 @@ const Home = (): JSX.Element => {
             <p className="text-xl text-ParaGrey">
               {heroSectionData.description}
             </p>
-            <Button className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4">
+            <Button className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4" onClick={navigateToContactUsPage}>
               {heroSectionData.buttonText}
               <ArrowRight className="h-6 w-6" />
             </Button>

@@ -16,6 +16,7 @@ import {
   serviceSectionData,
   techFusionHubSectionData,
 } from "../../lib/servicePageData";
+import { useNavigate } from "react-router-dom";
 
 enum TextEnum {
   getInTouch = "GET IN TOUCH",
@@ -24,6 +25,11 @@ enum TextEnum {
 }
 
 export const Services = (): JSX.Element => {
+  const navigate = useNavigate();
+
+  const navigateToContactUsPage = () => {
+    navigate("/contact-us");
+  }
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -83,7 +89,7 @@ export const Services = (): JSX.Element => {
             <p className="text-xl text-Gray font-bold">
               {ServicePageSectionsEnum.techStartupContent}
             </p>
-            <Button className="w-fit bg-BrandPurple text-white font-normal mt-5  px-8 py-6">
+            <Button className="w-fit bg-BrandPurple text-white font-normal mt-5  px-8 py-6" onClick={navigateToContactUsPage}>
               {TextEnum.getInTouch}
               <ArrowRight />
             </Button>
