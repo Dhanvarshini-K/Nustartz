@@ -1,24 +1,36 @@
 import { navigationLinks } from "../../lib/data";
 import { Link, useLocation } from "react-router-dom";
+import IMAGES from "../../themes";
+
+const socialMediaLinks: string[] = [
+  IMAGES.linkedIn,
+  IMAGES.facebook,
+  IMAGES.twitter,
+  IMAGES.youtube,
+];
+
+const footerData: string[] = [
+  "Website - www.nustartz.com",
+  "Email - contact@NuStartz.com",
+  "Mobile - (+1) 732-983-1325",
+];
 
 const Footer = () => {
   const location = useLocation();
-  const active = location.pathname === "/contactUs";
   return (
     <footer className="bg-LightLavender py-12 px-20">
-      <div className="flex justify-between flex-wrap gap-20">
+      <div className="flex justify-between flex-wrap lg:gap-20 gap-5">
         <div>
           <img
-            src="https://c.animaapp.com/4qACV4pp/img/logo.png"
+            src={IMAGES.nuStartzLogo}
             alt="NuStartz Logo"
             className="h-16 mb-4"
           />
         </div>
-        <div className="flex gap-28 flex-wrap lg:pr-60">
+        <div className="flex gap-10 md:gap-28 flex-wrap lg:pr-60">
           <div className="space-y-4 ">
             {navigationLinks.map((link) => {
               const isActive = location.pathname === link.url;
-
               return (
                 <div key={link.title}>
                   <Link
@@ -32,45 +44,17 @@ const Footer = () => {
                 </div>
               );
             })}
-            <div>
-              <Link
-                to="/contactUs"
-                className={`px-4 py-2 text-xl  ${
-                  active ? "text-BrandPurple font-bold" : "text-Gray"
-                }`}
-              >
-                Contact Us
-              </Link>
-            </div>
           </div>
           <div className="flex flex-col gap-6">
-            <div className="space-y-4 flex items-start flex-col">
-              <p className="text-3xl text-Gray">Website - www.nustartz.com</p>
-              <p className="text-3xl text-Gray">Email - contact@NuStartz.com</p>
-              <p className="text-3xl text-Gray">Mobile - (+1) 732-983-1325</p>
+            <div className="space-y-2 flex items-start flex-col">
+              {footerData.map((data,index) => (
+                <p className="text-lg md:text-3xl text-Gray" key={index}>{data}</p>
+              ))}
             </div>
-
             <div className="flex gap-4 ">
-              <img
-                src="https://c.animaapp.com/4qACV4pp/img/image-2@2x.png"
-                alt="Social"
-                className="h-8 w-8"
-              />
-              <img
-                src="https://c.animaapp.com/4qACV4pp/img/image-3@2x.png"
-                alt="Social"
-                className="h-8 w-8"
-              />
-              <img
-                src="https://c.animaapp.com/4qACV4pp/img/image-4@2x.png"
-                alt="Social"
-                className="h-8 w-8"
-              />
-              <img
-                src="https://c.animaapp.com/4qACV4pp/img/youtube-1@2x.png"
-                alt="YouTube"
-                className="h-8"
-              />
+              {socialMediaLinks.map((link, index) => (
+                <img src={link} alt="SocialMedia" className="w-8" key={index}/>
+              ))}
             </div>
           </div>
         </div>

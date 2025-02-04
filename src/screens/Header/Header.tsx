@@ -7,6 +7,7 @@ import {
 } from "../../components/ui/navigation-menu";
 import { navigationLinks } from "../../lib/data";
 import { Menu, X } from "lucide-react";
+import IMAGES from "../../themes";
 
 const Header = () => {
   const location = useLocation();
@@ -14,9 +15,9 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full bg-white shadow-md z-50">
-      <div className="container flex items-center justify-between py-4 px-10">
+      <div className="container flex items-center justify-between py-4 px-10 max-w-[1200px] m-auto">
         <img
-          src="https://c.animaapp.com/4qACV4pp/img/logo.png"
+          src={IMAGES.nuStartzLogo}
           alt="NuStartz Logo"
           className="h-12 w-auto"
         />
