@@ -24,6 +24,14 @@ const IMAGES = {
     serviceIcon: require('../assets/ServiceIcon.png'),
     techStartupImage1: require('../assets/TechStartupImage1.png'),
     techStartupImage2: require('../assets/TechStartupImage2.png'),
+    homeHeroSectionBackground: require('../assets/HomeHeroSectionBackground2.png'),
+    serviceHeroSectionBackground: require('../assets/ServiceHeroSectionBackground.png'),
+    operateTextImage: require('../assets/OperateText.png'),
+    buildTextImage: require('../assets/BuildText.png'),
+    transferTextImage: require('../assets/TransferText.png'),
+    eventImage1: require('../assets/Event1.png'),
+    eventImage2: require('../assets/Event2.png'),
+    eventImage3: require('../assets/Event3.png'),
 }
 
 

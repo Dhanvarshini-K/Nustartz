@@ -20,6 +20,7 @@ import {
   testimonialsData,
   whoWeAreSectionData,
 } from "../../lib/homePageData";
+import IMAGES from "../../themes";
 
 const Home = (): JSX.Element => {
   const navigate = useNavigate();
@@ -36,11 +37,11 @@ const Home = (): JSX.Element => {
       {/* Hero Section */}
       <section className="relative bg-heroBackground pt-20 px-10 md:px-24 ">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center items-center pt-16 pb-20 ">
-          <div className="space-y-8  text-start md:w-[515px]">
+          <div className="space-y-8  text-start md:w-[535px] z-10">
             <h1 className="text-8xl font-bold bg-gradient-to-b from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none">
               {heroSectionData.title}
             </h1>
-            <p className="text-xl text-ParaGrey">
+            <p className="text-xl text-ParaGrey z-10">
               {heroSectionData.description}
             </p>
             <Button className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4" onClick={navigateToContactUsPage}>
@@ -49,7 +50,7 @@ const Home = (): JSX.Element => {
             </Button>
           </div>
 
-          <div className="relative">
+          <div className="relative z-10">
             <img
               src={heroSectionData.heroImageUrl}
               alt="Hero"
@@ -75,6 +76,7 @@ const Home = (): JSX.Element => {
             </Card>
           </div>
         </div>
+      <img src={IMAGES.homeHeroSectionBackground} alt="Hero-Background" className="object-cover w-full h-full absolute inset-0" />
       </section>
 
       {/* How We Deliver Section */}
@@ -86,15 +88,12 @@ const Home = (): JSX.Element => {
 
         <div className="space-y-10">
           {companyDeliveryStepsData.map((step, index) => (
-            <div key={step.title}>
+            <div key={index}>
               {index % 2 === 0 ? (
                 <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16">
                   <div className="space-y-8">
                     <div className="flex">
-                      <div className="w-full h-1.5 bg-BrandPurple mt-6" />
-                      <h1 className="text-8xl font-medium text-BrandPurple text-end -ml-2">
-                        {step.title}
-                      </h1>
+                      <img src={step.titleImage} alt={step.titleImage} />
                     </div>
                     <p className="text-xl md:text-3xl text-ParaGrey md:w-[543px]">
                       {step.description}
@@ -103,7 +102,7 @@ const Home = (): JSX.Element => {
                   <div className="m-auto">
                     <img
                       src={step.image}
-                      alt={step.title}
+                      alt={step.image}
                       className="w-400px md:w-[420px]"
                     />
                   </div>
@@ -113,16 +112,13 @@ const Home = (): JSX.Element => {
                   <div className="m-auto lg:order-first order-last">
                     <img
                       src={step.image}
-                      alt={step.title}
+                      alt={step.image}
                       className="w-400px md:w-[420px]"
                     />
                   </div>
                   <div className="space-y-8">
                     <div className="flex">
-                      <h1 className="text-8xl font-medium text-BrandPurple text-end -mr-2">
-                        {step.title}
-                      </h1>
-                      <div className="w-full h-1.5 bg-BrandPurple mt-14" />
+                      <img src={step.titleImage} alt={step.titleImage} />
                     </div>
                     <p className="text-xl md:text-3xl text-ParaGrey md:w-[543px]">
                       {step.description}
