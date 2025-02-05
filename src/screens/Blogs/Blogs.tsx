@@ -12,7 +12,7 @@ import { CallToAction } from "../../components/ui/callToAction";
 
 export const Blogs = (): JSX.Element => {
   return (
-    <main>
+    <section>
       <div id="blogs">
         <Carousel>
           <div className=" flex justify-between md:items-center">
@@ -56,6 +56,6 @@ export const Blogs = (): JSX.Element => {
       </div>
 
       <CallToAction />
-    </main>
+    </section>
   );
 };

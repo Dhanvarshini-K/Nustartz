@@ -56,7 +56,7 @@ export const AboutUs = (): JSX.Element => {
       <section className="py-16 px-10 md:px-24">
         <div className="section-container">
           <h2 className="text-5xl font-bold text-ParaGrey text-center mb-10">
-          {AboutPageSectionEnums.founders}
+            {AboutPageSectionEnums.founders}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[800px] mx-auto">
             {foundersData.map((founder) => (
@@ -73,9 +73,7 @@ export const AboutUs = (): JSX.Element => {
                   <h3 className="text-2xl font-bold text-LightPurple">
                     {founder.name}
                   </h3>
-                  <p className="text-md text-NickelGrey">
-                    {founder.role}
-                  </p>
+                  <p className="text-md text-NickelGrey">{founder.role}</p>
                 </CardContent>
               </Card>
             ))}
@@ -86,33 +84,38 @@ export const AboutUs = (): JSX.Element => {
       {/* Leaders */}
       <section className="py-16 px-10 md:px-24">
         <div className="section-container">
-        <h2 className="text-5xl font-bold text-ParaGrey text-center mb-10">
-          {AboutPageSectionEnums.leaders}
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[800px] mx-auto">
-          {leadersData.map((leader) => (
-            <Card key={leader.name} className="rounded-[20px] shadow-md border-none">
-              <img
-                src={leader.image}
-                alt={leader.name}
-                className="w-full rounded-t-[20px]"
-              />
-              <CardContent className="p-4 md:p-6 border-none">
-                <h3 className="text-2xl font-bold text-LightPurple mb-2">
-                  {leader.name}
-                </h3>
-                <p className="text-md leading-[26px] text-NickelGrey">
-                  {leader.role}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+          <h2 className="text-5xl font-bold text-ParaGrey text-center mb-10">
+            {AboutPageSectionEnums.leaders}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[800px] mx-auto">
+            {leadersData.map((leader) => (
+              <Card
+                key={leader.name}
+                className="rounded-[20px] shadow-md border-none"
+              >
+                <img
+                  src={leader.image}
+                  alt={leader.name}
+                  className="w-full rounded-t-[20px]"
+                />
+                <CardContent className="p-4 md:p-6 border-none">
+                  <h3 className="text-2xl font-bold text-LightPurple mb-2">
+                    {leader.name}
+                  </h3>
+                  <p className="text-md leading-[26px] text-NickelGrey">
+                    {leader.role}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <CallToAction />
+      <div className="px-10 md:px-24">
+        <CallToAction />
+      </div>
     </main>
   );
 };
