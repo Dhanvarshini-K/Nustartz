@@ -10,22 +10,23 @@ import {
 import { nuStartzNews, startupNews } from "../../lib/data";
 import IMAGES from "../../themes";
 import { useNavigate } from "react-router-dom";
+import { insightsTabData } from "../../lib/insightsPageData";
+import { CallToAction } from "../../components/ui/callToAction";
 export const News = (): JSX.Element => {
   const navigate = useNavigate();
   const navigateToStartUpNews = () => {
     navigate("/startUpNews");
   };
   return (
-    <div className="bg-white">
       <main className="container px-4">
-        <section className="flex flex-col gap-4 xl:mx-20">
-          <h1 className="text-6xl font-bold text-DarkGrey">News</h1>
+        <section className="flex flex-col gap-4">
+          <h1 className="text-6xl font-bold text-DarkGrey">{insightsTabData.newsTabTitle}</h1>
 
           <Carousel>
             <div className="flex justify-between items-center ">
               <div className="flex  mb-8">
                 <h2 className="text-2xl sm:text-4xl font-medium text-BrandBlueHeavy">
-                  NuStartz News
+                  {insightsTabData.newsTabSubTitle1}
                 </h2>
               </div>
               <div className="flex mb-8">
@@ -57,12 +58,12 @@ export const News = (): JSX.Element => {
           </Carousel>
         </section>
 
-        <section className="mt-16  xl:mx-20">
+        <section className="mt-16">
           <Carousel>
             <div className="flex justify-between items-center">
               <div className="flex  mb-8">
                 <h2 className="text-2xl sm:text-4xl font-medium text-BrandBlueHeavy">
-                  Startup News
+                  {insightsTabData.newsTabSubTitle2}
                 </h2>
               </div>
               <div className="flex mb-8">
@@ -103,7 +104,8 @@ export const News = (): JSX.Element => {
             </CarouselContent>
           </Carousel>
         </section>
+
+        <CallToAction />
       </main>
-    </div>
   );
 };

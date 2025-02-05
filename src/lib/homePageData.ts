@@ -34,26 +34,26 @@ export const whoWeAreSectionData = {
 };
 
 type CompanyDeliveryStepDataType = {
-  title?: string;
+  titleImage?: string;
   description?: string;
   image?: string;
 };
 
 export const companyDeliveryStepsData: CompanyDeliveryStepDataType[] = [
   {
-    title: "Build",
+    titleImage: `${IMAGES.buildTextImage}`,
     description:
       "We kickstart your growth by building dedicated teams tailored to your product, technology, and marketing needs. From assembling skilled developers and tech support to strategizing your branding, we handle team setup, product development, and infrastructure—all aligned with your vision to set a strong foundation for success.",
     image: `${IMAGES.constructionCrane}`,
   },
   {
-    title: "Operate",
+    titleImage: `${IMAGES.operateTextImage}`,
     description:
       "With your team and projects in place, we manage day-to-day operations, ensuring seamless coordination across development, tech support, and marketing. Our expert oversight optimizes team performance and project outcomes, so you can focus on strategic decisions while we handle the execution and drive your vision forward.",
     image: `${IMAGES.company}`,
   },
   {
-    title: "Transfer",
+    titleImage: `${IMAGES.transferTextImage}`,
     description:
       "When your startup is ready to take full control, we seamlessly transfer the team, knowledge, and processes to you. Our comprehensive handover, including training and ongoing support, ensures that your team can confidently manage and scale operations independently as your own.",
     image: `${IMAGES.port}`,

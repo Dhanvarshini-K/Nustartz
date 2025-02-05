@@ -33,13 +33,15 @@ export const Services = (): JSX.Element => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="pt-20 bg-heroBackground px-10 md:px-24">
+      <section className="pt-20 bg-heroBackground px-10 md:px-24 relative">
         <div className="section-container flex flex-wrap lg:flex-nowrap justify-between gap-8 py-16">
-          <h1 className="text-6xl md:text-8xl font-bold text-ParaGrey leading-tight ">
+          <h1 className="text-6xl md:text-8xl font-bold text-ParaGrey leading-tight z-10">
             {ServicePageSectionsEnum.heroTitle}
           </h1>
-          <img src={IMAGES.serviceImage} alt="Hero illustration" />
+          <img src={IMAGES.serviceImage} alt="Hero illustration" className="z-10"/>
         </div>
+
+        <img src={IMAGES.serviceHeroSectionBackground} alt="Hero-Background" className="object-fill w-full h-full absolute inset-0"/>
       </section>
 
       {/* Services Section */}
