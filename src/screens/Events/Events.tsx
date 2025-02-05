@@ -33,7 +33,6 @@ export const Events = (): JSX.Element => {
           </div>
           <div className="flex">
             <CarouselContent
-              className="rounded-full"
               carouselClassName="pb-10"
             >
               {insightsEventsData.map((event, index) => (
