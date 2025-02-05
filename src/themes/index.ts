@@ -32,6 +32,16 @@ const IMAGES = {
     eventImage1: require('../assets/Event1.png'),
     eventImage2: require('../assets/Event2.png'),
     eventImage3: require('../assets/Event3.png'),
+    aboutusImage: require('../assets/AboutUsImage.png'),
+    boardMember1: require('../assets/BoardMember1.png'),
+    boardMember2: require('../assets/BoardMember2.png'),
+    boardMember3: require('../assets/BoardMember3.png'),
+    founder1: require('../assets/Founder1.png'),
+    founder2: require('../assets/Founder2.png'),
+    leader1: require('../assets/Leader1.png'),
+    leader2: require('../assets/Leader2.png'),
+    leader3: require('../assets/Leader3.png'),
+    leader4: require('../assets/Leader4.png'),
 }
 
 

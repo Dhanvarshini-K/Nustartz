@@ -5,8 +5,8 @@ import { insightsTabData } from "../../lib/insightsPageData";
 
 export const CallToAction = () => {
   return (
-    <section className="section-container py-16">
-      <div className="flex mx-auto overflow-hidden lg:h-[228px] flex-wrap">
+    <section className="py-16 px-10 md:px-24">
+      <div className="section-container flex mx-auto overflow-hidden lg:h-[228px] flex-wrap">
         <div className="bg-BrandPurple text-white p-4 lg:p-10 flex items-center justify-center text-5xl font-bold w-full lg:w-[400px]">
           {insightsTabData.blogsCTATitle}
         </div>
