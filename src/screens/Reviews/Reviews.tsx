@@ -1,54 +1,67 @@
 import { JSX } from "react";
 import { Card, CardContent } from "../../components/ui/card";
-import { solutions } from "../../lib/data";
+import {
+  clientReviewData,
+  reviewDescription,
+  ReviewPageSectionsEnum,
+  solutionSectionData,
+} from "../../lib/reviewsPageData";
+import IMAGES from "../../themes";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../../components/ui/carousel";
+import { CallToAction } from "../../components/ui/callToAction";
 
 export const Review = (): JSX.Element => {
   return (
-    <main className="bg-white">
-      <section className="mx-5 xl:mx-20 2xl:mx-72">
-        <section className="container pt-32 pb-16">
-          <h1 className="text-8xl font-bold text-paragray mb-8">Who we are</h1>
-          <Card className="p-10 bg-CornFlowerBlue rounded-[40px] border-[10px] border-white shadow-lg w-64 h-40 sm:w-[700px] lg:w-[1160px] sm:h-full">
-            <CardContent className="flex items-center justify-center sm:min-h-[500px]">
-              <img
-                src="https://c.animaapp.com/bvljseyz/img/group-1@2x.png"
-                alt="Who we are"
-                className="w-16"
-              />
-            </CardContent>
-          </Card>
-          <p className="text-xl text-ParaGrey mt-8 leading-relaxed 2xl:w-[1160px]">
-            At NuStartz, we are your comprehensive partner in building and
-            scaling your tech startup from the ground up—all the way to your
-            Initial Public Offering (IPO). Our full suite of services is
-            designed to support every aspect of your business, helping you
-            transform your ideas into a thriving enterprise.
-          </p>
-        </section>
+    <main>
+      <section className="bg-heroBackground pt-20 px-10 md:px-24 ">
+        <div className="section-container py-8 sm:py-16">
+          <h1 className="text-5xl sm:text-8xl font-bold text-paragray mb-8">
+            {ReviewPageSectionsEnum.whoWeAre}
+          </h1>
+          <div className="bg-white p-3 rounded-xl">
+            <div className="bg-fog h-[300px] sm:h-[500px] flex justify-center items-center rounded-xl">
+              <img src={`${IMAGES.pauseIcon}`} alt="pause-icon" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section className="container py-16">
-          <h2 className="text-5xl font-semibold text-paragray mb-16">
-            Our Solutions
+      <section className="px-10 md:px-24 py-8">
+        <p className="section-container text-xl text-ParaGrey">
+          {reviewDescription}
+        </p>
+      </section>
+
+      <section className="bg-white py-16 px-10 md:px-24">
+        <div className="section-container">
+          <h2 className="text-5xl font-semibold text-paragray mb-10">
+            {ReviewPageSectionsEnum.solutions}
           </h2>
-          <div className="space-y-16 2xl:w-[1158px]">
-            {solutions.map((solution, index) => (
+          <div className="space-y-8">
+            {solutionSectionData.map((solution, index) => (
               <Card
                 key={index}
-                className="bg-BrandLightBlue rounded-[20px] shadow-lg xl:w-5/7"
+                className="bg-BrandLightBlue rounded-[20px] shadow-lg"
               >
-                <CardContent className="flex flex-col md:flex-row">
-                  <div className="relative md:w-1/2 xl:w-3/4">
+                <CardContent className="flex flex-col sm:flex-row p-0">
+                  <div className="relative w-full sm:w-[50%]">
                     <img
                       src={solution.image}
                       alt={solution.title}
-                      className="h-full object-cover rounded-l-[20px] xl:w-[800px] xl:h-[700px] 2xl:w-[579px]"
+                      className="h-full w-[600px] sm:h-[500px]"
                     />
-                    <h3 className="absolute top-16 left-14 text-2xl font-bold text-white">
+                    <h3 className="absolute top-5 left-10 text-2xl font-bold text-white">
                       {solution.title}
                     </h3>
                   </div>
-                  <div className="md:w-1/2 md:p-10 h-[650px] overflow-y-auto">
-                    <p className="text-2xl leading-9 text-OuterBlack ">
+                  <div className="w-full sm:w-[75%] p-4 sm:p-6 lg:p-10 overflow-y-auto">
+                    <p className="text-lg md:text-xl text-OuterBlack ">
                       {solution.description}
                     </p>
                   </div>
@@ -56,39 +69,58 @@ export const Review = (): JSX.Element => {
               </Card>
             ))}
           </div>
-        </section>
-      </section>
-
-      <section className="container py-16 px-10 md:px-40  2xl:px-60 bg-GhostWhite ">
-        <h2 className="text-5xl font-bold text-paragray mb-8">
-          Client Reviews
-        </h2>
-        <img
-          src="https://c.animaapp.com/bvljseyz/img/group-1000009764.png"
-          alt="Client Reviews"
-          className="w-full"
-        />
-      </section>
-
-      {/* <section className="container py-16 md:px-10  ">
-        <div className="flex mx-auto overflow-hidden lg:h-[228px] flex-wrap lg:flex-nowrap">
-          <div className="bg-BrandPurple text-white p-5 flex items-center justify-center text-5xl font-bold w-[800px] md:w-[600px] lg:w-[500px]">
-            Want to solve your problem
-          </div>
-          <div className="flex flex-1 items-center bg-gradient-to-r from-gray-100 to-purple-100 p-3">
-            <Input
-              placeholder="Enter your email address"
-              className="bg-white text-3xl h-[68px] px-6 rounded-none"
-            />
-            <Button
-              size="lg"
-              className=" bg-BrandPurple h-[68px] w-[68px] rounded-none"
-            >
-              <ArrowRight className="h-8 w-8" color="white" />
-            </Button>
-          </div>
         </div>
-      </section> */}
+      </section>
+
+      <section className="py-16 px-10 md:px-24 bg-GhostWhite ">
+        <div className="section-container">
+          <h2 className="text-5xl font-bold text-paragray mb-8">
+            {ReviewPageSectionsEnum.clientReviews}
+          </h2>
+          <Carousel>
+            <CarouselContent>
+              {clientReviewData.map((review, index) => (
+                <CarouselItem className="flex bg-white gap-10 p-4 sm:p-8 rounded-2xl" key={index}>
+                  <div className="w-[20%]">
+                    <img
+                      src={IMAGES.apostrophe}
+                      alt="Apostrophe"
+                      className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px] m-5 sm:m-10 sm:p-5"
+                    />
+                  </div>
+                  <div className="p-4 sm:p-6 lg:p-10 space-y-8 w-full lg:w-[65%]">
+                    <p className="text-lg md:text-xl text-ParaGrey">{review.clientInfo}</p>
+                    <div className="flex items-center gap-5">
+                      <img
+                        src={review.profileImageURL}
+                        alt="Profile-Image"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <div>
+                        <h3 className="text-lg md:text-xl text-ParaGrey font-bold">
+                          {review.clientName}
+                        </h3>
+                        <p className="text-md md:text-lg text-ParaGrey">
+                          {review.clientRole}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+
+            {clientReviewData.length > 1 ? (
+              <div className="mt-4 flex flex-row-reverse">
+                <CarouselPrevious />
+                <CarouselNext />
+              </div>
+            ) : null}
+          </Carousel>
+        </div>
+      </section>
+
+      <CallToAction />
     </main>
   );
 };

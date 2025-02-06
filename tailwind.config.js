@@ -20,7 +20,9 @@ module.exports = {
         BrandLightBlue: "#EDF5FF",
         OuterBlack: "#263238",
         MineShaft: "#282828",
-        heroBackground: "#F8FAFF"
+        heroBackground: "#F8FAFF",
+        fog: "#DFD8FF",
+        inputBorder: "#B2B2B2"
       },
       fontSize: {
         "2xs": "0.625rem" /* 10px */,
