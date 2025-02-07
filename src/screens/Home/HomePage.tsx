@@ -76,7 +76,7 @@ const Home = (): JSX.Element => {
             </Card>
           </div>
         </div>
-      <img src={IMAGES.homeHeroSectionBackground} alt="Hero-Background" className="object-cover w-full h-full absolute inset-0" />
+      <img src={IMAGES.homeHeroSectionBackground} alt="Hero-Background" className="object-cover w-full h-full absolute inset-0 opacity-40" />
       </section>
 
       {/* How We Deliver Section */}

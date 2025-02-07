@@ -41,13 +41,13 @@ export const Services = (): JSX.Element => {
           <img src={IMAGES.serviceImage} alt="Hero illustration" className="z-10"/>
         </div>
 
-        <img src={IMAGES.serviceHeroSectionBackground} alt="Hero-Background" className="object-fill w-full h-full absolute inset-0"/>
+        <img src={IMAGES.serviceHeroSectionBackground} alt="Hero-Background" className="object-fill w-full h-full absolute inset-0 opacity-40"/>
       </section>
 
       {/* Services Section */}
       <section className="bg-GhostWhite py-16 px-10 md:px-24 ">
         <div className="section-container flex flex-col lg:flex-row justify-between gap-10">
-          <div className="w-[50%]">
+          <div className="w-[100%] sm:w-[50%]">
             <div className="flex items-center gap-4">
               <img
                 src={IMAGES.serviceIcon}
