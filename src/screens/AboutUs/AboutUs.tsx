@@ -1,6 +1,5 @@
 import React, { JSX } from "react";
 import { Card, CardContent } from "../../components/ui/card";
-import IMAGES from "../../themes";
 import {
   AboutPageSectionEnums,
   boardMembersData,
@@ -15,11 +14,14 @@ export const AboutUs = (): JSX.Element => {
       {/* Hero Section */}
       <section className="pt-20 bg-heroBackground px-10 md:px-24 relative">
         <div className="section-container py-16">
-          <img
-            src={`${IMAGES.aboutusImage}`}
-            alt="Hero"
-            className="w-full h-full"
-          />
+          <iframe
+            src="https://www.youtube.com/embed/bzcN_dyizIE?si=FF1fXQfZGC0iv2hk"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            className="w-full h-[300px] sm:h-[500px] rounded-xl"
+          ></iframe>
         </div>
       </section>
 

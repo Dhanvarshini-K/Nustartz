@@ -25,9 +25,14 @@ export const Review = (): JSX.Element => {
             {ReviewPageSectionsEnum.whoWeAre}
           </h1>
           <div className="bg-white p-3 rounded-xl">
-            <div className="bg-fog h-[300px] sm:h-[500px] flex justify-center items-center rounded-xl">
-              <img src={`${IMAGES.pauseIcon}`} alt="pause-icon" />
-            </div>
+            <iframe
+              src="https://www.youtube.com/embed/IfM1WIyIDGc?si=AvyGQ8eljShlJ34z"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="w-full h-[300px] sm:h-[500px] rounded-xl"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -80,7 +85,10 @@ export const Review = (): JSX.Element => {
           <Carousel>
             <CarouselContent>
               {clientReviewData.map((review, index) => (
-                <CarouselItem className="flex bg-white gap-10 p-4 sm:p-8 rounded-2xl" key={index}>
+                <CarouselItem
+                  className="flex bg-white gap-10 p-4 sm:p-8 rounded-2xl"
+                  key={index}
+                >
                   <div className="w-[20%]">
                     <img
                       src={IMAGES.apostrophe}
@@ -89,7 +97,9 @@ export const Review = (): JSX.Element => {
                     />
                   </div>
                   <div className="p-4 sm:p-6 lg:p-10 space-y-8 w-full lg:w-[65%]">
-                    <p className="text-lg md:text-xl text-ParaGrey">{review.clientInfo}</p>
+                    <p className="text-lg md:text-xl text-ParaGrey">
+                      {review.clientInfo}
+                    </p>
                     <div className="flex items-center gap-5">
                       <img
                         src={review.profileImageURL}
