@@ -103,8 +103,8 @@ export const Review = (): JSX.Element => {
                     <div className="flex items-center gap-5">
                       <img
                         src={review.profileImageURL}
-                        alt="Profile-Image"
-                        className="w-10 h-10 rounded-full"
+                        alt=""
+                        className="w-10 h-10 rounded-full bg-Gray z-[10]"
                       />
                       <div>
                         <h3 className="text-lg md:text-xl text-ParaGrey font-bold">
