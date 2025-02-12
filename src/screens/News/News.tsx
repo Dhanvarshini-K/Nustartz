@@ -7,42 +7,41 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../components/ui/carousel";
-import { nuStartzNews, startupNews } from "../../lib/data";
 import IMAGES from "../../themes";
 import { useNavigate } from "react-router-dom";
-import { insightsTabData } from "../../lib/insightsPageData";
+import { insightsNewsData, insightsStartupNewsData, insightsTabData } from "../../lib/insightsPageData";
 import { CallToAction } from "../../components/ui/callToAction";
 export const News = (): JSX.Element => {
   const navigate = useNavigate();
   const navigateToStartUpNews = () => {
-    navigate("/startUpNews");
+    navigate("/startup-news");
   };
   return (
       <main className="container px-4">
-        <section className="flex flex-col gap-4">
-          <h1 className="text-6xl font-bold text-DarkGrey">{insightsTabData.newsTabTitle}</h1>
+        <section className="flex flex-col gap-2 sm:gap-4">
+          <h1 className="text-5xl sm:text-6xl font-bold text-DarkGrey">{insightsTabData.newsTabTitle}</h1>
 
           <Carousel>
             <div className="flex justify-between items-center ">
-              <div className="flex  mb-8">
-                <h2 className="text-2xl sm:text-4xl font-medium text-BrandBlueHeavy">
+              <div className="flex  mb-4 sm:mb-8">
+                <h2 className="text-xl sm:text-4xl font-medium text-BrandBlueHeavy">
                   {insightsTabData.newsTabSubTitle1}
                 </h2>
               </div>
-              <div className="flex mb-8">
+              <div className="flex mb-4 sm:mb-8">
                 <CarouselPrevious />
                 <CarouselNext />
               </div>
             </div>
-            <div className="flex">
+            <div className="flex gap-10">
               <CarouselContent>
-                {nuStartzNews.map((news, index) => (
-                  <CarouselItem key={index} className="md:basis-1/3">
+                {insightsNewsData.map((news, index) => (
+                  <CarouselItem key={index} className="xs:basis-1/2 sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
                     <Card className="relative overflow-hidden rounded-xl">
                       <img
                         src={news.image}
                         alt={news.title}
-                        className="w-full h-[440px] object-cover"
+                        className="w-[600px] h-[440px] object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/90">
                         <CardContent className="absolute bottom-0 p-6 text-white">
@@ -58,23 +57,23 @@ export const News = (): JSX.Element => {
           </Carousel>
         </section>
 
-        <section className="mt-16">
+        <section className="mt-10 sm:mt-16">
           <Carousel>
             <div className="flex justify-between items-center">
-              <div className="flex  mb-8">
+              <div className="flex  mb-4 sm:mb-8">
                 <h2 className="text-2xl sm:text-4xl font-medium text-BrandBlueHeavy">
                   {insightsTabData.newsTabSubTitle2}
                 </h2>
               </div>
-              <div className="flex mb-8">
+              <div className="flex mb-4 sm:mb-8">
                 <CarouselPrevious />
                 <CarouselNext />
               </div>
             </div>
 
             <CarouselContent>
-              {startupNews.map((news, index) => (
-                <CarouselItem key={index} className="md:basis-1/3">
+              {insightsStartupNewsData.map((news, index) => (
+                <CarouselItem key={index} className="xs:basis-1/2 sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
                   <Card
                     className="relative overflow-hidden rounded-xl cursor-pointer"
                     onClick={navigateToStartUpNews}
@@ -92,10 +91,10 @@ export const News = (): JSX.Element => {
                       </div>
 
                       <CardContent className="absolute bottom-0 p-6 text-white">
-                        <h3 className="text-4xl font-semibold mb-4">
+                        <h3 className="text-2xl sm:text-4xl font-semibold mb-4">
                           {news.title}
                         </h3>
-                        <p className="text-xl">{news.description}</p>
+                        <p className="text-lg sm:text-xl">{news.description}</p>
                       </CardContent>
                     </div>
                   </Card>

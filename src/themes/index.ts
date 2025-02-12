@@ -47,6 +47,9 @@ const IMAGES = {
     solutionImage2: require('../assets/SolutionImage2.png'),
     solutionImage3: require('../assets/SolutionImage3.png'),
     apostrophe: require('../assets/Apostrophe.png'),
+    nustartzNewsImage1: require('../assets/NustartzNewsImage1.png'),
+    nustartzNewsImage2: require('../assets/NustartzNewsImage2.png'),
+    nustartzNewsImage3: require('../assets/NustartzNewsImage3.png'),
 }
 
 

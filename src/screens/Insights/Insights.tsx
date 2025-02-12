@@ -19,12 +19,12 @@ export const Insights = () => {
   return (
     <div>
       <section className="bg-heroBackground pt-20 px-10 md:px-24 ">
-        <div className="section-container py-16">
+        <div className="section-container py-10 sm:py-16">
           <Tabs defaultValue="blogs">
-            <TabsList className="mb-4">
+            <TabsList className="mb-2 sm:mb-4">
               <TabsTrigger
                 value="blogs"
-                className={` text-3xl font-bold ${
+                className={`text-lg sm:text-3xl font-bold ${
                   active === "blogs" ? "text-BrandPurple" : "text-gray-400"
                 }`}
                 onClick={() => handleTabChange("blogs")}
@@ -33,7 +33,7 @@ export const Insights = () => {
               </TabsTrigger>
               <TabsTrigger
                 value="news"
-                className={` text-3xl font-bold px-10 ${
+                className={`text-lg sm:text-3xl font-bold px-5 sm:px-10 ${
                   active === "news" ? "text-BrandPurple" : "text-gray-400"
                 }`}
                 onClick={() => handleTabChange("news")}
@@ -42,7 +42,7 @@ export const Insights = () => {
               </TabsTrigger>
               <TabsTrigger
                 value="events"
-                className={` text-3xl font-bold px-10 ${
+                className={`text-lg sm:text-3xl font-bold pr-10 ${
                   active === "events" ? "text-BrandPurple" : "text-gray-400"
                 }`}
                 onClick={() => handleTabChange("events")}
@@ -51,7 +51,7 @@ export const Insights = () => {
               </TabsTrigger>
             </TabsList>
 
-            <Separator className="w-[100%] mb-8 bg-ChineseSilver" />
+            <Separator className="w-[100%] mb-4 sm:mb-8 bg-ChineseSilver" />
             <TabsContent value="blogs">
               <Blogs />
             </TabsContent>

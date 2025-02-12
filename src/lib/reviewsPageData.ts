@@ -3,7 +3,7 @@ import IMAGES from "../themes"
 export enum ReviewPageSectionsEnum {
   whoWeAre = "Who we are",
   solutions = "Solutions",
-  clientReviews = "ClientReviews",
+  clientReviews = "Client Reviews",
 }
 
 
@@ -40,14 +40,14 @@ export const solutionSectionData: SolutionSectionDataType[] = [
 
 export const clientReviewData = [
     {
-        clientName: "Name of the client",
-        clientRole: "CEO, Company Name",
+        clientName: "Melvin Christopher",
+        clientRole: "CEO, Myna",
         clientInfo: "We envision a world where technology and substainability go hand in hand, creating impactful solutions for a better future. Our dedication to reducing food waste and promoting eco-friendly practices is exemplified through our groundbreaking product, Nutricycle",
         profileImageURL: ""
     },
     {
-        clientName: "Name of the client",
-        clientRole: "CEO, Company Name",
+        clientName: "Neha",
+        clientRole: "CEO, Beyond Media",
         clientInfo: "We envision a world where technology and substainability go hand in hand, creating impactful solutions for a better future. Our dedication to reducing food waste and promoting eco-friendly practices is exemplified through our groundbreaking product, Nutricycle",
         profileImageURL: ""
     }

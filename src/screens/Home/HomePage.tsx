@@ -33,15 +33,15 @@ const Home = (): JSX.Element => {
     navigate("/contact-us");
   }
   return (
-    <div className="bg-white">
+    <main className="bg-white">
       {/* Hero Section */}
       <section className="relative bg-heroBackground pt-20 px-10 md:px-24 ">
-        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center items-center pt-16 pb-20 ">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center items-center pt-8 sm:pt-16 pb-20 ">
           <div className="space-y-8  text-start md:w-[535px] z-10">
-            <h1 className="text-8xl font-bold bg-gradient-to-b from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-b from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none">
               {heroSectionData.title}
             </h1>
-            <p className="text-xl text-ParaGrey z-10">
+            <p className="text-lg sm:text-xl text-ParaGrey z-10">
               {heroSectionData.description}
             </p>
             <Button className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4" onClick={navigateToContactUsPage}>
@@ -81,8 +81,8 @@ const Home = (): JSX.Element => {
 
       {/* How We Deliver Section */}
 
-      <section className="py-16 px-10 md:px-24 bg-GhostWhite">
-        <h2 className="text-6xl font-bold text-center text-paragray mb-10">
+      <section className="py-10 sm:py-16 px-10 md:px-24 bg-GhostWhite">
+        <h2 className="text-5xl sm:text-6xl font-bold text-center text-paragray mb-10">
           {HomePageSectionsEnum.howWeDeliver}
         </h2>
 
@@ -90,12 +90,12 @@ const Home = (): JSX.Element => {
           {companyDeliveryStepsData.map((step, index) => (
             <div key={index}>
               {index % 2 === 0 ? (
-                <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div className="section-container flex flex-wrap lg:flex-nowrap gap-16">
                   <div className="space-y-8">
                     <div className="flex">
                       <img src={step.titleImage} alt={step.titleImage} />
                     </div>
-                    <p className="text-xl md:text-3xl text-ParaGrey md:w-[543px]">
+                    <p className="text-lg sm:text-xl md:text-3xl text-ParaGrey md:w-[543px]">
                       {step.description}
                     </p>
                   </div>
@@ -108,7 +108,7 @@ const Home = (): JSX.Element => {
                   </div>
                 </div>
               ) : (
-                <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div className="section-container flex flex-wrap lg:flex-nowrap gap-16">
                   <div className="m-auto lg:order-first order-last">
                     <img
                       src={step.image}
@@ -120,7 +120,7 @@ const Home = (): JSX.Element => {
                     <div className="flex">
                       <img src={step.titleImage} alt={step.titleImage} />
                     </div>
-                    <p className="text-xl md:text-3xl text-ParaGrey md:w-[543px]">
+                    <p className="text-lg sm:text-xl md:text-3xl text-ParaGrey md:w-[543px]">
                       {step.description}
                     </p>
                   </div>
@@ -132,24 +132,24 @@ const Home = (): JSX.Element => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="bg-white py-16 px-10">
-        <div className="container text-center">
-          <h2 className="text-6xl font-bold text-paragray mb-8">
+      <section className="bg-white py-10 sm:py-16 px-10">
+        <div className="section-container text-center">
+          <h2 className="text-5xl sm:text-6xl font-bold text-paragray mb-8">
             {HomePageSectionsEnum.whoWeAre}
           </h2>
-          <p className="text-xl md:text-2xl text-BrandBlueHeavy mb-16 max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-BrandBlueHeavy mb-16 max-w-4xl mx-auto">
             {whoWeAreSectionData.description}
           </p>
 
-          <div className="flex gap-20 md:gap-50 mb-16 justify-center content-center flex-wrap">
+          <div className="flex gap-10 sm:gap-20 md:gap-50 mb-10 sm:mb-16 justify-center content-center flex-wrap">
             {aboutSectionData.map((value) => (
               <div key={value.title} className="flex flex-col items-center ">
                 <img
                   src={value.image}
                   alt={value.title}
-                  className="w-24 h-24 mb-6"
+                  className="w-15 h-15 sm:w-24 sm:h-24 sm:mb-6"
                 />
-                <h3 className="text-3xl font-normal">{value.title}</h3>
+                <h3 className="text-xl sm:text-3xl font-normal">{value.title}</h3>
               </div>
             ))}
           </div>
@@ -166,9 +166,9 @@ const Home = (): JSX.Element => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-GhostWhite py-16 px-10 md:px-24">
+      <section className="bg-GhostWhite py-10 sm:py-16 px-10 md:px-24">
         <div className="section-container">
-          <h2 className="text-6xl font-bold text-paragray text-center mb-8">
+          <h2 className="text-5xl sm:text-6xl font-bold text-paragray text-center mb-8">
             {HomePageSectionsEnum.testimonials}
           </h2>
 
@@ -187,12 +187,12 @@ const Home = (): JSX.Element => {
                         <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent" />
                       </div>
                       <div className="p-3 md:p-10 space-y-8">
-                        <p className="text-2xl text-white  md:w-[430px]">
+                        <p className="text-lg sm:text-2xl text-white  md:w-[430px]">
                           {item.description}
                         </p>
-                        <div>
-                          <p className="text-4xl">{item.name}</p>
-                          <p className="text-4xl">{item.projectName}</p>
+                        <div className="p-3">
+                          <p className="text-3xl sm:text-4xl">{item.name}</p>
+                          <p className="text-3xl sm:text-4xl">{item.projectName}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -211,17 +211,17 @@ const Home = (): JSX.Element => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16 px-10 md:px-24">
         <div className="section-container text-center">
-          <h2 className="text-6xl font-bold text-ParaGrey mb-10">
+          <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-10">
             {HomePageSectionsEnum.startupPortFolio}
           </h2>
-          <div className="flex justify-center items-center gap-12 flex-wrap">
+          <div className="flex justify-center items-center gap-10 sm:gap-12 flex-wrap">
             {startupPortfolioData.map((project, index) => (
               <img
                 src={project}
                 alt="Startup-Portfolio-Projects"
-                className="lg:w-[250px] w-[200px]"
+                className="w-[180px] sm:w-[200px] lg:w-[250px] "
                 key={index}
               />
             ))}
@@ -230,24 +230,24 @@ const Home = (): JSX.Element => {
       </section>
 
       {/* Partners Section */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="section-container text-center">
-          <h2 className="text-6xl font-bold text-ParaGrey mb-10">
+          <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-10">
             {HomePageSectionsEnum.partners}
           </h2>
-          <div className="flex justify-center items-center gap-12 flex-wrap">
+          <div className="flex justify-center items-center gap-10 sm:gap-12 flex-wrap">
             {ourPartners.map((partner, index) => (
               <img
                 src={partner}
                 alt="Our-Partners"
-                className="lg:w-[250px] w-[200px]"
+                className="lg:w-[250px] sm:w-[200px] w-[180px]"
                 key={index}
               />
             ))}
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

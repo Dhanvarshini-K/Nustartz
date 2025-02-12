@@ -88,3 +88,58 @@ export const insightsEventsData: InsightsEventDataType[]= [
         image: `${IMAGES.eventImage1}`,
     }
 ];
+
+type InsightsNewsDataType = {
+    id?: number,
+    date?: string,
+    title?: string,
+    image?: string,
+}
+
+export const insightsNewsData: InsightsNewsDataType[] = [
+    {
+        id: 1,
+        date: "Wednesday, 09 - Oct 2024",
+        title: "NuStartz at IndiaFirst Startup Expo & Conclave 2024",
+        image: `${IMAGES.nustartzNewsImage1}`, 
+    },
+    {
+        id: 2,
+        date: "Wednesday, 09 - Oct 2024",
+        title: "NuStartz Wins Best Startup Knowledge Provider Award",
+        image: `${IMAGES.nustartzNewsImage2}`,
+    },
+    {
+        id: 3,
+        date: "Wednesday, 09 - Oct 2024",
+        title: "NuStartz Shines at the NY Tech Meetup",
+        image: `${IMAGES.nustartzNewsImage3}`,
+    }
+];
+
+type InsightsStartupNewsDataType = {
+    date?: string,
+    title?: string,
+    description?: string,
+}
+
+export const insightsStartupNewsData: InsightsStartupNewsDataType[] = [
+    {
+        date: "Wednesday, 09 - Oct 2024",
+        title: "Work Culture",
+        description:
+            "Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing",
+    },
+    {
+        date: "Wednesday, 09 - Oct 2024",
+        title: "News Headline",
+        description:
+            "Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing",
+    },
+    {
+        date: "Wednesday, 09 - Oct 2024",
+        title: "News Headline",
+        description:
+            "Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing",
+    },
+];
