@@ -13,7 +13,7 @@ export const AboutUs = (): JSX.Element => {
     <main className="bg-white">
       {/* Hero Section */}
       <section className="pt-20 bg-heroBackground px-10 md:px-24 relative">
-        <div className="section-container py-16">
+        <div className="section-container py-10 sm:py-16">
           <iframe
             src="https://www.youtube.com/embed/bzcN_dyizIE?si=FF1fXQfZGC0iv2hk"
             title="YouTube video player"
@@ -26,9 +26,9 @@ export const AboutUs = (): JSX.Element => {
       </section>
 
       {/* Board of Advisors */}
-      <section className="py-16 px-10 md:px-24">
+      <section className="py-10 sm:py-16 px-10 md:px-24">
         <div className="section-container ">
-          <h2 className="text-5xl font-bold text-ParaGrey text-center mb-10">
+          <h2 className="text-5xl font-bold text-ParaGrey text-center mb-5 sm:mb-10">
             {AboutPageSectionEnums.boardAdvisors}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -55,9 +55,9 @@ export const AboutUs = (): JSX.Element => {
       </section>
 
       {/* Founders */}
-      <section className="py-16 px-10 md:px-24">
+      <section className="py-10 sm:py-16 px-10 md:px-24">
         <div className="section-container">
-          <h2 className="text-5xl font-bold text-ParaGrey text-center mb-10">
+          <h2 className="text-5xl font-bold text-ParaGrey text-center mb-5 sm:mb-10">
             {AboutPageSectionEnums.founders}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[800px] mx-auto">
@@ -84,9 +84,9 @@ export const AboutUs = (): JSX.Element => {
       </section>
 
       {/* Leaders */}
-      <section className="py-16 px-10 md:px-24">
+      <section className="py-10 sm:py-16 px-10 md:px-24">
         <div className="section-container">
-          <h2 className="text-5xl font-bold text-ParaGrey text-center mb-10">
+          <h2 className="text-5xl font-bold text-ParaGrey text-center mb-5 sm:mb-10">
             {AboutPageSectionEnums.leaders}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[800px] mx-auto">

@@ -20,8 +20,8 @@ export const Review = (): JSX.Element => {
   return (
     <main>
       <section className="bg-heroBackground pt-20 px-10 md:px-24 ">
-        <div className="section-container py-8 sm:py-16">
-          <h1 className="text-5xl sm:text-8xl font-bold text-paragray mb-8">
+        <div className="section-container py-10 sm:py-16">
+          <h1 className="text-5xl sm:text-8xl font-bold text-paragray mb-4 sm:mb-8">
             {ReviewPageSectionsEnum.whoWeAre}
           </h1>
           <div className="bg-white p-3 rounded-xl">
@@ -37,13 +37,13 @@ export const Review = (): JSX.Element => {
         </div>
       </section>
 
-      <section className="px-10 md:px-24 py-8">
-        <p className="section-container text-xl text-ParaGrey">
+      <section className="px-10 md:px-24 pt-8">
+        <p className="section-container text-lg sm:text-xl text-ParaGrey">
           {reviewDescription}
         </p>
       </section>
 
-      <section className="bg-white py-16 px-10 md:px-24">
+      <section className="bg-white py-10 sm:py-16 px-10 md:px-24">
         <div className="section-container">
           <h2 className="text-5xl font-semibold text-paragray mb-10">
             {ReviewPageSectionsEnum.solutions}
@@ -129,8 +129,10 @@ export const Review = (): JSX.Element => {
           </Carousel>
         </div>
       </section>
-
-      <CallToAction />
+      
+      <div className="px-10 md:px-24">
+        <CallToAction />
+      </div>
     </main>
   );
 };

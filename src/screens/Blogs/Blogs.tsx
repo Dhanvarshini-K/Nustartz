@@ -16,11 +16,11 @@ export const Blogs = (): JSX.Element => {
       <div id="blogs">
         <Carousel>
           <div className=" flex justify-between md:items-center">
-            <h1 className="text-2xl sm:text-6xl font-bold text-DarkGrey mb-8">
+            <h1 className="text-2xl sm:text-6xl font-bold text-DarkGrey mb-4 sm:mb-8">
               {insightsTabData.blogsTabTitle}
             </h1>
-            {blogPostsData?.length > 3 ? (
-              <div className="flex mb-8">
+            {blogPostsData?.length > 1 ? (
+              <div className="flex mb-4 sm:mb-8">
                 <CarouselPrevious />
                 <CarouselNext />
               </div>
@@ -35,10 +35,10 @@ export const Blogs = (): JSX.Element => {
                 >
                   <Card className="relative rounded-xl border-none">
                     <div
-                      className={`w-[320px] h-[300px] rounded-2xl ${post.bgColor}`}
+                      className={`w-[248px] h-[270px] sm:w-[320px] sm:h-[300px] rounded-2xl ${post.bgColor}`}
                     ></div>
-                    <Card className="absolute w-72 h-32 start-8 -bottom-12 border-none">
-                      <CardContent className="p-6 bg-white rounded-2xl">
+                    <Card className="absolute w-56 h-20 sm:w-72 sm:h-32 sm:start-8 start-6 bottom-0 sm:-bottom-12 border-none">
+                      <CardContent className="p-3 sm:p-6 bg-white rounded-2xl">
                         <h3 className="text-2xl font-bold text-BrandBlueHeavy mb-1">
                           {post.title}
                         </h3>
