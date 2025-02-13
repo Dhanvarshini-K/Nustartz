@@ -10,6 +10,9 @@ import { ContactUs } from "./screens/ContactUs/ContactUs";
 import { StartupNews } from "./screens/StartUpNews.tsx/StartUpNews";
 import { ScrollToTop } from "./customHooks/ScrollToTop";
 import { Insights } from "./screens/Insights/Insights";
+import {NuStartzNews} from "./screens/NuStartzNews/NuStartzNews";
+import {NuStartzEvents} from "./screens/NuStartzEvents/NuStartzEvents";
+import {CaseStudy} from "./screens/CaseStudy/CaseStudy";
 
 const App = () => {
   return (
@@ -24,7 +27,10 @@ const App = () => {
           <Route path="/review" element={<Review />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/startup-news" element={<StartupNews />} />
+          <Route path="/case-study" element={<CaseStudy />} />
+          <Route path="/insights/startup-news" element={<StartupNews />} />
+          <Route path="/insights/nustartz-news" element={<NuStartzNews />} />
+          <Route path="/insights/nustartz-events" element={<NuStartzEvents />} />
         </Routes>
         <Footer />
       </Router>

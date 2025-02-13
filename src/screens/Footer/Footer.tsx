@@ -12,7 +12,7 @@ const socialMediaLinks: string[] = [
 const footerData: string[] = [
   "Website - www.nustartz.com",
   "Email - contact@NuStartz.com",
-  "Mobile - (+1) 732-983-1325",
+  "Mobile - (+1) 310-818-3415",
 ];
 
 const Footer = () => {

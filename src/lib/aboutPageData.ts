@@ -15,7 +15,7 @@ type BoardMembersDataType = {
 export const boardMembersData: BoardMembersDataType[] = [
     {
         name: "Ben John",
-        role: "Vice President, Microsoft AI Former CTO, Xandr",
+        role: "Vice President Microsoft AI, Former CTO Xandr",
         image: `${IMAGES.boardMember1}`,
     },
     {
