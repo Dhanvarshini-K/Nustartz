@@ -9,13 +9,17 @@ import {
 } from "../../components/ui/carousel";
 import IMAGES from "../../themes";
 import { useNavigate } from "react-router-dom";
-import { insightsNewsData, insightsStartupNewsData, insightsTabData } from "../../lib/insightsPageData";
+import { insightsNewsData, InsightsNewsDataType, insightsStartupNewsData, insightsTabData } from "../../lib/insightsPageData";
 import { CallToAction } from "../../components/ui/callToAction";
 export const News = (): JSX.Element => {
   const navigate = useNavigate();
   const navigateToStartUpNews = () => {
-    navigate("/startup-news");
+    navigate("/insights/startup-news");
   };
+
+  const navigateToNuStartzNews = (news: InsightsNewsDataType) => {
+    navigate("/insights/nustartz-news", { state: news });
+  }
   return (
       <main className="container px-4">
         <section className="flex flex-col gap-2 sm:gap-4">
@@ -37,7 +41,7 @@ export const News = (): JSX.Element => {
               <CarouselContent>
                 {insightsNewsData.map((news, index) => (
                   <CarouselItem key={index} className="xs:basis-1/2 sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
-                    <Card className="relative overflow-hidden rounded-xl">
+                    <Card className="relative overflow-hidden rounded-xl" onClick={() => navigateToNuStartzNews(news)}>
                       <img
                         src={news.image}
                         alt={news.title}

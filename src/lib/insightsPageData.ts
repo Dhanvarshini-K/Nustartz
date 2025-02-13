@@ -55,7 +55,7 @@ export const blogPostsData: BlogPostsDataType[] = [
     },
 ];
 
-type InsightsEventDataType = {
+export type InsightsEventDataType = {
     id?: number,
     title?: string,
     description?: string,
@@ -81,15 +81,9 @@ export const insightsEventsData: InsightsEventDataType[]= [
         description: "There are many variaties of passages of engineer",
         image: `${IMAGES.eventImage3}`,
     },
-    {
-        id: 4,
-        title: "Event 4",
-        description: "There are many variaties of passages of engineer",
-        image: `${IMAGES.eventImage1}`,
-    }
 ];
 
-type InsightsNewsDataType = {
+export type InsightsNewsDataType = {
     id?: number,
     date?: string,
     title?: string,
