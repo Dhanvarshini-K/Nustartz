@@ -26,7 +26,7 @@ export const Events = (): JSX.Element => {
       <Carousel>
         <div className="flex justify-between items-center">
           <div className="flex mb-8">
-            <h2 className="text-4xl font-medium text-BrandBlueHeavy">
+            <h2 className="text-5xl sm:text-6xl font-bold text-DarkGrey">
               {insightsTabData.eventsTabTitle}
             </h2>
           </div>
@@ -55,11 +55,11 @@ export const Events = (): JSX.Element => {
                       alt={event.title}
                       className="w-full h-[341px] object-cover rounded-t-lg"
                     />
-                    <div className="p-6 bg-white border-none rounded-b-lg h-[130px]">
-                      <h3 className="text-xl font-bold text-blue-900 mb-2">
+                    <div className="py-2 px-2 sm:p-6 bg-white border-none rounded-b-lg h-[130px]">
+                      <h3 className="text-xl font-bold text-BrandBlueHeavy mb-2">
                         {event.title}
                       </h3>
-                      <p className="text-gray-600">{event.description}</p>
+                      <p className="text-lg text-ParaGrey">{event.description}</p>
                     </div>
                   </CardContent>
                 </Card>

@@ -2,11 +2,14 @@ import { navigationLinks } from "../../lib/data";
 import { Link, useLocation } from "react-router-dom";
 import IMAGES from "../../themes";
 
-const socialMediaLinks: string[] = [
-  IMAGES.linkedIn,
-  IMAGES.twitter,
-  IMAGES.facebook,
-  IMAGES.youtube,
+const socialMediaLinks = [
+  {
+    image: IMAGES.linkedIn,
+    url: "https://www.linkedin.com/company/nustartz/posts/?feedView=all",
+  },
+  { image: IMAGES.instagram, url: "https://www.instagram.com/nustartz/" },
+  { image: IMAGES.facebook, url: "https://www.facebook.com/share/19xETUcAsU/" },
+  { image: IMAGES.youtube, url: "https://www.youtube.com/@NuStartz" },
 ];
 
 const footerData: string[] = [
@@ -47,13 +50,22 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-6 ml-4 sm:ml-0">
             <div className="space-y-2 flex items-start flex-col">
-              {footerData.map((data,index) => (
-                <p className="text-lg md:text-3xl text-Gray" key={index}>{data}</p>
+              {footerData.map((data, index) => (
+                <p className="text-lg md:text-3xl text-Gray" key={index}>
+                  {data}
+                </p>
               ))}
             </div>
             <div className="flex gap-4 ">
               {socialMediaLinks.map((link, index) => (
-                <img src={link} alt="SocialMedia" className="w-8" key={index} />
+                <a href={`${link.url}`} target="_blank" rel="noreferrer">
+                  <img
+                    src={link.image}
+                    alt="SocialMedia"
+                    className="w-8 h-8 rounded-lg"
+                    key={index}
+                  />
+                </a>
               ))}
             </div>
           </div>

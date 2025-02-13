@@ -15,44 +15,32 @@ export const insightsTabData = {
     eventsTabTitle: "Events",
 }
 
-type BlogPostsDataType = {
+export type BlogPostsDataType = {
     id?: number,
     title?: string,
     description?: string,
-    bgColor?: string,
+    image?: string;
 }
 
 export const blogPostsData: BlogPostsDataType[] = [
     {
         id: 1,
         title: "Blog 1",
-        description: "There are many variaties of passages of engineer",
-        bgColor: "bg-[#92e3a9]",
+        description: "The Significance of Building a Robust Team to Elevate Your Tech Startup's Value",
+        image: `${IMAGES.blogImage1}`,
     },
     {
         id: 2,
         title: "Blog 2",
-        description: "There are many variaties of passages of engineer",
-        bgColor: "bg-[#bcf9f8]",
+        description: "Elevate Your Startup Pitch with These Three Key Strategies",
+        image: `${IMAGES.blogImage2}`,
     },
     {
         id: 3,
         title: "Blog 3",
-        description: "There are many variaties of passages of engineer",
-        bgColor: "bg-[#f7d1d1]",
-    },
-    {
-        id: 4,
-        title: "Blog 4",
-        description: "There are many variaties of passages of engineer",
-        bgColor: "bg-[#92e3a9]",
-    },
-    {
-        id: 5,
-        title: "Blog 5",
-        description: "There are many variaties of passages of engineer",
-        bgColor: "bg-[#bcf9f8]",
-    },
+        description: "Elevate Your Tech Startup's Idea with Services",
+        image: `${IMAGES.blogImage3}`,
+    }
 ];
 
 export type InsightsEventDataType = {

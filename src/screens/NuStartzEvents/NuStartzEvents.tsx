@@ -9,7 +9,6 @@ export const NuStartzEvents = () => {
   const nustartzEventsArticleData = nuStartzEventsData.find(
     (event) => event.image === image
   );
-  console.log("nustartzEventsArticleData", nustartzEventsArticleData);
   return (
     <section className="bg-heroBackground pt-20 px-10 md:px-24">
       {nustartzEventsArticleData !== undefined ? (

@@ -7,10 +7,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../components/ui/carousel";
-import { blogPostsData, insightsTabData } from "../../lib/insightsPageData";
+import { blogPostsData, BlogPostsDataType, insightsTabData } from "../../lib/insightsPageData";
 import { CallToAction } from "../../components/ui/callToAction";
+import { useNavigate } from "react-router-dom";
 
 export const Blogs = (): JSX.Element => {
+  const navigate = useNavigate();
+
+  const navigateToNuStartzBlogs = (post: BlogPostsDataType) => {
+    navigate("/insights/nustartz-blogs", { state: post});
+  };
   return (
     <section>
       <div id="blogs">
@@ -26,27 +32,32 @@ export const Blogs = (): JSX.Element => {
               </div>
             ) : null}
           </div>
-          <div className="flex relative">
-            <CarouselContent carouselClassName="h-[400px]">
+          <div>
+            <CarouselContent>
               {blogPostsData.map((post, index) => (
                 <CarouselItem
                   key={index}
                   className="xs:basis-1/2 sm:basis-1/2 md:basis-1/2 lg:basis-1/3"
                 >
-                  <Card className="relative rounded-xl border-none">
-                    <div
-                      className={`w-[248px] h-[270px] sm:w-[320px] sm:h-[300px] rounded-2xl ${post.bgColor}`}
-                    ></div>
-                    <Card className="absolute w-56 h-20 sm:w-72 sm:h-32 sm:start-8 start-6 bottom-0 sm:-bottom-12 border-none">
-                      <CardContent className="p-3 sm:p-6 bg-white rounded-2xl">
-                        <h3 className="text-2xl font-bold text-BrandBlueHeavy mb-1">
+                  <Card
+                    className="border-none h-[400px] sm:h-[500px]"
+                    onClick={() => navigateToNuStartzBlogs(post)}
+                  >
+                    <CardContent className="p-3 sm:p-6 relative">
+                      <img
+                        src={post.image}
+                        alt="Blog-Image"
+                        className="w-[440px] sm:h-[400px] h-[300px] rounded-xl"
+                      />
+                      <div className="p-4 sm:p-6 bg-white rounded-xl shadow-sm h-[180px] absolute -bottom-10 w-[75%] end-3 sm:end-6">
+                        <h3 className="text-xl font-bold text-BrandBlueHeavy mb-1">
                           {post.title}
                         </h3>
-                        <p className="text-md text-NickelGrey">
+                        <p className="text-md sm:text-lg text-ParaGrey">
                           {post.description}
                         </p>
-                      </CardContent>
-                    </Card>
+                      </div>
+                    </CardContent>
                   </Card>
                 </CarouselItem>
               ))}

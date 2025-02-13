@@ -13,6 +13,7 @@ import { Insights } from "./screens/Insights/Insights";
 import {NuStartzNews} from "./screens/NuStartzNews/NuStartzNews";
 import {NuStartzEvents} from "./screens/NuStartzEvents/NuStartzEvents";
 import {CaseStudy} from "./screens/CaseStudy/CaseStudy";
+import {NuStartzBlogs} from "./screens/NuStartzBlogs/NuStartzBlogs";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/insights" element={<Insights />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/case-study" element={<CaseStudy />} />
+          <Route path="/insights/nustartz-blogs" element={<NuStartzBlogs />} />
           <Route path="/insights/startup-news" element={<StartupNews />} />
           <Route path="/insights/nustartz-news" element={<NuStartzNews />} />
           <Route path="/insights/nustartz-events" element={<NuStartzEvents />} />
