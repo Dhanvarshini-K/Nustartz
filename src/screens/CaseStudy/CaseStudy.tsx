@@ -9,12 +9,18 @@ export const CaseStudy = () => {
         </h1>
         {caseStudyData.sections.map((section, index) => (
           <div key={index}>
-            <h2 className="text-xl text-BrandPurple font-semibold">
+            <h2 className="text-2xl text-BrandPurple font-semibold my-4">
               {section.heading}
             </h2>
-            <p className="text-lg sm:text-xl text-ParaGrey pb-4 sm:pb-10">
-              {section.content}
-            </p>
+            {section.content.length > 1 ? (
+            <ul className="text-lg sm:text-xl text-ParaGrey">
+              {section.content.map((point, index) => (
+                <li key={index}>- {point}</li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-lg sm:text-xl text-ParaGrey">{section.content[0]}</p>
+          )}
           </div>
         ))}
       </div>
