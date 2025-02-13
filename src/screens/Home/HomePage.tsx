@@ -54,7 +54,7 @@ const Home = (): JSX.Element => {
             <img
               src={heroSectionData.heroImageUrl}
               alt="Hero"
-              className="md:w-[371px] lg:w-[400px] object-cover"
+              className="w-[300px] sm:w-[371px] lg:w-[400px] object-cover"
             />
 
             <Card className="absolute -left-10 -top-10 sm:top-6 sm:-left-24 lg:top-10 lg:-left-32 md:top-6 md:-left-32  xl:top-18 xl:-left-32 bg-[#90dbf6] border-8 border-white shadow-lg rounded-[30px] w-20 h-20 md:w-28 md:h-28 ">
@@ -65,13 +65,13 @@ const Home = (): JSX.Element => {
 
             <Card className="absolute -bottom-10 -left-8 sm:-bottom-10 sm:-left-10 lg:-bottom-10 lg:-left-10 md:-bottom-16 md:-left-14 xl:-bottom-5 xl:-left-10 bg-[#f8a8fe] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
               <CardContent className="p-1 md:p-5">
-                <RocketIcon className="h-20 w-20 text-white" />
+                <RocketIcon className="h-14 w-14 sm:h-20 sm:w-20 text-white" />
               </CardContent>
             </Card>
 
             <Card className="absolute -top-10 -right-6 sm:-top-10 sm:-right-10 lg:-top-12 lg:-right-10 md:-top-12 md:-right-20 xl:-right-0 xl:-top-10 bg-[#72dfb3] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
               <CardContent className="p-1 md:p-5">
-                <LeafIcon className="h-20 w-20 text-white" />
+                <LeafIcon className="h-14 w-14 sm:h-20 sm:w-20 text-white" />
               </CardContent>
             </Card>
           </div>

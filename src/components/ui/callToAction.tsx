@@ -18,6 +18,7 @@ export const CallToAction = () => {
           <Button
             size="lg"
             className=" bg-BrandPurple h-[68px] w-[68px] rounded-none"
+            disabled
           >
             <ArrowRight className="h-8 w-8" color="white" />
           </Button>

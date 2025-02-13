@@ -4,8 +4,8 @@ import IMAGES from "../../themes";
 
 const socialMediaLinks: string[] = [
   IMAGES.linkedIn,
-  IMAGES.facebook,
   IMAGES.twitter,
+  IMAGES.facebook,
   IMAGES.youtube,
 ];
 
@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
             <div className="flex gap-4 ">
               {socialMediaLinks.map((link, index) => (
-                <img src={link} alt="SocialMedia" className="w-8" key={index}/>
+                <img src={link} alt="SocialMedia" className="w-8" key={index} />
               ))}
             </div>
           </div>
