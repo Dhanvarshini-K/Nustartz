@@ -66,19 +66,19 @@ export const insightsEventsData: InsightsEventDataType[]= [
     {
         id: 1,
         title: "Event 1",
-        description: "There are many variaties of passages of engineer",
+        description: "Announcing Our New Office at Spazeone Arima Wakefield",
         image: `${IMAGES.eventImage1}`,
     },
     {
         id: 2,
         title: "Event 2",
-        description: "There are many variaties of passages of engineer",
+        description: "New NuStartz Office at Coimbatore",
         image: `${IMAGES.eventImage2}`,
     },
     {
         id: 3,
         title: "Event 3",
-        description: "There are many variaties of passages of engineer",
+        description: "Team Building & Fun at NuStartz Office",
         image: `${IMAGES.eventImage3}`,
     },
 ];

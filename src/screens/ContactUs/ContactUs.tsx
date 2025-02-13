@@ -74,7 +74,7 @@ export const ContactUs = (): JSX.Element => {
                 />
               </div>
 
-              <Button className="ml-auto flex items-center gap-4 p-6 sm:p-8 bg-BrandPurple text-white">
+              <Button className="ml-auto flex items-center gap-4 p-6 sm:p-8 bg-BrandPurple text-white" disabled>
                 <span className="text-lg sm:text-xl">{formLabels.buttonText}</span>
                 <ArrowRight className="w-[30px] h-[30px]" />
               </Button>
