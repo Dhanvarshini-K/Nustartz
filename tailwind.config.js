@@ -22,7 +22,8 @@ module.exports = {
         MineShaft: "#282828",
         heroBackground: "#F8FAFF",
         fog: "#DFD8FF",
-        inputBorder: "#B2B2B2"
+        inputBorder: "#B2B2B2",
+        contactButton: "#91DBF6",
       },
       fontSize: {
         "2xs": "0.625rem" /* 10px */,

@@ -86,12 +86,12 @@ const Home = (): JSX.Element => {
           {HomePageSectionsEnum.howWeDeliver}
         </h2>
 
-        <div className="space-y-10">
+        <div className="space-y-10 sm:space-y-20">
           {companyDeliveryStepsData.map((step, index) => (
             <div key={index}>
               {index % 2 === 0 ? (
                 <div className="section-container flex flex-wrap lg:flex-nowrap gap-16">
-                  <div className="space-y-8">
+                  <div className="space-y-8 w-[100%]">
                     <div className="flex">
                       <img src={step.titleImage} alt={step.titleImage} />
                     </div>
@@ -99,7 +99,7 @@ const Home = (): JSX.Element => {
                       {step.description}
                     </p>
                   </div>
-                  <div className="m-auto">
+                  <div className="w-[100%] flex justify-center lg:justify-end">
                     <img
                       src={step.image}
                       alt={step.image}
@@ -109,14 +109,14 @@ const Home = (): JSX.Element => {
                 </div>
               ) : (
                 <div className="section-container flex flex-wrap lg:flex-nowrap gap-16">
-                  <div className="m-auto lg:order-first order-last">
+                  <div className="m-auto lg:order-first order-last  w-[100%] flex justify-center lg:justify-start">
                     <img
                       src={step.image}
                       alt={step.image}
                       className="w-400px md:w-[420px]"
                     />
                   </div>
-                  <div className="space-y-8">
+                  <div className="space-y-8  w-[100%]">
                     <div className="flex">
                       <img src={step.titleImage} alt={step.titleImage} />
                     </div>
@@ -143,13 +143,13 @@ const Home = (): JSX.Element => {
 
           <div className="flex gap-10 sm:gap-20 md:gap-50 mb-10 sm:mb-16 justify-center content-center flex-wrap">
             {aboutSectionData.map((value) => (
-              <div key={value.title} className="flex flex-col items-center ">
+              <div key={value.title} className="flex flex-col items-center justify-center">
                 <img
                   src={value.image}
                   alt={value.title}
-                  className="w-15 h-15 sm:w-24 sm:h-24 sm:mb-6"
+                  className="w-15 h-15 sm:w-24 sm:h-24 transform transition duration-500 hover:scale-110 mb-2"
                 />
-                <h3 className="text-xl sm:text-3xl font-normal">{value.title}</h3>
+                <h3 className="text-xl sm:text-3xl font-normal ml-3">{value.title}</h3>
               </div>
             ))}
           </div>

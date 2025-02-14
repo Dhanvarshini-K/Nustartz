@@ -43,7 +43,7 @@ export const Blogs = (): JSX.Element => {
                     className="border-none h-[400px] sm:h-[500px]"
                     onClick={() => navigateToNuStartzBlogs(post)}
                   >
-                    <CardContent className="p-3 sm:p-6 relative">
+                    <CardContent className="p-3 sm:p-6 relative transform transition duration-500 hover:scale-95">
                       <img
                         src={post.image}
                         alt="Blog-Image"

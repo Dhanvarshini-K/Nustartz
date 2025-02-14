@@ -45,9 +45,9 @@ export const News = (): JSX.Element => {
                       <img
                         src={news.image}
                         alt={news.title}
-                        className="w-[600px] h-[440px] object-cover"
+                        className="w-[600px] h-[440px] object-cover transform transition duration-500 hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/90">
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/90 pointer-events-none">
                         <CardContent className="absolute bottom-0 p-6 text-white">
                           <p className="mb-2">{news.date}</p>
                           <h3 className="text-xl font-medium">{news.title}</h3>
@@ -83,7 +83,7 @@ export const News = (): JSX.Element => {
                     onClick={navigateToStartUpNews}
                   >
                     <div
-                      className="h-[440px] bg-cover bg-center"
+                      className="h-[440px] bg-cover bg-center transform transition duration-500 hover:scale-105"
                       style={{
                         backgroundImage: `url(${IMAGES.startUpNewsImage})`,
                       }}

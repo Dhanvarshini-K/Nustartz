@@ -37,7 +37,7 @@ export const Services = (): JSX.Element => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="pt-20 bg-heroBackground px-10 md:px-24 relative">
+      <section className="pt-20 bg-heroBackground bg-opacity-40 px-10 md:px-24 relative">
         <div className="section-container flex flex-wrap lg:flex-nowrap justify-between gap-8 py-10 sm:py-16">
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-ParaGrey leading-tight z-10">
             {ServicePageSectionsEnum.heroTitle}

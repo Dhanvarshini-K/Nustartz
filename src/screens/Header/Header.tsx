@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -8,10 +8,12 @@ import {
 import { navigationLinks } from "../../lib/data";
 import { Menu, X } from "lucide-react";
 import IMAGES from "../../themes";
+import { Button } from "../../components/ui/button";
 
 const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <header className="fixed top-0 w-full bg-white shadow-md z-50">
@@ -28,6 +30,18 @@ const Header = () => {
             {navigationLinks.map((link) => {
               const isActive = location.pathname === link.url;
 
+              if (link.title.includes("Contact us")) {
+                return (
+                  <Button
+                    className={`bg-contactButton text-xl ${
+                      isActive ? "text-BrandPurple font-semibold" : "text-white"
+                    }`}
+                    onClick={() => navigate("/contact-us")}
+                  >
+                    {link.title}
+                  </Button>
+                );
+              }
               return (
                 <NavigationMenuItem key={link.title}>
                   <Link
@@ -58,6 +72,17 @@ const Header = () => {
         <div className="md:hidden bg-white shadow-md py-4 absolute top-full left-0 w-full flex flex-col items-center">
           {navigationLinks.map((link) => {
             const isActive = location.pathname === link.url;
+
+            if (link.title.includes("Contact us")) {
+              return (
+                <Button
+                  className="text-white bg-contactButton text-xl"
+                  onClick={() => navigate("/contact-us")}
+                >
+                  {link.title}
+                </Button>
+              );
+            }
 
             return (
               <Link

@@ -16,20 +16,13 @@ export enum HomePageSectionsEnum {
 
 export const heroSectionData: HeroDataType = {
   title: "Crafting the future of Startups.",
-  description: `At NuStartz, we are your comprehensive partner in building and
-                scaling your tech startup from the ground up—all the way to your
-                Initial Public Offering (IPO). Our full suite of services is
-                designed to support every aspect of your business, helping you
-                transform your ideas into a thriving enterprise.`,
+  description: `At NuStartz, we turn your startup vision into reality. From building high-performing teams to developing market-ready products, we provide the resources and expertise you need to grow and succeed. Let’s craft your success story together.`,
   buttonText: "GET IN TOUCH",
   heroImageUrl: `${IMAGES.craftingImage}`,
 };
 
 export const whoWeAreSectionData = {
-  description: `At NuStartz, we're not just a team—we're your growth partners. From
-              tech and branding to marketing and beyond, we deliver solutions that
-              drive measurable results, empowering startups to scale and succeed.
-              Discover how we fuel your journey!`,
+  description: `NuStartz is your one-stop partner for startup success. We’re a committed, resilient team dedicated to meeting every need of your growing business—from development and tech support to marketing, branding, and beyond. Our mission is to provide startups with the expertise, resources, and hands-on support they need to thrive at every stage. By integrating seamlessly into your vision, we empower you to focus on what you do best: innovating and scaling your ideas. At NuStartz, we’re here to fuel your journey from launch to lasting impact.`,
   buttonText: "Learn More",
 };
 
