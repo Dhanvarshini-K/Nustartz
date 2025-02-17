@@ -37,6 +37,7 @@ const Header = () => {
                       isActive ? "text-BrandPurple font-semibold" : "text-white"
                     }`}
                     onClick={() => navigate("/contact-us")}
+                    key={link.title}
                   >
                     {link.title}
                   </Button>

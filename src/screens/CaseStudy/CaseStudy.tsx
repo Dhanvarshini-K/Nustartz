@@ -1,6 +1,10 @@
-import { caseStudyData } from "../../lib/caseStudyData";
+import { useLocation } from "react-router-dom";
+import { caseStudyData1, caseStudyData2 } from "../../lib/caseStudyData";
 
 export const CaseStudy = () => {
+  const {state} = useLocation();
+
+  const caseStudyData = state === "01" ? caseStudyData1 : caseStudyData2;
   return (
     <section className="bg-heroBackground pt-20 px-10 md:px-24">
       <div className="section-container py-10 sm:py-16">

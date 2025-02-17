@@ -31,8 +31,8 @@ export const Services = (): JSX.Element => {
     navigate("/contact-us");
   }
 
-  const navigateToCaseStudy = () => {
-    navigate("/case-study");
+  const navigateToCaseStudy = (caseStudyNumber: string) => {
+    navigate("/case-study", {state: caseStudyNumber});
   }
   return (
     <div className="bg-white">
@@ -156,7 +156,7 @@ export const Services = (): JSX.Element => {
                     </p>
                     <p className="text-lg sm:text-xl text-ParaGrey">{study.description}</p>
                   </div>
-                  <Button className="w-fit bg-BrandPurple text-white mt-5" onClick={navigateToCaseStudy}>
+                  <Button className="w-fit bg-BrandPurple text-white mt-5" onClick={() => navigateToCaseStudy(study.number)}>
                     {TextEnum.seeMore}
                     <ArrowRight />
                   </Button>
