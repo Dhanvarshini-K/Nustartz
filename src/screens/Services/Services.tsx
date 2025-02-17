@@ -68,13 +68,13 @@ export const Services = (): JSX.Element => {
             collapsible
             className="w-full max-w-7xl ml-auto"
           >
-            {serviceSectionData.map((service) => (
-              <AccordionItem key={service} value={service}>
+            {serviceSectionData.map((service, index) => (
+              <AccordionItem key={index} value={service.title}>
                 <AccordionTrigger className="text-xl sm:text-3xl text-Grey py-4 sm:py-6">
-                  {service}
+                  {service.title}
                 </AccordionTrigger>
                 <AccordionContent className="text-Grey text-md sm:text-lg">
-                  {ServicePageSectionsEnum.triggeredAccordionText}
+                  {service.description}
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -151,12 +151,12 @@ export const Services = (): JSX.Element => {
               <Card key={index} className="bg-Lavender bg-opacity-60 p-4 sm:p-8">
                 <CardContent className="flex flex-col gap-8">
                   <div>
-                    <p className="text-3xl mb-2 text-ParaGrey">
+                    <p className="text-3xl mb-2 text-ParaGrey font-semibold">
                       {TextEnum.caseStudy} ({study.number})
                     </p>
-                    <p className="text-md text-ParaGrey">{study.description}</p>
+                    <p className="text-lg sm:text-xl text-ParaGrey">{study.description}</p>
                   </div>
-                  <Button className="w-fit bg-BrandPurple text-white mt-5 sm:mt-10" onClick={navigateToCaseStudy}>
+                  <Button className="w-fit bg-BrandPurple text-white mt-5" onClick={navigateToCaseStudy}>
                     {TextEnum.seeMore}
                     <ArrowRight />
                   </Button>

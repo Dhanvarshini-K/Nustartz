@@ -15,14 +15,57 @@ export enum ServicePageSectionsEnum {
   techStartupContent = `Ready to elevate your startup? Contact us today!`,
 }
 
-export const serviceSectionData: string[] = [
-  "Team Development",
-  "Dedicated Office Spaces",
-  "Transparent Pricing Structure",
-  "Product Development",
-  "IT Support",
-  "Marketing",
-  "From Ideas to IPO",
+type ServiceSectionType = {
+  title: string;
+  description: string;
+}
+
+export const serviceSectionData: ServiceSectionType[] = [
+  {
+    title: "Team Development",
+    description:
+      "We help you build a world-class team aligned with your startup’s mission. Our recruitment experts find top talent, and we provide leadership training to foster innovation and collaboration.",
+  },
+  {
+    title: "Dedicated Office Space",
+    description:
+      "We offer flexible office solutions, from co-working spaces to private suites, tailored to your startup’s needs, and scalable as your business grows.",
+  },
+  {
+    title: "Transparent Pricing Structure",
+    description:
+      "Our clear, upfront pricing ensures you know your expenses from day one, helping you plan confidently without hidden fees.",
+  },
+  {
+    title: "Product Development",
+    description:
+      "From concept to launch, we transform your ideas into market-ready products. Our agile approach ensures rapid development and alignment with your target audience.",
+  },
+  {
+    title: "IT Support",
+    description:
+      "Our 24/7 IT support covers system setup, network security, and troubleshooting, ensuring smooth operations while you focus on growing your business.",
+  },
+  {
+    title: "Marketing",
+    description:
+      "We create data-driven marketing strategies to increase brand visibility, from social media and SEO to content marketing, driving engagement and growth.",
+  },
+  {
+    title: "Sales",
+    description:
+      "Our sales strategies boost revenue through lead generation, CRM integration, and ongoing sales training to close deals efficiently.",
+  },
+  {
+    title: "Branding",
+    description:
+      "We develop compelling branding that reflects your startup’s identity, from design to messaging, ensuring your brand leaves a lasting impression.",
+  },
+  {
+    title: "From Ideas to IPO",
+    description:
+      "We support you from startup to scale-up, providing guidance for funding, growth, and preparing for an IPO, ensuring long-term success.",
+  }
 ];
 
 interface TechFusionDataType {
@@ -85,11 +128,11 @@ export const caseStudiesSectionData: CaseStudySectionDataType[] = [
   {
     number: "01",
     description:
-      "At NuStartz, we understand that starting and scaling a tech business requires the right resources, guidance, and support. That's why we offer additional services, including financial management, legal consulting, business strategy, customer support solutions, and more",
+      "BeyondMedia - Revolutionizing Enterprise Search for Beyond Media Solutions with NuStartz",
   },
   {
     number: "02",
     description:
-      "At NuStartz, we understand that starting and scaling a tech business requires the right resources, guidance, and support. That's why we offer additional services, including financial management, legal consulting, business strategy, customer support solutions, and more",
+      "CareerJourney - Bridging the Gap Between Aspiration and Achievement",
   },
 ];
