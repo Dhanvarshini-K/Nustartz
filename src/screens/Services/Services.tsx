@@ -89,9 +89,14 @@ export const Services = (): JSX.Element => {
             <h2 className="text-5xl font-semibold text-ParaGrey">
               {ServicePageSectionsEnum.techStartup}
             </h2>
-            <p className="text-lg sm:text-xl leading-relaxed text-Gray">
+            <p className="text-lg sm:text-xl text-Gray">
               {ServicePageSectionsEnum.techStartupDescription}
             </p>
+
+            <p className="text-lg sm:text-xl text-Gray">
+              {ServicePageSectionsEnum.techStartupDescription2}
+            </p>
+
             <p className="text-lg sm:text-xl text-Gray font-bold">
               {ServicePageSectionsEnum.techStartupContent}
             </p>

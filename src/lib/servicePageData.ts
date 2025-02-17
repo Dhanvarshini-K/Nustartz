@@ -8,17 +8,15 @@ export enum ServicePageSectionsEnum {
   triggeredAccordionText = `We help you assemble a world-class team that aligns with your startup's mission and values.
     Our recruitment experts identify top talent, ensuring your team is equipped with the skills and motivation needed to
     drive your business forward. Plus, we offer leadership training and team-building activities to foster a culture of innovation and collaboration`,
-  techStartupDescription = `"Experience a workspace that feels like home for your brand. At
-                NuStartz, we offer fully-branded, exclusive office spaces
-                tailored to your team's unique needs—blending professionalism,
-                focus, and collaboration. Ready to create a seamless extension of your company's identity?"`,
+  techStartupDescription = `At NuStartz, we understand that starting and scaling a tech business requires the right resources, guidance, and support. That’s why we offer additional services, including financial management, legal consulting, business strategy, customer support solutions, and more. With our comprehensive approach, we make sure every part of your business is covered so you can focus on what matters most—growing your startup.`,
+  techStartupDescription2 = `Let us be your one-stop shop for success, from ideas to IPO. Whether you're just starting out or ready to scale, Nustartz has the tools, expertise, and resources to help your startup thrive.`,
   techStartupContent = `Ready to elevate your startup? Contact us today!`,
 }
 
 type ServiceSectionType = {
   title: string;
   description: string;
-}
+};
 
 export const serviceSectionData: ServiceSectionType[] = [
   {
@@ -65,7 +63,7 @@ export const serviceSectionData: ServiceSectionType[] = [
     title: "From Ideas to IPO",
     description:
       "We support you from startup to scale-up, providing guidance for funding, growth, and preparing for an IPO, ensuring long-term success.",
-  }
+  },
 ];
 
 interface TechFusionDataType {
