@@ -7,7 +7,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../components/ui/carousel";
-import { blogPostsData, BlogPostsDataType, insightsTabData } from "../../lib/insightsPageData";
+import {
+  blogPostsData,
+  BlogPostsDataType,
+  insightsTabData,
+} from "../../lib/insightsPageData";
 import { CallToAction } from "../../components/ui/callToAction";
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +19,7 @@ export const Blogs = (): JSX.Element => {
   const navigate = useNavigate();
 
   const navigateToNuStartzBlogs = (post: BlogPostsDataType) => {
-    navigate("/insights/nustartz-blogs", { state: post});
+    navigate("/insights/nustartz-blogs", { state: post });
   };
   return (
     <section>
@@ -47,7 +51,7 @@ export const Blogs = (): JSX.Element => {
                       <img
                         src={post.image}
                         alt="Blog-Image"
-                        className="w-[440px] sm:h-[400px] h-[300px] rounded-xl"
+                        className="w-[400px] h-[380px] object-cover rounded-xl"
                       />
                       <div className="p-4 sm:p-6 bg-white rounded-xl shadow-sm h-[180px] absolute -bottom-10 w-[75%] end-3 sm:end-6">
                         <h3 className="text-xl font-bold text-BrandBlueHeavy mb-1">
