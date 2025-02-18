@@ -1,27 +1,36 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
-import { Input } from "../../components/ui/input";
 import { JSX } from "react";
-import { Textarea } from "../../components/ui/textarea";
+import { FormInput } from "../../components/ui/formInput";
+import { useForm } from "react-hook-form";
+import { emailRegex } from "../../lib/regex";
+import { PhoneInput } from "../../components/ui/phoneInput";
 
 const contactUsFormData = {
   contactTitle: "Contact our team",
   contactDescription: `We'd love to hear about your vision and challenges. Share your
               details below, and let's explore how we can help your startup scale, innovate,
               and succeed.`,
+  contactButtonText: "SEND MESSAGE",
 };
 
-const formLabels = {
-  firstName: "First Name",
-  lastName: "Last Name",
-  email: "Email Address",
-  phoneNumber: "Phone Number",
-  message: "Message",
-  buttonText: "SEND MESSAGE",
+type FormFieldType = {
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  phoneNumber?: string;
+  message?: string;
 };
 
 export const ContactUs = (): JSX.Element => {
+  const { handleSubmit, reset, control, setValue } = useForm<FormFieldType>();
+
+  const onSubmit = (data: FormFieldType) => {
+    console.log("Form submitted:", data);
+    reset();
+  };
+
   return (
     <div>
       <section className="bg-heroBackground pt-20 px-10 md:px-24">
@@ -35,49 +44,69 @@ export const ContactUs = (): JSX.Element => {
 
           <Card className="w-full sm:max-w-[776px] sm:mx-auto bg-transparent border-none shadow-none">
             <CardContent className="space-y-4 sm:space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-1 sm:space-y-3">
-                  <label className="text-xl sm:text-3xl font-medium text-black">
-                    {formLabels.firstName}
-                  </label>
-                  <Input placeholder="First name" className="h-[40px] sm:h-[84px] text-lg sm:text-xl"/>
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="space-y-4 sm:space-y-8"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <FormInput
+                    label="First Name"
+                    placeholder="First Name"
+                    type="text"
+                    name="firstName"
+                    control={control}
+                    isRequired
+                  />
+                  <FormInput
+                    label="Last Name"
+                    placeholder="Last Name"
+                    type="text"
+                    name="lastName"
+                    control={control}
+                    isRequired
+                  />
                 </div>
-                <div className="space-y-1 sm:space-y-3">
-                  <label className="text-xl sm:text-3xl font-medium text-black">
-                    {formLabels.lastName}
-                  </label>
-                  <Input placeholder="Last name" className="h-[40px] sm:h-[84px] text-lg sm:text-xl"/>
-                </div>
-              </div>
 
-              <div className="space-y-1 sm:space-y-3">
-                <label className="text-xl sm:text-3xl font-medium text-black">
-                  {formLabels.email}
-                </label>
-                <Input placeholder="you@company.com" type="email" className="h-[40px] sm:h-[84px] text-lg sm:text-xl"/>
-              </div>
-
-              <div className="space-y-1 sm:space-y-3">
-                <label className="text-xl sm:text-3xl font-medium text-black">
-                  {formLabels.phoneNumber}
-                </label>
-                <Input placeholder="+1 (000)-000-0000" type="tel" className="h-[40px] sm:h-[84px] text-lg sm:text-xl"/>
-              </div>
-
-              <div className="space-y-1 sm:space-y-3">
-                <label className="text-xl sm:text-3xl font-medium text-black">
-                  {formLabels.message}
-                </label>
-                <Textarea
-                  placeholder="Leave us a message"
-                  className="h-[243px] text-2xl p-6 rounded-[10px] border-2 border-inputBorder"
+                <FormInput
+                  control={control}
+                  label="Email Address"
+                  placeholder="Email Address"
+                  type="email"
+                  name="email"
+                  isRequired
+                  rules={{
+                    pattern: {
+                      value: emailRegex,
+                      message: "Email is not valid",
+                    },
+                  }}
                 />
-              </div>
 
-              <Button className="ml-auto flex items-center gap-4 p-6 sm:p-8 bg-BrandPurple text-white" disabled>
-                <span className="text-lg sm:text-xl">{formLabels.buttonText}</span>
-                <ArrowRight className="w-[30px] h-[30px]" />
-              </Button>
+                <PhoneInput
+                  control={control}
+                  name="phoneNumber"
+                  placeholder="Phone Number"
+                  isRequired
+                  label="Phone Number"
+                  setValue={setValue}
+                />
+
+                <FormInput
+                  control={control}
+                  name="textArea"
+                  label="Message"
+                  type="textarea"
+                  placeholder="Leave us a message"
+                  isRequired
+                />
+
+                <Button className="ml-auto flex items-center gap-4 p-6 sm:p-8 bg-BrandPurple text-white">
+                  <span className="text-lg sm:text-xl">
+                    {contactUsFormData.contactButtonText}
+                  </span>
+                  <ArrowRight className="w-[30px] h-[30px]" />
+                </Button>
+              </form>
             </CardContent>
           </Card>
         </div>

@@ -14,6 +14,10 @@ const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const handleMobileMenu = () => {
+    navigate("/contact-us");
+    setIsMenuOpen(false);
+  }
 
   return (
     <header className="fixed top-0 w-full bg-white shadow-md z-50">
@@ -33,8 +37,8 @@ const Header = () => {
               if (link.title.includes("Contact us")) {
                 return (
                   <Button
-                    className={`bg-contactButton text-xl ${
-                      isActive ? "text-BrandPurple font-semibold" : "text-white"
+                    className={`bg-BrandPurple text-xl ${
+                      isActive ? "text-GhostWhite font-semibold" : "text-white"
                     }`}
                     onClick={() => navigate("/contact-us")}
                     key={link.title}
@@ -77,8 +81,8 @@ const Header = () => {
             if (link.title.includes("Contact us")) {
               return (
                 <Button
-                  className="text-white bg-contactButton text-xl"
-                  onClick={() => navigate("/contact-us")}
+                  className="text-white bg-BrandPurple text-xl"
+                  onClick={handleMobileMenu}
                 >
                   {link.title}
                 </Button>

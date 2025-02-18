@@ -30,7 +30,7 @@ const Footer = () => {
             className="h-16 sm:mb-4"
           />
         </div>
-        <div className="flex gap-5 sm:gap-10 md:gap-28 flex-wrap lg:pr-60">
+        <div className="flex gap-5 sm:gap-10 md:gap-28 flex-wrap">
           <div className="space-y-2 sm:space-y-4 ">
             {navigationLinks.map((link) => {
               const isActive = location.pathname === link.url;
@@ -51,14 +51,19 @@ const Footer = () => {
           <div className="flex flex-col gap-6 ml-4 sm:ml-0">
             <div className="space-y-2 flex items-start flex-col">
               {footerData.map((data, index) => (
-                <p className="text-lg md:text-3xl text-Gray" key={index}>
+                <p className="text-lg md:text-xl text-Gray" key={index}>
                   {data}
                 </p>
               ))}
             </div>
             <div className="flex gap-4 ">
               {socialMediaLinks.map((link, index) => (
-                <a href={`${link.url}`} target="_blank" rel="noreferrer" key={index}>
+                <a
+                  href={`${link.url}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={index}
+                >
                   <img
                     src={link.image}
                     alt="SocialMedia"
