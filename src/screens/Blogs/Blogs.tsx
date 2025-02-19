@@ -44,7 +44,7 @@ export const Blogs = (): JSX.Element => {
                   className="xs:basis-1/2 sm:basis-1/2 md:basis-1/2 lg:basis-1/3"
                 >
                   <Card
-                    className="border-none h-[400px] sm:h-[500px]"
+                    className="border-none h-[500px]"
                     onClick={() => navigateToNuStartzBlogs(post)}
                   >
                     <CardContent className="p-3 sm:p-6 relative transform transition duration-500 hover:scale-95">
