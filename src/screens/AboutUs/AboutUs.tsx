@@ -7,6 +7,7 @@ import {
   leadersData,
 } from "../../lib/aboutPageData";
 import { CallToAction } from "../../components/ui/callToAction";
+import IMAGES from "../../themes";
 
 export const AboutUs = (): JSX.Element => {
   return (
@@ -43,9 +44,22 @@ export const AboutUs = (): JSX.Element => {
                   className="w-full rounded-t-[20px]"
                 />
                 <CardContent className="p-4 md:p-6">
-                  <h3 className="text-2xl font-bold text-LightPurple">
-                    {member.name}
-                  </h3>
+                  <div className="flex items-center gap-4">
+                    <h3 className="text-2xl font-bold text-LightPurple">
+                      {member.name}
+                    </h3>
+                    <a
+                      href={`${member.linkedInUrl}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={`${IMAGES.linkedIn}`}
+                        alt="linkedIn"
+                        className="w-5 opacity-50"
+                      />
+                    </a>
+                  </div>
                   <p className="text-md text-NickelGrey">{member.role}</p>
                 </CardContent>
               </Card>
@@ -72,9 +86,22 @@ export const AboutUs = (): JSX.Element => {
                   className="w-full rounded-t-[20px]"
                 />
                 <CardContent className="p-4 md:p-6 border-none">
-                  <h3 className="text-2xl font-bold text-LightPurple">
-                    {founder.name}
-                  </h3>
+                  <div className="flex items-center gap-4">
+                    <h3 className="text-2xl font-bold text-LightPurple">
+                      {founder.name}
+                    </h3>
+                    <a
+                      href={`${founder.linkedInUrl}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={`${IMAGES.linkedIn}`}
+                        alt="linkedIn"
+                        className="w-5 opacity-50"
+                      />
+                    </a>
+                  </div>
                   <p className="text-md text-NickelGrey">{founder.role}</p>
                 </CardContent>
               </Card>
@@ -89,7 +116,7 @@ export const AboutUs = (): JSX.Element => {
           <h2 className="text-5xl font-bold text-ParaGrey text-center mb-5 sm:mb-10">
             {AboutPageSectionEnums.leaders}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[800px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[800px] mx-auto">
             {leadersData.map((leader) => (
               <Card
                 key={leader.name}

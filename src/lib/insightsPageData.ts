@@ -108,20 +108,20 @@ type InsightsStartupNewsDataType = {
 export const insightsStartupNewsData: InsightsStartupNewsDataType[] = [
     {
         date: "Wednesday, 09 - Oct 2024",
-        title: "Work Culture",
+        title: "DeepSeek's Cybersecurity Challenge",
         description:
-            "Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing",
+            "Chinese AI startup DeepSeek has temporarily paused new user registrations due to a cyberattack.",
     },
     {
         date: "Wednesday, 09 - Oct 2024",
-        title: "News Headline",
+        title: "Anthropic Secures $4B Investment from Amazon",
         description:
-            "Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing",
+            "In a major development, AI safety and research startup Anthropic has raised an additional $4 billion from Amazon.",
     },
     {
         date: "Wednesday, 09 - Oct 2024",
-        title: "News Headline",
+        title: "Salva Health of Startup Battlefield",
         description:
-            "Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing",
+            "Congratulations to Salva Health, the winner of Startup Battlefield at Disrupt 2024! Salva Health impressed the judges.",
     },
 ];
