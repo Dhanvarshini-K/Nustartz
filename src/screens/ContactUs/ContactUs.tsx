@@ -71,7 +71,6 @@ export const ContactUs = (): JSX.Element => {
                   control={control}
                   label="Email Address"
                   placeholder="Email Address"
-                  type="email"
                   name="email"
                   isRequired
                   rules={{

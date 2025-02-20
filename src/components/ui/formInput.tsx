@@ -14,7 +14,7 @@ interface FormInputProps {
 
 export const FormInput = ({
   label,
-  type,
+  type = "text",
   placeholder,
   className,
   name,
@@ -34,17 +34,18 @@ export const FormInput = ({
         ...rules,
       }}
       render={({ field: { value, ...rest }, fieldState: { error } }) => (
-        <div className="flex flex-col gap-2">
-          <label className="text-xl sm:text-3xl font-medium text-black">
+        <div className="flex flex-col gap-1">
+          <label className="text-xl font-medium text-black">
             {label}
             {isRequired ? (
               <span className="text-danger font-bold ml-2">*</span>
             ) : null}
           </label>
-          {type === "textarea" ? (
+
+          {type === "textarea" && (
             <textarea
               className={cn(
-                "flex placeholder:text-muted-foreground focus-visible:outline-none bg-transparent min-h-[80px] text-lg sm:text-xl w-full p-6 rounded-[10px] border-2 border-inputBorder resize-none",
+                "flex placeholder:text-muted-foreground focus-visible:outline-none bg-transparent min-h-[80px] text-lg sm:text-xl w-full p-3 rounded-[10px] border-2 border-inputBorder resize-none",
                 error?.message ? "border-danger" : "border-inputBorder",
                 className
               )}
@@ -52,7 +53,9 @@ export const FormInput = ({
               placeholder={placeholder}
               {...rest}
             />
-          ) : (
+          )}
+
+          {type === "text" && (
             <input
               type={type}
               value={value || ""}

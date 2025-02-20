@@ -99,7 +99,7 @@ export const insightsNewsData: InsightsNewsDataType[] = [
     }
 ];
 
-type InsightsStartupNewsDataType = {
+export type InsightsStartupNewsDataType = {
     date?: string,
     title?: string,
     description?: string,
@@ -120,7 +120,7 @@ export const insightsStartupNewsData: InsightsStartupNewsDataType[] = [
     },
     {
         date: "Wednesday, 09 - Oct 2024",
-        title: "Salva Health of Startup Battlefield",
+        title: "Salva Health Wins Startup Battlefield",
         description:
             "Congratulations to Salva Health, the winner of Startup Battlefield at Disrupt 2024! Salva Health impressed the judges.",
     },

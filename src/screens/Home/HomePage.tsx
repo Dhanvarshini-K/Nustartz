@@ -1,4 +1,4 @@
-import React, { JSX } from "react";
+import React, { JSX, useState } from "react";
 import { ArrowRight, DollarSignIcon, LeafIcon, RocketIcon } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
@@ -21,17 +21,23 @@ import {
   whoWeAreSectionData,
 } from "../../lib/homePageData";
 import IMAGES from "../../themes";
+import { StartupPitchDeckForm } from "../../components/ui/startupPitchDeckForm";
 
 const Home = (): JSX.Element => {
+  const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/review");
   };
 
-  const navigateToContactUsPage = () => {
-    navigate("/contact-us");
-  }
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
   return (
     <main className="bg-white">
       {/* Hero Section */}
@@ -44,7 +50,10 @@ const Home = (): JSX.Element => {
             <p className="text-lg sm:text-xl text-ParaGrey z-10">
               {heroSectionData.description}
             </p>
-            <Button className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4" onClick={navigateToContactUsPage}>
+            <Button
+              className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4"
+              onClick={handleOpenModal}
+            >
               {heroSectionData.buttonText}
               <ArrowRight className="h-6 w-6" />
             </Button>
@@ -76,8 +85,18 @@ const Home = (): JSX.Element => {
             </Card>
           </div>
         </div>
-      <img src={IMAGES.homeHeroSectionBackground} alt="Hero-Background" className="object-cover w-full h-full absolute inset-0 opacity-40" />
+        <img
+          src={IMAGES.homeHeroSectionBackground}
+          alt="Hero-Background"
+          className="object-cover w-full h-full absolute inset-0 opacity-40"
+        />
       </section>
+
+      {openModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <StartupPitchDeckForm handleCloseModal={handleCloseModal} />
+        </div>
+      )}
 
       {/* How We Deliver Section */}
 
@@ -143,13 +162,18 @@ const Home = (): JSX.Element => {
 
           <div className="flex gap-10 sm:gap-20 md:gap-50 mb-10 sm:mb-16 justify-center content-center flex-wrap">
             {aboutSectionData.map((value) => (
-              <div key={value.title} className="flex flex-col items-center justify-center">
+              <div
+                key={value.title}
+                className="flex flex-col items-center justify-center"
+              >
                 <img
                   src={value.image}
                   alt={value.title}
                   className="w-15 h-15 sm:w-24 sm:h-24 transform transition duration-500 hover:scale-110 mb-2"
                 />
-                <h3 className="text-xl sm:text-3xl font-normal ml-3">{value.title}</h3>
+                <h3 className="text-xl sm:text-3xl font-normal ml-3">
+                  {value.title}
+                </h3>
               </div>
             ))}
           </div>
@@ -192,7 +216,9 @@ const Home = (): JSX.Element => {
                         </p>
                         <div className="p-3">
                           <p className="text-3xl sm:text-4xl">{item.name}</p>
-                          <p className="text-3xl sm:text-4xl">{item.projectName}</p>
+                          <p className="text-3xl sm:text-4xl">
+                            {item.projectName}
+                          </p>
                         </div>
                       </div>
                     </CardContent>

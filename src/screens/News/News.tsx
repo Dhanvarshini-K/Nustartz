@@ -13,13 +13,14 @@ import {
   insightsNewsData,
   InsightsNewsDataType,
   insightsStartupNewsData,
+  InsightsStartupNewsDataType,
   insightsTabData,
 } from "../../lib/insightsPageData";
 import { CallToAction } from "../../components/ui/callToAction";
 export const News = (): JSX.Element => {
   const navigate = useNavigate();
-  const navigateToStartUpNews = () => {
-    navigate("/insights/startup-news");
+  const navigateToStartUpNews = (news: InsightsStartupNewsDataType) => {
+    navigate("/insights/startup-news", { state: news });
   };
 
   const navigateToNuStartzNews = (news: InsightsNewsDataType) => {
@@ -96,7 +97,7 @@ export const News = (): JSX.Element => {
               >
                 <Card
                   className="relative overflow-hidden rounded-xl cursor-pointer"
-                  onClick={navigateToStartUpNews}
+                  onClick={() => navigateToStartUpNews(news)}
                 >
                   <div
                     className="h-[440px] bg-cover bg-center transform transition duration-500 hover:scale-105"

@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import React, { JSX } from "react";
+import React, { JSX, useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -17,23 +17,29 @@ import {
   techFusionHubSectionData,
 } from "../../lib/servicePageData";
 import { useNavigate } from "react-router-dom";
+import { StartupPitchDeckForm } from "../../components/ui/startupPitchDeckForm";
 
 enum TextEnum {
   getInTouch = "GET IN TOUCH",
   seeMore = "SEE MORE",
-  caseStudy = "CASE STUDY"
+  caseStudy = "CASE STUDY",
 }
 
 export const Services = (): JSX.Element => {
+  const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
 
-  const navigateToContactUsPage = () => {
-    navigate("/contact-us");
-  }
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
 
   const navigateToCaseStudy = (caseStudyNumber: string) => {
-    navigate("/case-study", {state: caseStudyNumber});
-  }
+    navigate("/case-study", { state: caseStudyNumber });
+  };
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -42,10 +48,18 @@ export const Services = (): JSX.Element => {
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-ParaGrey leading-tight z-10">
             {ServicePageSectionsEnum.heroTitle}
           </h1>
-          <img src={IMAGES.serviceImage} alt="Hero illustration" className="z-10"/>
+          <img
+            src={IMAGES.serviceImage}
+            alt="Hero illustration"
+            className="z-10"
+          />
         </div>
 
-        <img src={IMAGES.serviceHeroSectionBackground} alt="Hero-Background" className="object-fill w-full h-full absolute inset-0 opacity-40"/>
+        <img
+          src={IMAGES.serviceHeroSectionBackground}
+          alt="Hero-Background"
+          className="object-fill w-full h-full absolute inset-0 opacity-40"
+        />
       </section>
 
       {/* Services Section */}
@@ -100,7 +114,10 @@ export const Services = (): JSX.Element => {
             <p className="text-lg sm:text-xl text-Gray font-bold">
               {ServicePageSectionsEnum.techStartupContent}
             </p>
-            <Button className="w-fit bg-BrandPurple text-white font-normal mt-5  px-8 py-6" onClick={navigateToContactUsPage}>
+            <Button
+              className="w-fit bg-BrandPurple text-white font-normal mt-5  px-8 py-6"
+              onClick={handleOpenModal}
+            >
               {TextEnum.getInTouch}
               <ArrowRight />
             </Button>
@@ -111,6 +128,12 @@ export const Services = (): JSX.Element => {
           </div>
         </div>
       </section>
+
+      {openModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <StartupPitchDeckForm handleCloseModal={handleCloseModal} />
+        </div>
+      )}
 
       {/* Tech Fusion Hub Section */}
       <section className="bg-GhostWhite px-10 md:px-24 py-10 sm:py-16">
@@ -126,7 +149,9 @@ export const Services = (): JSX.Element => {
           {techFusionHubSectionData.map((service) => (
             <div key={service.category} className="flex flex-col gap-4 px-4">
               <div className="flex gap-5 sm:justify-between items-center">
-                <span className="text-xl sm:text-2xl font-semibold">{service.number}</span>
+                <span className="text-xl sm:text-2xl font-semibold">
+                  {service.number}
+                </span>
                 <h3 className="text-xl sm:text-3xl font-semibold text-black">
                   {service.category}
                 </h3>
@@ -153,15 +178,23 @@ export const Services = (): JSX.Element => {
 
           <div className="flex flex-wrap lg:flex-nowrap gap-8 ">
             {caseStudiesSectionData.map((study, index) => (
-              <Card key={index} className="bg-Lavender bg-opacity-60 p-4 sm:p-8">
+              <Card
+                key={index}
+                className="bg-Lavender bg-opacity-60 p-4 sm:p-8"
+              >
                 <CardContent className="flex flex-col gap-8">
                   <div>
                     <p className="text-3xl mb-2 text-ParaGrey font-semibold">
                       {TextEnum.caseStudy} ({study.number})
                     </p>
-                    <p className="text-lg sm:text-xl text-ParaGrey">{study.description}</p>
+                    <p className="text-lg sm:text-xl text-ParaGrey">
+                      {study.description}
+                    </p>
                   </div>
-                  <Button className="w-fit bg-BrandPurple text-white mt-5" onClick={() => navigateToCaseStudy(study.number)}>
+                  <Button
+                    className="w-fit bg-BrandPurple text-white mt-5"
+                    onClick={() => navigateToCaseStudy(study.number)}
+                  >
                     {TextEnum.seeMore}
                     <ArrowRight />
                   </Button>
