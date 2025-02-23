@@ -17,6 +17,10 @@ export const StartupNews = (): JSX.Element => {
           <h1 className="pt-10 md:pt-16 text-4xl sm:text-6xl font-bold">
             {startUpNewsArticleData?.title}
           </h1>
+          <img
+            src={`${startUpNewsArticleData.image}`}
+            alt="StartupArticleImage"
+          />
           <div className="py-10">
             {startUpNewsArticleData?.contents?.map((content, index) => (
               <p className="text-lg sm:text-xl py-2 text-ParaGrey" key={index}>

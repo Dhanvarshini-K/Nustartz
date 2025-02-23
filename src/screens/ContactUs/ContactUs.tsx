@@ -33,7 +33,7 @@ export const ContactUs = (): JSX.Element => {
 
   return (
     <div>
-      <section className="bg-heroBackground pt-20 px-10 md:px-24">
+      <section className="bg-heroBackground pt-20 px-10 md:px-24 bg-gradient-to-r from-gray-100 to-purple-100">
         <div className="section-container px-0 md:px-10 lg:px-24 py-10 sm:py-16">
           <h1 className="text-center text-5xl sm:text-8xl font-bold text-DarkGrey mb-4 sm:mb-8">
             {contactUsFormData.contactTitle}
@@ -63,7 +63,6 @@ export const ContactUs = (): JSX.Element => {
                     type="text"
                     name="lastName"
                     control={control}
-                    isRequired
                   />
                 </div>
 
@@ -96,7 +95,6 @@ export const ContactUs = (): JSX.Element => {
                   label="Message"
                   type="textarea"
                   placeholder="Leave us a message"
-                  isRequired
                 />
 
                 <Button className="ml-auto flex items-center gap-4 p-6 sm:p-8 bg-BrandPurple text-white">

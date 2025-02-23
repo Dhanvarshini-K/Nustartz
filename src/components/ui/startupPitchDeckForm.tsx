@@ -32,7 +32,7 @@ const selectOptions = [
   { label: "Initial Public Offering", value: "Initial Public Offering" },
 ];
 
-export const StartupPitchDeckForm = ({ handleCloseModal }: any) => {
+export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
   const { control, handleSubmit, reset } = useForm<FormDataType>();
 
   const onSubmit = (data: FormDataType) => {
@@ -41,10 +41,18 @@ export const StartupPitchDeckForm = ({ handleCloseModal }: any) => {
     handleCloseModal();
   };
   return (
-    <section className="max-w-[500px] bg-heroBackground p-10 rounded-lg shadow-lg relative">
+    <section
+      className={`w-[300px] sm:w-[500px] bg-heroBackground p-10 rounded-lg shadow-lg relative max-h-[500px] overflow-y-auto 
+      transform transition-all duration-500 ease-in-out 
+      ${
+        openModal
+          ? "opacity-100 scale-100 translate-y-0"
+          : "opacity-0 scale-95 translate-y-[-50px]"
+      } bg-gradient-to-r from-gray-100 to-purple-100`}
+    >
       <button
         onClick={handleCloseModal}
-        className="absolute top-4 right-4 hover:text-ParaGrey text-NickelGrey"
+        className="absolute top-4 right-4 hover:text-BrandPurple text-NickelGrey"
       >
         <X className="w-6 h-6" />
       </button>

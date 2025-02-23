@@ -102,6 +102,7 @@ export const insightsNewsData: InsightsNewsDataType[] = [
 export type InsightsStartupNewsDataType = {
     date?: string,
     title?: string,
+    image?: string,
     description?: string,
 }
 
@@ -109,18 +110,21 @@ export const insightsStartupNewsData: InsightsStartupNewsDataType[] = [
     {
         date: "Wednesday, 09 - Oct 2024",
         title: "DeepSeek's Cybersecurity Challenge",
+        image: `${IMAGES.startupNewsImage1}`,
         description:
             "Chinese AI startup DeepSeek has temporarily paused new user registrations due to a cyberattack.",
     },
     {
         date: "Wednesday, 09 - Oct 2024",
         title: "Anthropic Secures $4B Investment from Amazon",
+        image: `${IMAGES.startupNewsImage2}`,
         description:
             "In a major development, AI safety and research startup Anthropic has raised an additional $4 billion from Amazon.",
     },
     {
         date: "Wednesday, 09 - Oct 2024",
         title: "Salva Health Wins Startup Battlefield",
+        image: `${IMAGES.startupNewsImage3}`,
         description:
             "Congratulations to Salva Health, the winner of Startup Battlefield at Disrupt 2024! Salva Health impressed the judges.",
     },

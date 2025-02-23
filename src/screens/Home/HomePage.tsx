@@ -3,13 +3,13 @@ import { ArrowRight, DollarSignIcon, LeafIcon, RocketIcon } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { useNavigate } from "react-router-dom";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "../../components/ui/carousel";
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "../../components/ui/carousel";
 import {
   aboutSectionData,
   companyDeliveryStepsData,
@@ -17,7 +17,7 @@ import {
   HomePageSectionsEnum,
   ourPartners,
   startupPortfolioData,
-  testimonialsData,
+  // testimonialsData,
   whoWeAreSectionData,
 } from "../../lib/homePageData";
 import IMAGES from "../../themes";
@@ -92,11 +92,16 @@ const Home = (): JSX.Element => {
         />
       </section>
 
-      {openModal && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <StartupPitchDeckForm handleCloseModal={handleCloseModal} />
-        </div>
-      )}
+      <div
+        className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-500 ${
+          openModal ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        <StartupPitchDeckForm
+          handleCloseModal={handleCloseModal}
+          openModal={openModal}
+        />
+      </div>
 
       {/* How We Deliver Section */}
 
@@ -190,7 +195,7 @@ const Home = (): JSX.Element => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-GhostWhite py-10 sm:py-16 px-10 md:px-24">
+      {/* <section className="bg-GhostWhite py-10 sm:py-16 px-10 md:px-24">
         <div className="section-container">
           <h2 className="text-5xl sm:text-6xl font-bold text-paragray text-center mb-8">
             {HomePageSectionsEnum.testimonials}
@@ -234,7 +239,7 @@ const Home = (): JSX.Element => {
             ) : null}
           </Carousel>
         </div>
-      </section>
+      </section> */}
 
       {/* Portfolio Section */}
       <section className="py-10 sm:py-16 px-10 md:px-24">

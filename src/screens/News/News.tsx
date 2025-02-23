@@ -7,7 +7,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../components/ui/carousel";
-import IMAGES from "../../themes";
 import { useNavigate } from "react-router-dom";
 import {
   insightsNewsData,
@@ -102,12 +101,12 @@ export const News = (): JSX.Element => {
                   <div
                     className="h-[440px] bg-cover bg-center transform transition duration-500 hover:scale-105"
                     style={{
-                      backgroundImage: `url(${IMAGES.startUpNewsImage})`,
+                      backgroundImage: `url(${news.image})`,
                     }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-b from-[#007AFF]/30 to-[#004999]/100"></div>
 
-                    <div className="absolute top-4 left-4  text-black px-3 py-1 rounded-md">
+                    <div className="absolute top-4 left-4  text-white px-3 py-1 rounded-md">
                       <p className="text-sm font-medium">{news.date}</p>
                     </div>
 

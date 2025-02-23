@@ -1,11 +1,15 @@
+import IMAGES from "../themes";
+
 type StartupNewsDataType = {
   title: string;
+  image?: string;
   contents: string[];
 };
 
 export const startUpNewsData: StartupNewsDataType[] = [
   {
     title: "DeepSeek's Cybersecurity Challenge",
+    image: `${IMAGES.startupNewsImage1}`,
     contents: [
       `Deepseek, a rapidly growing AI startup, has temporarily halted new user signups following a cybersecurity incident. The company, known for its advanced AI-powered search and data analytics tools, announced on January 27, 2025, that it is investigating a security breach affecting its platform. According to TechCrunch, Deepseek’s security team identified unauthorized access to certain internal systems, prompting immediate action to safeguard user data and platform integrity.`,
       `While the company has not disclosed the full extent of the breach, it has assured existing users that their data remains secure and that proactive security measures are being implemented.`,
@@ -16,6 +20,7 @@ export const startUpNewsData: StartupNewsDataType[] = [
   },
   {
     title: "Anthropic Secures $4B Investment from Amazon",
+    image: `${IMAGES.startupNewsImage2}`,
     contents: [
       `Anthropic, a leading AI research company, has secured an additional $4 billion in funding from Amazon, further solidifying its position as a major player in the AI industry. The investment, announced on November 22, 2024, marks a significant expansion of Anthropic’s collaboration with Amazon Web Services (AWS), which will now serve as its primary cloud partner.`,
       `According to TechCrunch, this funding round underscores Amazon’s commitment to advancing AI technologies and integrating them into its cloud infrastructure. With this latest investment, Anthropic aims to accelerate the development of its AI models while leveraging AWS’s computing power and security features.`,
@@ -26,6 +31,7 @@ export const startUpNewsData: StartupNewsDataType[] = [
   },
   {
     title: "Salva Health Wins Startup Battlefield",
+    image: `${IMAGES.startupNewsImage3}`,
     contents: [
       `Salva Health took the spotlight at Disrupt 2024 by winning the Startup Battlefield, marking a breakthrough for healthcare accessibility.Competing against top startups, Salva Health captivated judges with its mission to close healthcare gaps through technology.Their platform combines telemedicine, AI-driven diagnostics, and an easy-to-use mobile interface to connect underserved communities with essential healthcare services, addressing a global need for equitablemedical care.`,
       `What truly set Salva Health apart was its scalable,sustainable model, designed to make healthcare accessible where traditional systems often fall short. By partnering with local healthcare providers and NGOs, Salva Health has built a robust solution that adapts to specific regional needs, ensuring both quality and reach. This innovative approach provides a blueprint for the future of health tech, showing how technology can drive social impact while remaining scalable and sustainable. Their success highlights the rising Salva Health Wins Startup Battlefield at Disrupt 2024,Pioneering Accessible Healthcare Salva Health took the spotlight at Disrupt 2024 by winning the Startup Battlefield, marking a breakthrough for healthcare accessibility. Competing against top startups, Salva Health captivated judges with its mission to close healthcare gaps through technology.`, 

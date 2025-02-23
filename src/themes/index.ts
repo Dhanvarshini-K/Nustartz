@@ -57,6 +57,16 @@ const IMAGES = {
     blogImage2: require('../assets/NustartzBlogImage2.png'),
     blogImage3: require('../assets/NustartzBlogImage3.png'),
     instagram: require('../assets/Instagram.jpg'),
+    techDayLogo: require('../assets/TechdayLogo.png'),
+    pulseLogo: require('../assets/PulseLogo.png'),
+    chatFinLogo: require('../assets/ChatFinLogo.png'),
+    yottaasysLogo: require('../assets/YottaasysLogo.png'),
+    careerJourneyLogo: require('../assets/CareerJourneyLogo.png'),
+    intentXLogo: require('../assets/IntentXLogo.png'),
+    mamentaLogo: require('../assets/MamentaLogo.png'),
+    startupNewsImage1: require('../assets/StartupNewsImage1.png'),
+    startupNewsImage2: require('../assets/StartupNewsImage2.png'),
+    startupNewsImage3: require('../assets/StartupNewsImage3.png'),
 }
 
 

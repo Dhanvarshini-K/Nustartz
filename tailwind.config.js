@@ -23,7 +23,7 @@ module.exports = {
         heroBackground: "#F8FAFF",
         fog: "#DFD8FF",
         inputBorder: "#B2B2B2",
-        contactButton: "#91DBF6",
+        contactButton: "#187DF7",
         danger: "#EF4444"
       },
       fontSize: {

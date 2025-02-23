@@ -101,9 +101,16 @@ export const startupPortfolioData: string[] = [
   IMAGES.beyondMediaLogo,
   IMAGES.teledoctorLogo,
   IMAGES.glgLogo,
+  IMAGES.chatFinLogo,
+  IMAGES.intentXLogo,
+  IMAGES.careerJourneyLogo,
+  IMAGES.mamentaLogo,
+  IMAGES.yottaasysLogo,
 ];
 export const ourPartners: string[] = [
   IMAGES.microsoftLogo,
   IMAGES.koreAILogo,
   IMAGES.snapLogicLogo,
+  IMAGES.techDayLogo,
+  IMAGES.pulseLogo
 ];

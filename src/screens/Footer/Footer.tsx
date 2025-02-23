@@ -67,7 +67,7 @@ const Footer = () => {
                   <img
                     src={link.image}
                     alt="SocialMedia"
-                    className="w-8 h-8 rounded-lg"
+                    className="w-8 h-8 rounded-lg transform transition duration-500 hover:scale-110"
                     key={index}
                   />
                 </a>

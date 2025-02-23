@@ -56,7 +56,7 @@ export const AboutUs = (): JSX.Element => {
                       <img
                         src={`${IMAGES.linkedIn}`}
                         alt="linkedIn"
-                        className="w-5 opacity-50"
+                        className="w-5 opacity-50 hover:bg-contactButton transform transition duration-500 hover:scale-110"
                       />
                     </a>
                   </div>
@@ -98,7 +98,7 @@ export const AboutUs = (): JSX.Element => {
                       <img
                         src={`${IMAGES.linkedIn}`}
                         alt="linkedIn"
-                        className="w-5 opacity-50"
+                        className="w-5 opacity-50 hover:bg-contactButton transform transition duration-500 hover:scale-110"
                       />
                     </a>
                   </div>

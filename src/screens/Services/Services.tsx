@@ -45,7 +45,7 @@ export const Services = (): JSX.Element => {
       {/* Hero Section */}
       <section className="pt-20 bg-heroBackground bg-opacity-40 px-10 md:px-24 relative">
         <div className="section-container flex flex-wrap lg:flex-nowrap justify-between gap-8 py-10 sm:py-16">
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-ParaGrey leading-tight z-10">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-ParaGrey leading-tight z-10 md:pt-16">
             {ServicePageSectionsEnum.heroTitle}
           </h1>
           <img
@@ -129,11 +129,16 @@ export const Services = (): JSX.Element => {
         </div>
       </section>
 
-      {openModal && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <StartupPitchDeckForm handleCloseModal={handleCloseModal} />
-        </div>
-      )}
+      <div
+        className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-500 ${
+          openModal ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        <StartupPitchDeckForm
+          handleCloseModal={handleCloseModal}
+          openModal={openModal}
+        />
+      </div>
 
       {/* Tech Fusion Hub Section */}
       <section className="bg-GhostWhite px-10 md:px-24 py-10 sm:py-16">
