@@ -36,7 +36,7 @@ export const AboutUs = (): JSX.Element => {
             {boardMembersData.map((member) => (
               <Card
                 key={member.name}
-                className="rounded-[20px] shadow-md border-none"
+                className="bg-white rounded-[20px] shadow-md border-none"
               >
                 <img
                   src={member.image}
@@ -56,7 +56,7 @@ export const AboutUs = (): JSX.Element => {
                       <img
                         src={`${IMAGES.linkedIn}`}
                         alt="linkedIn"
-                        className="w-5 opacity-50 hover:bg-contactButton transform transition duration-500 hover:scale-110"
+                        className="w-5 opacity-50 hover:bg-contactButton transform transition duration-500 hover:scale-110 hover:rounded-sm"
                       />
                     </a>
                   </div>
@@ -78,7 +78,7 @@ export const AboutUs = (): JSX.Element => {
             {foundersData.map((founder) => (
               <Card
                 key={founder.name}
-                className="rounded-[20px] shadow-md border-none"
+                className="bg-white rounded-[20px] shadow-md border-none"
               >
                 <img
                   src={founder.image}
@@ -98,7 +98,7 @@ export const AboutUs = (): JSX.Element => {
                       <img
                         src={`${IMAGES.linkedIn}`}
                         alt="linkedIn"
-                        className="w-5 opacity-50 hover:bg-contactButton transform transition duration-500 hover:scale-110"
+                        className="w-5 opacity-50 hover:bg-contactButton transform transition duration-500 hover:scale-110 hover:rounded-sm"
                       />
                     </a>
                   </div>
@@ -120,7 +120,7 @@ export const AboutUs = (): JSX.Element => {
             {leadersData.map((leader) => (
               <Card
                 key={leader.name}
-                className="rounded-[20px] shadow-md border-none"
+                className="bg-white rounded-[20px] shadow-md border-none"
               >
                 <img
                   src={leader.image}
