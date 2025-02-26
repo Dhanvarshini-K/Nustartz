@@ -10,7 +10,7 @@ export const CallToAction = () => {
         <div className="bg-BrandPurple text-white p-4 lg:p-10 flex items-center justify-center text-2xl sm:text-5xl font-bold w-full lg:w-[400px]">
           {insightsTabData.blogsCTATitle}
         </div>
-        <div className="flex flex-1 items-center bg-gradient-to-r from-gray-100 to-purple-100 p-4 px-4 lg:px-20">
+        <div className="flex flex-1 items-center bg-gradient-to-r from-[#d2f1fb] to-[#fbd7fb] p-4 px-4 lg:px-20">
           <Input
             placeholder="Enter your email address"
             className="bg-white text-md sm:text-2xl h-[30px] sm:h-[68px] px-2 sm:px-6 rounded-none"

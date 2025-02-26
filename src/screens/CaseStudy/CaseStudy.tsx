@@ -6,7 +6,7 @@ export const CaseStudy = () => {
 
   const caseStudyData = state === "01" ? caseStudyData1 : caseStudyData2;
   return (
-    <section className="bg-heroBackground pt-20 px-10 md:px-24">
+    <section className="bg-custom-gradient pt-20 px-10 md:px-24">
       <div className="section-container py-10 sm:py-16">
         <h1 className="text-3xl sm:text-6xl font-bold mb-5 sm:mb-10">
           {caseStudyData.title}

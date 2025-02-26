@@ -10,7 +10,7 @@ export const NuStartzBlogs = () => {
     (blog) => blog.image === image
   );
   return (
-    <section className="bg-heroBackground pt-20 px-10 md:px-24">
+    <section className="bg-custom-gradient pt-20 px-10 md:px-24">
       {nuStartzBlogsArticleData !== undefined ? (
         <div className="section-container py-10 sm:py-16 space-y-4 sm:space-y-8">
           <h1 className="text-5xl sm:text-6xl text-DarkGrey font-bold">
@@ -31,9 +31,11 @@ export const NuStartzBlogs = () => {
 
           <div>
             {nuStartzBlogsArticleData.keypoints.map((point, index) => (
-                <ol key={index}>
-                    <li className="text-lg sm:text-xl text-ParaGrey py-2">{index+1}. {point}</li>
-                </ol>
+              <ol key={index}>
+                <li className="text-lg sm:text-xl text-ParaGrey py-2">
+                  {index + 1}. {point}
+                </li>
+              </ol>
             ))}
           </div>
 

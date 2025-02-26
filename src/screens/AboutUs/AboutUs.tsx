@@ -11,7 +11,7 @@ import IMAGES from "../../themes";
 
 export const AboutUs = (): JSX.Element => {
   return (
-    <main className="bg-white">
+    <main className="bg-custom-gradient">
       {/* Hero Section */}
       <section className="pt-20 bg-heroBackground px-10 md:px-24 relative">
         <div className="section-container py-10 sm:py-16">

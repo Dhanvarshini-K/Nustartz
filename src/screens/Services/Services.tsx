@@ -41,7 +41,7 @@ export const Services = (): JSX.Element => {
     navigate("/case-study", { state: caseStudyNumber });
   };
   return (
-    <div className="bg-white">
+    <div className="bg-custom-gradient">
       {/* Hero Section */}
       <section className="pt-20 bg-heroBackground bg-opacity-40 px-10 md:px-24 relative">
         <div className="section-container flex flex-wrap lg:flex-nowrap justify-between gap-8 py-10 sm:py-16">
@@ -63,7 +63,7 @@ export const Services = (): JSX.Element => {
       </section>
 
       {/* Services Section */}
-      <section className="bg-GhostWhite py-10 sm:py-16 px-10 md:px-24 ">
+      <section className="py-10 sm:py-16 px-10 md:px-24 ">
         <div className="section-container flex flex-col lg:flex-row justify-between gap-5 sm:gap-10">
           <div className="w-[100%] sm:w-[50%]">
             <div className="flex items-center gap-4">
@@ -141,7 +141,7 @@ export const Services = (): JSX.Element => {
       </div>
 
       {/* Tech Fusion Hub Section */}
-      <section className="bg-GhostWhite px-10 md:px-24 py-10 sm:py-16">
+      <section className="px-10 md:px-24 py-10 sm:py-16">
         <div className="section-container">
           <h2 className="text-5xl font-semibold text-ParaGrey mb-5 sm:mb-10">
             {ServicePageSectionsEnum.techFusion}

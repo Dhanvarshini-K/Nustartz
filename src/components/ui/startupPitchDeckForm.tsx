@@ -48,7 +48,7 @@ export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
         openModal
           ? "opacity-100 scale-100 translate-y-0"
           : "opacity-0 scale-95 translate-y-[-50px]"
-      } bg-gradient-to-r from-gray-100 to-purple-100`}
+      } bg-gradient-to-r from-[#d2f1fb] to-[#fbd7fb]`}
     >
       <button
         onClick={handleCloseModal}

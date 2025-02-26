@@ -2,7 +2,6 @@ import React, { JSX, useState } from "react";
 import { ArrowRight, DollarSignIcon, LeafIcon, RocketIcon } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
-import { useNavigate } from "react-router-dom";
 // import {
 //   Carousel,
 //   CarouselContent,
@@ -22,14 +21,10 @@ import {
 } from "../../lib/homePageData";
 import IMAGES from "../../themes";
 import { StartupPitchDeckForm } from "../../components/ui/startupPitchDeckForm";
+import Marquee from "react-fast-marquee";
 
 const Home = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/review");
-  };
 
   const handleOpenModal = () => {
     setOpenModal(true);
@@ -39,7 +34,7 @@ const Home = (): JSX.Element => {
     setOpenModal(false);
   };
   return (
-    <main className="bg-white">
+    <main className="bg-custom-gradient">
       {/* Hero Section */}
       <section className="relative bg-heroBackground pt-20 px-10 md:px-24 ">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center items-center pt-8 sm:pt-16 pb-20 ">
@@ -156,7 +151,7 @@ const Home = (): JSX.Element => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="bg-white py-10 sm:py-16 px-10">
+      <section className="py-10 sm:py-16 px-10">
         <div className="section-container text-center">
           <h2 className="text-5xl sm:text-6xl font-bold text-paragray mb-8">
             {HomePageSectionsEnum.whoWeAre}
@@ -183,10 +178,7 @@ const Home = (): JSX.Element => {
             ))}
           </div>
           <div className="flex justify-center">
-            <Button
-              className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4"
-              onClick={handleClick}
-            >
+            <Button className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4">
               {whoWeAreSectionData.buttonText}
               <ArrowRight className="h-6 w-6" />
             </Button>
@@ -242,40 +234,44 @@ const Home = (): JSX.Element => {
       </section> */}
 
       {/* Portfolio Section */}
-      <section className="py-10 sm:py-16 px-10 md:px-24">
+      <section className="pt-10 sm:pt-16">
         <div className="section-container text-center">
-          <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-10">
+          <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-5">
             {HomePageSectionsEnum.startupPortFolio}
           </h2>
-          <div className="flex justify-center items-center gap-10 sm:gap-12 flex-wrap">
-            {startupPortfolioData.map((project, index) => (
-              <img
-                src={project}
-                alt="Startup-Portfolio-Projects"
-                className="w-[180px] sm:w-[200px] lg:w-[250px] "
-                key={index}
-              />
-            ))}
-          </div>
+          <Marquee pauseOnHover={true}>
+            <div className="flex justify-center items-center gap-10 sm:gap-12 flex-wrap">
+              {startupPortfolioData.map((project, index) => (
+                <img
+                  src={project}
+                  alt="Startup-Portfolio-Projects"
+                  className="sm:w-[200px] w-[180px]"
+                  key={index}
+                />
+              ))}
+            </div>
+          </Marquee>
         </div>
       </section>
 
       {/* Partners Section */}
       <section className="py-10 sm:py-16">
         <div className="section-container text-center">
-          <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-10">
+          <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-5">
             {HomePageSectionsEnum.partners}
           </h2>
-          <div className="flex justify-center items-center gap-10 sm:gap-12 flex-wrap">
-            {ourPartners.map((partner, index) => (
-              <img
-                src={partner}
-                alt="Our-Partners"
-                className="lg:w-[250px] sm:w-[200px] w-[180px]"
-                key={index}
-              />
-            ))}
-          </div>
+          <Marquee pauseOnHover={true}>
+            <div className="flex justify-center items-center gap-10 sm:gap-12 flex-wrap">
+              {ourPartners.map((partner, index) => (
+                <img
+                  src={partner}
+                  alt="Our-Partners"
+                  className="sm:w-[200px] w-[180px]"
+                  key={index}
+                />
+              ))}
+            </div>
+          </Marquee>
         </div>
       </section>
     </main>
