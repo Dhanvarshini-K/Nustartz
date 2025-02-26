@@ -45,7 +45,7 @@ export const FormInput = ({
           {type === "textarea" && (
             <textarea
               className={cn(
-                "flex placeholder:text-muted-foreground focus-visible:outline-none bg-transparent min-h-[80px] text-lg sm:text-xl w-full p-3 rounded-[10px] border-2 border-inputBorder resize-none",
+                "flex placeholder:text-muted-foreground focus-visible:outline-none bg-transparent min-h-[120px] text-lg sm:text-xl w-full p-3 rounded-[10px] border-2 border-inputBorder resize-none",
                 error?.message ? "border-danger" : "border-inputBorder",
                 className
               )}
@@ -63,7 +63,7 @@ export const FormInput = ({
               {...rest}
               className={cn(
                 "flex placeholder:text-muted-foreground focus-visible:outline-none bg-transparent h-[40px] sm:h-[60px] text-lg sm:text-xl w-full p-6 rounded-[10px] border-2 border-inputBorder",
-                error?.message ? "border-danger" : "border-inputBorder",
+                // error?.message ? "border-danger" : "border-inputBorder",
                 className
               )}
             />

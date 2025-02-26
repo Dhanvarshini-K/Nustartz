@@ -5,7 +5,7 @@ import { JSX } from "react";
 import { FormInput } from "../../components/ui/formInput";
 import { useForm } from "react-hook-form";
 import { emailRegex } from "../../lib/regex";
-import { PhoneInput } from "../../components/ui/phoneInput";
+import { PhoneNumberInput } from "../../components/ui/phoneInput";
 
 const contactUsFormData = {
   contactTitle: "Contact our team",
@@ -24,7 +24,7 @@ type FormFieldType = {
 };
 
 export const ContactUs = (): JSX.Element => {
-  const { handleSubmit, reset, control, setValue } = useForm<FormFieldType>();
+  const { handleSubmit, reset, control } = useForm<FormFieldType>();
 
   const onSubmit = (data: FormFieldType) => {
     console.log("Form submitted:", data);
@@ -79,13 +79,12 @@ export const ContactUs = (): JSX.Element => {
                 }}
               />
 
-              <PhoneInput
+              <PhoneNumberInput
                 control={control}
-                name="phoneNumber"
-                placeholder="Phone Number"
-                isRequired
                 label="Phone Number"
-                setValue={setValue}
+                name="phoneNumber"
+                isRequired
+                placeholder="Phone Number"
               />
 
               <FormInput

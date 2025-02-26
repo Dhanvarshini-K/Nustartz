@@ -1,8 +1,9 @@
 * {
-  font-family: 'Sequel Sans', sans-serif;
+  font-family: "Sequel Sans", sans-serif;
 }
 
-img, .container {
+img,
+.container {
   max-width: 100%;
   height: auto;
 }
@@ -10,4 +11,25 @@ img, .container {
 .section-container {
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.react-tel-input .form-control {
+  border-radius: 0 !important;
+  width: 100% !important;
+  height: 60px !important;
+  border-radius: 10px !important;
+  border: 2px solid #b2b2b2 !important;
+  background: transparent !important;
+  font-size: 20px !important
+}
+
+.react-tel-input .flag-dropdown {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag,
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:active {
+  background-color: transparent !important;
 }
