@@ -22,8 +22,8 @@ export const NuStartzNews = () => {
             {nustartzNewsArticleData?.subtitle}
           </p>
 
-          <div className="flex gap-10 py-10 flex-col-reverse lg:flex-row">
-            <div className="w-full lg:w-[50%] flex flex-col justify-center">
+          <div className="flex gap-10 py-10 flex-col-reverse lg:flex-row justify-between">
+            <div className="w-full lg:w-[75%] flex flex-col justify-center">
               <p className="text-lg sm:text-xl text-ParaGrey pb-4">
                 {nustartzNewsArticleData?.imageDescription1}
               </p>
@@ -40,7 +40,7 @@ export const NuStartzNews = () => {
             </div>
           </div>
 
-          <div className="flex gap-10 py-10 flex-col lg:flex-row">
+          <div className="flex gap-10 py-10 flex-col lg:flex-row justify-between">
             <div className="w-full flex items-center justify-center">
               <img
                 src={nustartzNewsArticleData?.image2}
@@ -49,7 +49,7 @@ export const NuStartzNews = () => {
               />
             </div>
             <div className="flex items-center">
-              <p className="text-lg sm:text-xl text-ParaGrey w-full lg:w-[50%]">
+              <p className="text-lg sm:text-xl text-ParaGrey w-full">
                 {nustartzNewsArticleData?.description2}
               </p>
             </div>

@@ -1,5 +1,11 @@
 import React, { JSX, useState } from "react";
-import { ArrowRight, DollarSignIcon, LeafIcon, RocketIcon } from "lucide-react";
+import {
+  ArrowRight,
+  DollarSignIcon,
+  LeafIcon,
+  RocketIcon,
+  X,
+} from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 // import {
@@ -25,6 +31,7 @@ import Marquee from "react-fast-marquee";
 
 const Home = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
   const handleOpenModal = () => {
     setOpenModal(true);
@@ -32,6 +39,10 @@ const Home = (): JSX.Element => {
 
   const handleCloseModal = () => {
     setOpenModal(false);
+  };
+
+  const showYouTubeVideo = () => {
+    setShowVideo(true);
   };
   return (
     <main className="bg-custom-gradient">
@@ -178,13 +189,36 @@ const Home = (): JSX.Element => {
             ))}
           </div>
           <div className="flex justify-center">
-            <Button className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4">
+            <Button
+              className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4"
+              onClick={showYouTubeVideo}
+            >
               {whoWeAreSectionData.buttonText}
               <ArrowRight className="h-6 w-6" />
             </Button>
           </div>
         </div>
       </section>
+
+      <div
+        className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-500 ${
+          showVideo ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        <div>
+          <button onClick={() => setShowVideo(false)}>
+            <X className="w-6 h-6" />
+          </button>
+          <iframe
+            src="https://www.youtube.com/embed/IfM1WIyIDGc?si=AvyGQ8eljShlJ34z"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            className="w-[300px] sm:w-[500px] h-[300px] rounded-xl relative"
+          ></iframe>
+        </div>
+      </div>
 
       {/* Testimonials Section */}
       {/* <section className="bg-GhostWhite py-10 sm:py-16 px-10 md:px-24">
@@ -239,13 +273,13 @@ const Home = (): JSX.Element => {
           <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-5">
             {HomePageSectionsEnum.startupPortFolio}
           </h2>
-          <Marquee pauseOnHover={true}>
-            <div className="flex justify-center items-center gap-10 sm:gap-12 flex-wrap">
+          <Marquee pauseOnHover>
+            <div className="flex justify-center items-center gap-10 sm:gap-20">
               {startupPortfolioData.map((project, index) => (
                 <img
                   src={project}
                   alt="Startup-Portfolio-Projects"
-                  className="sm:w-[200px] w-[180px]"
+                  className="sm:w-[200px] w-[180px] first:ml-10 sm:first:ml-20"
                   key={index}
                 />
               ))}
@@ -260,13 +294,13 @@ const Home = (): JSX.Element => {
           <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-5">
             {HomePageSectionsEnum.partners}
           </h2>
-          <Marquee pauseOnHover={true}>
-            <div className="flex justify-center items-center gap-10 sm:gap-12 flex-wrap">
+          <Marquee pauseOnHover>
+            <div className="flex justify-center items-center gap-10 sm:gap-20">
               {ourPartners.map((partner, index) => (
                 <img
                   src={partner}
                   alt="Our-Partners"
-                  className="sm:w-[200px] w-[180px]"
+                  className="sm:w-[200px] w-[180px] first:ml-10 sm:first:ml-20"
                   key={index}
                 />
               ))}

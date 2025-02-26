@@ -42,7 +42,7 @@ export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
   };
   return (
     <section
-      className={`w-[300px] sm:w-[500px] bg-heroBackground p-10 rounded-lg shadow-lg relative max-h-[500px] overflow-y-auto 
+      className={`w-[300px] sm:w-[500px] bg-heroBackground p-10 rounded-lg shadow-lg relative m-auto h-[90vh] overflow-y-auto 
       transform transition-all duration-500 ease-in-out 
       ${
         openModal
@@ -90,13 +90,14 @@ export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
           }}
         />
 
-        {/* <FormInput
+        <FormInput
           control={control}
           type="file"
           label="Attach the pitch deck below"
           placeholder="Attach your file pdf/ppt"
           name="file"
-        /> */}
+        />
+
         <SelectInput
           control={control}
           label="Funding Stage"
@@ -108,7 +109,7 @@ export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
         <FormInput
           control={control}
           type="textarea"
-          label="Describe your product idea"
+          label="Describe your product idea in 250 words"
           placeholder="Your product idea"
           name="productIdea"
           isRequired

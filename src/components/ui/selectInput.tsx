@@ -50,7 +50,6 @@ export const SelectInput = ({
           <select
             className={cn(
               `text-ParaGrey bg-transparent h-[60px] text-lg w-full p-3 focus-visible:outline-none rounded-[10px] border-2 border-inputBorder`,
-              error?.message ? "border-danger" : "border-inputBorder",
               className
             )}
             value={value || ""}

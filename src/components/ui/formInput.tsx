@@ -1,10 +1,12 @@
 import { Control, Controller, RegisterOptions } from "react-hook-form";
 import { cn } from "../../lib/utils";
+import { HTMLInputTypeAttribute, useState } from "react";
+import { Paperclip } from "lucide-react";
 
 interface FormInputProps {
   label: string;
   name: string;
-  type?: string;
+  type?: HTMLInputTypeAttribute;
   placeholder?: string;
   className?: string;
   control: Control;
@@ -22,6 +24,8 @@ export const FormInput = ({
   control,
   isRequired = false,
 }: FormInputProps) => {
+  const [fileName, setFileName] = useState<string | null>(null);
+
   return (
     <Controller
       control={control}
@@ -33,45 +37,62 @@ export const FormInput = ({
         },
         ...rules,
       }}
-      render={({ field: { value, ...rest }, fieldState: { error } }) => (
-        <div className="flex flex-col gap-1">
+      render={({
+        field: { onChange, value, ...rest },
+        fieldState: { error },
+      }) => (
+        <div className="flex flex-col gap-2">
           <label className="text-xl font-medium text-black">
             {label}
-            {isRequired ? (
+            {isRequired && (
               <span className="text-danger font-bold ml-2">*</span>
-            ) : null}
+            )}
           </label>
 
-          {type === "textarea" && (
+          {type === "file" ? (
+            <div>
+              <label className="flex items-center justify-start gap-3 cursor-pointer border-2 border-inputBorder text-Gray py-3 px-5 rounded-lg hover:bg-opacity-80 transition">
+                <Paperclip className="w-5 h-5" />
+                <span>{fileName ? fileName : "Attach your file/pdf/ppt"}</span>
+                <input
+                  type="file"
+                  className="hidden"
+                  accept=".pdf, .ppt, .pptx, .doc, .docx"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0] || null;
+                    setFileName(file ? file.name : null);
+                    onChange(file);
+                  }}
+                  {...rest}
+                />
+              </label>
+            </div>
+          ) : type === "textarea" ? (
             <textarea
               className={cn(
-                "flex placeholder:text-muted-foreground focus-visible:outline-none bg-transparent min-h-[120px] text-lg sm:text-xl w-full p-3 rounded-[10px] border-2 border-inputBorder resize-none",
-                error?.message ? "border-danger" : "border-inputBorder",
+                "placeholder:text-muted-foreground focus-visible:outline-none bg-transparent min-h-[120px] text-lg sm:text-xl w-full p-3 rounded-[10px] border-2 border-inputBorder",
                 className
               )}
-              value={value || ""}
               placeholder={placeholder}
+              onChange={onChange}
               {...rest}
             />
-          )}
-
-          {type === "text" && (
+          ) : (
             <input
               type={type}
-              value={value || ""}
               placeholder={placeholder}
-              {...rest}
+              onChange={onChange}
               className={cn(
-                "flex placeholder:text-muted-foreground focus-visible:outline-none bg-transparent h-[40px] sm:h-[60px] text-lg sm:text-xl w-full p-6 rounded-[10px] border-2 border-inputBorder",
-                // error?.message ? "border-danger" : "border-inputBorder",
+                "placeholder:text-muted-foreground focus-visible:outline-none bg-transparent h-[40px] sm:h-[60px] text-lg sm:text-xl w-full p-3 rounded-[10px] border-2 border-inputBorder",
                 className
               )}
+              {...rest}
             />
           )}
 
-          {error?.message ? (
-            <p className="text-danger text-sm">{error?.message}</p>
-          ) : null}
+          {error?.message && (
+            <p className="text-danger text-sm">{error.message}</p>
+          )}
         </div>
       )}
     />

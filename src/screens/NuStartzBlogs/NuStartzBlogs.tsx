@@ -17,13 +17,13 @@ export const NuStartzBlogs = () => {
             {nuStartzBlogsArticleData?.title}
           </h1>
 
-          <div className="flex justify-center">
-            <img
-              src={`${nuStartzBlogsArticleData?.image}`}
-              alt="Blog-Image"
-              className="w-[300px] sm:w-[500px]"
-            />
-          </div>
+          {/* <div className="flex justify-center"> */}
+          <img
+            src={`${nuStartzBlogsArticleData?.image}`}
+            alt="Blog-Image"
+            className="w-[300px] sm:w-[500px]"
+          />
+          {/* </div> */}
 
           <p className="text-lg sm:text-xl text-ParaGrey">
             {nuStartzBlogsArticleData?.description}
