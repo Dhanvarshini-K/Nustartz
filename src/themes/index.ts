@@ -67,6 +67,9 @@ const IMAGES = {
     startupNewsImage1: require('../assets/StartupNewsImage1.png'),
     startupNewsImage2: require('../assets/StartupNewsImage2.png'),
     startupNewsImage3: require('../assets/StartupNewsImage3.png'),
+    nustartzEvent1Image1: require('../assets/EventImage1.png'),
+    nustartzEvent1Image2: require('../assets/EventImage2.png'),
+    nustartzEvent1Image3: require('../assets/EventImage3.png'),
 }
 
 

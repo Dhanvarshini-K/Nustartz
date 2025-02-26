@@ -20,6 +20,7 @@ export const StartupNews = (): JSX.Element => {
           <img
             src={`${startUpNewsArticleData.image}`}
             alt="StartupArticleImage"
+            className="pt-5 w-[300px]"
           />
           <div className="py-10">
             {startUpNewsArticleData?.contents?.map((content, index) => (
