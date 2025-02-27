@@ -26,7 +26,7 @@ export const NuStartzEvents = () => {
           <p className="text-lg sm:text-xl text-ParaGrey">
             {nustartzEventsArticleData?.content}
           </p>
-          <div className="flex gap-10 flex-wrap">
+          {/* <div className="flex gap-10 flex-wrap">
             {nustartzEventsArticleData?.eventImages?.map((image, index) => (
               <img
                 src={`${image}`}
@@ -35,7 +35,7 @@ export const NuStartzEvents = () => {
                 key={index}
               />
             ))}
-          </div>
+          </div> */}
           {nustartzEventsArticleData?.description?.map((point, index) => (
             <p className="text-lg sm:text-xl text-ParaGrey" key={index}>
               {point}

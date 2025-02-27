@@ -17,23 +17,24 @@ export const NuStartzBlogs = () => {
             {nuStartzBlogsArticleData?.title}
           </h1>
 
-          {/* <div className="flex justify-center"> */}
           <img
             src={`${nuStartzBlogsArticleData?.image}`}
             alt="Blog-Image"
             className="w-[300px] sm:w-[500px]"
           />
-          {/* </div> */}
 
           <p className="text-lg sm:text-xl text-ParaGrey">
             {nuStartzBlogsArticleData?.description}
           </p>
 
           <div>
-            {nuStartzBlogsArticleData.keypoints.map((point, index) => (
+            {nuStartzBlogsArticleData?.contents?.map((content, index) => (
               <ol key={index}>
                 <li className="text-lg sm:text-xl text-ParaGrey py-2">
-                  {index + 1}. {point}
+                  <span className="text-ParaGrey font-bold">
+                    {index + 1}. {content?.contentTitle}
+                  </span>
+                  {content?.contentDescription}
                 </li>
               </ol>
             ))}

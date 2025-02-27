@@ -150,7 +150,7 @@ export const Services = (): JSX.Element => {
       </div>
 
       {/* Tech Fusion Hub Section */}
-      <section className="px-4 md:px-20 py-10 sm:py-16">
+      <section className="bg-heroBackground px-4 md:px-20 py-10 sm:py-16">
         <div className="section-container">
           <h2 className="text-4xl sm:text-5xl font-semibold text-ParaGrey mb-5 sm:mb-10">
             {ServicePageSectionsEnum.techFusion}
