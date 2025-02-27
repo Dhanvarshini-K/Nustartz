@@ -54,10 +54,7 @@ export const Blogs = (): JSX.Element => {
                         className="w-[400px] h-[380px] object-cover rounded-xl"
                       />
                       <div className="p-4 sm:p-6 bg-white rounded-xl shadow-sm h-[180px] absolute -bottom-10 w-[75%] end-3 sm:end-6">
-                        <h3 className="text-xl font-bold text-BrandBlueHeavy mb-1">
-                          {post.title}
-                        </h3>
-                        <p className="text-md sm:text-lg text-ParaGrey">
+                        <p className="text-md sm:text-lg text-ParaGrey font-semibold">
                           {post.description}
                         </p>
                       </div>

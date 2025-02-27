@@ -32,9 +32,9 @@ export const ContactUs = (): JSX.Element => {
   };
 
   return (
-    <section className="bg-custom-gradient pt-20 px-10 md:px-24">
+    <section className="bg-custom-gradient px-4 md:px-20">
       <div className="section-container px-0 md:px-10 lg:px-24 py-10 sm:py-16">
-        <h1 className="text-center text-5xl sm:text-8xl font-bold text-DarkGrey mb-4 sm:mb-8">
+        <h1 className="sm:text-center text-4xl sm:text-8xl font-bold text-DarkGrey mb-4 sm:mb-8">
           {contactUsFormData.contactTitle}
         </h1>
         <p className="max-w-[776px] mx-auto text-lg sm:text-2xl font-medium text-black mb-10">

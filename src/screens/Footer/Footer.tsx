@@ -21,7 +21,7 @@ const footerData: string[] = [
 const Footer = () => {
   const location = useLocation();
   return (
-    <footer className="bg-LightLavender p-5 sm:py-12 sm:px-20">
+    <footer className="bg-LightLavender p-5 sm:py-12 px-4 sm:px-20">
       <div className="flex justify-between flex-wrap lg:gap-20 gap-5">
         <div>
           <img

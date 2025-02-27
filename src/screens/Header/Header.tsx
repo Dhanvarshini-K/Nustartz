@@ -17,7 +17,7 @@ const Header = () => {
   const handleMobileMenu = () => {
     navigate("/contact-us");
     setIsMenuOpen(false);
-  }
+  };
 
   return (
     <header className="fixed top-0 w-full bg-white shadow-md z-50">
@@ -27,8 +27,6 @@ const Header = () => {
           alt="NuStartz Logo"
           className="h-12 w-auto"
         />
-
-        {/* Desktop Navigation */}
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             {navigationLinks.map((link) => {
@@ -63,7 +61,6 @@ const Header = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden p-2 rounded focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -72,7 +69,6 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-md py-4 absolute top-full left-0 w-full flex flex-col items-center">
           {navigationLinks.map((link) => {

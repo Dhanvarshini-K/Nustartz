@@ -17,7 +17,7 @@ export const Insights = () => {
     setActive(tab);
   };
   return (
-    <section className="bg-custom-gradient pt-20 px-10 md:px-24 ">
+    <section className="bg-custom-gradient px-4 md:px-20">
       <div className="section-container py-10 sm:py-16">
         <Tabs defaultValue="blogs">
           <TabsList className="mb-2 sm:mb-4">
