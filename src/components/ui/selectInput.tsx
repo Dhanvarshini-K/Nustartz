@@ -40,8 +40,8 @@ export const SelectInput = ({
       }}
       defaultValue={defaultValue}
       render={({ field: { value, ...rest }, fieldState: { error } }) => (
-        <div className="flex flex-col gap-2">
-          <label className="text-xl font-medium text-black">
+        <div className="flex flex-col sm:gap-2">
+          <label className="text-md sm:text-xl font-medium text-black">
             {label}
             {isRequired ? (
               <span className="text-danger font-bold ml-2">*</span>
@@ -49,7 +49,7 @@ export const SelectInput = ({
           </label>
           <select
             className={cn(
-              `text-ParaGrey bg-transparent h-[60px] text-lg w-full p-3 focus-visible:outline-none rounded-[10px] border-2 border-inputBorder`,
+              `text-ParaGrey bg-transparent h-[60px] sm:text-lg w-full px-2 sm:p-3 focus-visible:outline-none rounded-[10px] border-2 border-inputBorder`,
               className
             )}
             value={value || ""}

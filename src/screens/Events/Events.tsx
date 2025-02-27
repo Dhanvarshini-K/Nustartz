@@ -46,20 +46,19 @@ export const Events = (): JSX.Element => {
               >
                 <Card
                   key={event.id}
-                  className="border-none shadow-md"
+                  className="border-none shadow-md transform transition duration-500 hover:scale-95"
                   onClick={() => navigateToNuStartzEvents(event)}
                 >
-                  <CardContent className="p-0 transform transition duration-500 hover:scale-95">
+                  <CardContent className="p-0">
                     <img
                       src={event.image}
                       alt={event.title}
                       className="w-full h-[341px] object-cover rounded-t-lg"
                     />
-                    <div className="py-2 px-2 sm:p-6 bg-white border-none rounded-b-lg h-[130px]">
-                      <h3 className="text-xl font-bold text-BrandBlueHeavy mb-2">
-                        {event.title}
-                      </h3>
-                      <p className="text-lg text-ParaGrey">{event.description}</p>
+                    <div className="py-2 px-2 sm:p-6 bg-white border-none rounded-b-lg h-[110px]">
+                      <p className="text-lg text-ParaGrey font-semibold">
+                        {event.description}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>

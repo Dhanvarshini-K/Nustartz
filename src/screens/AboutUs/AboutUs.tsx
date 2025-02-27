@@ -13,7 +13,7 @@ export const AboutUs = (): JSX.Element => {
   return (
     <main className="bg-custom-gradient">
       {/* Hero Section */}
-      <section className="pt-20 bg-heroBackground px-10 md:px-24 relative">
+      <section className="bg-heroBackground px-10 md:px-24 relative">
         <div className="section-container py-10 sm:py-16">
           <iframe
             src="https://www.youtube.com/embed/bzcN_dyizIE?si=FF1fXQfZGC0iv2hk"
@@ -36,7 +36,7 @@ export const AboutUs = (): JSX.Element => {
             {boardMembersData.map((member) => (
               <Card
                 key={member.name}
-                className="bg-white rounded-[20px] shadow-md border-none"
+                className="bg-white rounded-[20px] shadow-md border-none transform transition duration-500 hover:scale-105 hover:shadow-xl"
               >
                 <img
                   src={member.image}
@@ -78,7 +78,7 @@ export const AboutUs = (): JSX.Element => {
             {foundersData.map((founder) => (
               <Card
                 key={founder.name}
-                className="bg-white rounded-[20px] shadow-md border-none"
+                className="bg-white rounded-[20px] shadow-md border-none transform transition duration-500 hover:scale-105 hover:shadow-xl"
               >
                 <img
                   src={founder.image}
@@ -120,7 +120,7 @@ export const AboutUs = (): JSX.Element => {
             {leadersData.map((leader) => (
               <Card
                 key={leader.name}
-                className="bg-white rounded-[20px] shadow-md border-none"
+                className="bg-white rounded-[20px] shadow-md border-none transform transition duration-500 hover:scale-105 hover:shadow-xl"
               >
                 <img
                   src={leader.image}

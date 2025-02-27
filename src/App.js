@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Footer from "./screens/Footer/Footer";
-import Header from "./screens/Header/Header";
 import Home from "./screens/Home/HomePage";
 import { Services } from "./screens/Services/Services";
 import { AboutUs } from "./screens/AboutUs/AboutUs";
@@ -14,12 +12,13 @@ import {NuStartzNews} from "./screens/NuStartzNews/NuStartzNews";
 import {NuStartzEvents} from "./screens/NuStartzEvents/NuStartzEvents";
 import {CaseStudy} from "./screens/CaseStudy/CaseStudy";
 import {NuStartzBlogs} from "./screens/NuStartzBlogs/NuStartzBlogs";
+import {Layout} from "./components/ui/Layout";
 
 const App = () => {
   return (
     <div className="App">
       <Router>
-        <Header />
+        <Layout>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -34,7 +33,7 @@ const App = () => {
           <Route path="/insights/nustartz-news" element={<NuStartzNews />} />
           <Route path="/insights/nustartz-events" element={<NuStartzEvents />} />
         </Routes>
-        <Footer />
+        </Layout>
       </Router>
     </div>
   );

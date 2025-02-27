@@ -25,6 +25,8 @@ enum TextEnum {
   caseStudy = "CASE STUDY",
 }
 
+const serviceHeroTitle: string[] = ["Your one", "stop shop", "for success"];
+
 export const Services = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
@@ -43,11 +45,18 @@ export const Services = (): JSX.Element => {
   return (
     <div className="bg-custom-gradient">
       {/* Hero Section */}
-      <section className="pt-20 bg-heroBackground bg-opacity-40 px-10 md:px-24 relative">
+      <section className="bg-heroBackground bg-opacity-40 px-4 md:px-20 relative">
         <div className="section-container flex flex-wrap lg:flex-nowrap justify-between gap-8 py-10 sm:py-16">
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-ParaGrey leading-tight z-10 md:pt-16">
-            {ServicePageSectionsEnum.heroTitle}
-          </h1>
+          <div className="md:mt-16">
+            {serviceHeroTitle?.map((title, index) => (
+              <h1
+                className="text-5xl sm:text-6xl md:text-8xl font-bold text-ParaGrey leading-tight z-10"
+                key={index}
+              >
+                {title}
+              </h1>
+            ))}
+          </div>
           <img
             src={IMAGES.serviceImage}
             alt="Hero illustration"
@@ -63,7 +72,7 @@ export const Services = (): JSX.Element => {
       </section>
 
       {/* Services Section */}
-      <section className="py-10 sm:py-16 px-10 md:px-24 ">
+      <section className="bg-heroBackground py-10 sm:py-16 px-4 md:px-20 ">
         <div className="section-container flex flex-col lg:flex-row justify-between gap-5 sm:gap-10">
           <div className="w-[100%] sm:w-[50%]">
             <div className="flex items-center gap-4">
@@ -97,10 +106,10 @@ export const Services = (): JSX.Element => {
       </section>
 
       {/* Tech Hub Section */}
-      <section className="py-10 sm:py-16  px-10 md:px-24">
+      <section className="py-10 sm:py-16 px-4 md:px-20">
         <div className="section-container flex justify-between gap-16 flex-col lg:flex-row">
           <div className="flex flex-col justify-center gap-8 lg:w-[50%]">
-            <h2 className="text-5xl font-semibold text-ParaGrey">
+            <h2 className="text-4xl sm:text-5xl font-semibold text-ParaGrey">
               {ServicePageSectionsEnum.techStartup}
             </h2>
             <p className="text-lg sm:text-xl text-Gray">
@@ -115,7 +124,7 @@ export const Services = (): JSX.Element => {
               {ServicePageSectionsEnum.techStartupContent}
             </p>
             <Button
-              className="w-fit bg-BrandPurple text-white font-normal mt-5  px-8 py-6"
+              className="w-fit bg-BrandPurple text-white font-normal mt-5 px-8 py-6"
               onClick={handleOpenModal}
             >
               {TextEnum.getInTouch}
@@ -141,18 +150,21 @@ export const Services = (): JSX.Element => {
       </div>
 
       {/* Tech Fusion Hub Section */}
-      <section className="px-10 md:px-24 py-10 sm:py-16">
+      <section className="px-4 md:px-20 py-10 sm:py-16">
         <div className="section-container">
-          <h2 className="text-5xl font-semibold text-ParaGrey mb-5 sm:mb-10">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-ParaGrey mb-5 sm:mb-10">
             {ServicePageSectionsEnum.techFusion}
           </h2>
-          <p className="text-xl sm:text-3xl md:text-6xl text-Gray mb-10 max-w-3xl">
+          <p className="text-xl sm:text-3xl md:text-6xl text-Gray mb-5 sm:mb-10 max-w-3xl">
             {ServicePageSectionsEnum.techFusionSubTitle}
           </p>
         </div>
-        <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16">
           {techFusionHubSectionData.map((service) => (
-            <div key={service.category} className="flex flex-col gap-4 px-4">
+            <div
+              key={service.category}
+              className="flex flex-col gap-2 sm:gap-4"
+            >
               <div className="flex gap-5 sm:justify-between items-center">
                 <span className="text-xl sm:text-2xl font-semibold">
                   {service.number}
@@ -175,24 +187,24 @@ export const Services = (): JSX.Element => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-10 sm:py-16 px-10 md:px-24">
+      <section className="py-10 sm:py-16 px-4 md:px-20">
         <div className="section-container">
-          <h2 className="text-5xl font-semibold text-ParaGrey mb-5 sm:mb-10">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-ParaGrey mb-5 sm:mb-10">
             {ServicePageSectionsEnum.caseStudies}
           </h2>
 
-          <div className="flex flex-wrap lg:flex-nowrap gap-8 ">
+          <div className="flex flex-wrap lg:flex-nowrap gap-8">
             {caseStudiesSectionData.map((study, index) => (
               <Card
                 key={index}
                 className="bg-Lavender bg-opacity-60 p-4 sm:p-8"
               >
-                <CardContent className="flex flex-col gap-8">
+                <CardContent className="flex flex-col">
                   <div>
-                    <p className="text-3xl mb-2 text-ParaGrey font-semibold">
+                    {/* <p className="text-3xl mb-2 text-ParaGrey font-semibold">
                       {TextEnum.caseStudy} ({study.number})
-                    </p>
-                    <p className="text-lg sm:text-xl text-ParaGrey">
+                    </p> */}
+                    <p className="text-lg sm:text-xl text-ParaGrey font-semibold">
                       {study.description}
                     </p>
                   </div>

@@ -11,7 +11,7 @@ export const NuStartzNews = () => {
   );
 
   return (
-    <section className="bg-custom-gradient pt-20 px-10 md:px-24">
+    <section className="bg-custom-gradient px-4 md:px-20">
       {nustartzNewsArticleData !== undefined ? (
         <div className="section-container py-10 sm:py-16">
           <h1 className="text-3xl sm:text-6xl font-bold mb-5 sm:mb-10">

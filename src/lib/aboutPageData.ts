@@ -16,19 +16,19 @@ type BoardMembersDataType = {
 export const boardMembersData: BoardMembersDataType[] = [
     {
         name: "Ben John",
-        role: "Vice President Microsoft AI, Former CTO Xandr",
+        role: "Vice President Microsoft AI | Former CTO Xandr",
         image: `${IMAGES.boardMember1}`,
         linkedInUrl: "https://www.linkedin.com/in/benjohnlink/",
     },
     {
         name: "Sumer Jabri",
-        role: "CTO, Crafter CMS Former CEO, Rivet Logic (acquired by Capgemini)",
+        role: "CTO | Crafter CMS Former CEO | Rivet Logic (acquired by Capgemini)",
         image: `${IMAGES.boardMember2}`,
         linkedInUrl: "https://www.linkedin.com/in/sjabri/",
     },
     {
         name: "Igor Shindel",
-        role: "Former CIO, Appnexus CTO Coach for Tech Leaders",
+        role: "Former CIO | Appnexus CTO Coach for Tech Leaders",
         image: `${IMAGES.boardMember3}`,
         linkedInUrl: "https://www.linkedin.com/in/igorshindel/",
     },
@@ -37,7 +37,7 @@ export const boardMembersData: BoardMembersDataType[] = [
 export const foundersData: BoardMembersDataType[] = [
     {
         name: "Siva Periasamy",
-        role: "Founder",
+        role: "Founder & President",
         image: `${IMAGES.founder1}`,
         linkedInUrl: "https://www.linkedin.com/in/sivaperiasamy/",
     },
@@ -52,12 +52,12 @@ export const foundersData: BoardMembersDataType[] = [
 export const leadersData: BoardMembersDataType[] = [
     {
         name: "Nagaraj",
-        role: "Director of Operations",
+        role: "Global Director of Operations",
         image: `${IMAGES.leader1}`,
     },
     {
         name: "Sujith",
-        role: "Business Development Manager",
+        role: "Global Business Development Manager",
         image: `${IMAGES.leader2}`,
     },
     {
@@ -67,7 +67,7 @@ export const leadersData: BoardMembersDataType[] = [
     },
     {
         name: "Michael Barnabas",
-        role: "Brand Manager",
+        role: "Global Brand Manager",
         image: `${IMAGES.leader4}`,
     }
 ];

@@ -47,8 +47,8 @@ const Home = (): JSX.Element => {
   return (
     <main className="bg-custom-gradient">
       {/* Hero Section */}
-      <section className="relative bg-heroBackground pt-20 px-10 md:px-24 ">
-        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center items-center pt-8 sm:pt-16 pb-20 ">
+      <section className="relative bg-heroBackground px-4 md:px-20 ">
+        <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center items-center pt-8 sm:pt-16 pb-20 ">
           <div className="space-y-8  text-start md:w-[535px] z-10">
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-b from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none">
               {heroSectionData.title}
@@ -72,19 +72,19 @@ const Home = (): JSX.Element => {
               className="w-[300px] sm:w-[371px] lg:w-[400px] object-cover"
             />
 
-            <Card className="absolute -left-10 -top-10 sm:top-6 sm:-left-24 lg:top-10 lg:-left-32 md:top-6 md:-left-32  xl:top-18 xl:-left-32 bg-[#90dbf6] border-8 border-white shadow-lg rounded-[30px] w-20 h-20 md:w-28 md:h-28 ">
+            <Card className="absolute -left-4 -top-10 sm:top-6 sm:-left-24 lg:top-10 lg:-left-32 md:top-6 md:-left-32  xl:top-18 xl:-left-32 bg-[#90dbf6] border-8 border-white shadow-lg rounded-[30px] w-20 h-20 md:w-28 md:h-28 ">
               <CardContent className="p-1 md:p-5">
                 <DollarSignIcon className="h-14 w-14 text-white" />
               </CardContent>
             </Card>
 
-            <Card className="absolute -bottom-10 -left-8 sm:-bottom-10 sm:-left-10 lg:-bottom-10 lg:-left-10 md:-bottom-16 md:-left-14 xl:-bottom-5 xl:-left-10 bg-[#f8a8fe] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
+            <Card className="absolute -bottom-10 -left-4 sm:-bottom-10 sm:-left-10 lg:-bottom-10 lg:-left-10 md:-bottom-16 md:-left-14 xl:-bottom-5 xl:-left-10 bg-[#f8a8fe] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
               <CardContent className="p-1 md:p-5">
                 <RocketIcon className="h-14 w-14 sm:h-20 sm:w-20 text-white" />
               </CardContent>
             </Card>
 
-            <Card className="absolute -top-10 -right-6 sm:-top-10 sm:-right-10 lg:-top-12 lg:-right-10 md:-top-12 md:-right-20 xl:-right-0 xl:-top-10 bg-[#72dfb3] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
+            <Card className="absolute -top-10 -right-3 sm:-top-10 sm:-right-10 lg:-top-12 lg:-right-10 md:-top-12 md:-right-20 xl:-right-0 xl:-top-10 bg-[#72dfb3] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
               <CardContent className="p-1 md:p-5">
                 <LeafIcon className="h-14 w-14 sm:h-20 sm:w-20 text-white" />
               </CardContent>
@@ -111,8 +111,8 @@ const Home = (): JSX.Element => {
 
       {/* How We Deliver Section */}
 
-      <section className="py-10 sm:py-16 px-10 md:px-24 bg-GhostWhite">
-        <h2 className="text-5xl sm:text-6xl font-bold text-center text-paragray mb-10">
+      <section className="py-10 sm:py-16 px-4 md:px-20 bg-GhostWhite">
+        <h2 className="text-5xl sm:text-6xl font-bold text-center text-paragray mb-5 sm:mb-10">
           {HomePageSectionsEnum.howWeDeliver}
         </h2>
 
@@ -162,12 +162,12 @@ const Home = (): JSX.Element => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-10 sm:py-16 px-10">
-        <div className="section-container text-center">
-          <h2 className="text-5xl sm:text-6xl font-bold text-paragray mb-8">
+      <section className="py-10 sm:py-16 px-4">
+        <div className="section-container sm:text-center">
+          <h2 className="text-5xl sm:text-6xl font-bold text-paragray mb-5 sm:mb-10">
             {HomePageSectionsEnum.whoWeAre}
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-BrandBlueHeavy mb-16 max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-BrandBlueHeavy mb-10 max-w-4xl mx-auto">
             {whoWeAreSectionData.description}
           </p>
 
@@ -190,7 +190,7 @@ const Home = (): JSX.Element => {
           </div>
           <div className="flex justify-center">
             <Button
-              className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4"
+              className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4 transform transition duration-300 hover:scale-105"
               onClick={showYouTubeVideo}
             >
               {whoWeAreSectionData.buttonText}
@@ -205,9 +205,12 @@ const Home = (): JSX.Element => {
           showVideo ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        <div>
-          <button onClick={() => setShowVideo(false)}>
-            <X className="w-6 h-6" />
+        <div className="relative">
+          <button
+            onClick={() => setShowVideo(false)}
+            className="absolute end-0 -top-6"
+          >
+            <X className="w-8 h-7 hover:text-BrandPurple" />
           </button>
           <iframe
             src="https://www.youtube.com/embed/IfM1WIyIDGc?si=AvyGQ8eljShlJ34z"
@@ -215,7 +218,7 @@ const Home = (): JSX.Element => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-            className="w-[300px] sm:w-[500px] h-[300px] rounded-xl relative"
+            className="w-[300px] h-[300px] sm:w-[550px] sm:h-[350px] rounded-xl relative"
           ></iframe>
         </div>
       </div>

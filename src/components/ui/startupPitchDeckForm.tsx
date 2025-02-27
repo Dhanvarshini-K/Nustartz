@@ -42,21 +42,21 @@ export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
   };
   return (
     <section
-      className={`w-[300px] sm:w-[500px] bg-heroBackground p-10 rounded-lg shadow-lg relative m-auto h-[90vh] overflow-y-auto 
+      className={`w-[300px] sm:w-[500px] bg-heroBackground p-5 sm:p-10 rounded-lg shadow-lg relative m-auto h-[90vh] overflow-y-auto 
       transform transition-all duration-500 ease-in-out 
       ${
         openModal
           ? "opacity-100 scale-100 translate-y-0"
           : "opacity-0 scale-95 translate-y-[-50px]"
-      } bg-gradient-to-r from-[#d2f1fb] to-[#fbd7fb]`}
+      } bg-gradient-to-r from-[#dbf4fc] to-[#fee3fe]`}
     >
       <button
         onClick={handleCloseModal}
-        className="absolute top-4 right-4 hover:text-BrandPurple text-NickelGrey"
+        className="absolute top-0 right-0 hover:text-BrandPurple text-NickelGrey"
       >
         <X className="w-6 h-6" />
       </button>
-      <h1 className="text-center text-4xl font-bold text-DarkGrey mb-4">
+      <h1 className="sm:text-center text-xl sm:text-4xl font-bold text-DarkGrey mb-2 sm:mb-4">
         {startUpPitchDeckData.title}
       </h1>
 
@@ -64,14 +64,14 @@ export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
         <FormInput
           control={control}
           label="Company Name"
-          placeholder="Name"
+          placeholder="Enter company name"
           name="companyName"
           isRequired
         />
         <FormInput
           control={control}
           label="Primary Contact Name"
-          placeholder="Name"
+          placeholder="Enter your name"
           name="name"
           isRequired
         />
@@ -92,10 +92,25 @@ export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
 
         <FormInput
           control={control}
+          label="Linkedin url"
+          placeholder="Enter your linkedin url"
+          name="linkedInUrl"
+        />
+
+        <FormInput
+          control={control}
+          label="Website url"
+          placeholder="Enter your website url"
+          name="websiteUrl"
+        />
+
+        <FormInput
+          control={control}
           type="file"
           label="Attach the pitch deck below"
-          placeholder="Attach your file pdf/ppt"
+          placeholder="Attach your file"
           name="file"
+          isRequired
         />
 
         <SelectInput
@@ -115,8 +130,10 @@ export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
           isRequired
         />
 
-        <Button className="ml-auto flex items-center p-6 bg-BrandPurple text-white">
-          <span className="text-lg">{startUpPitchDeckData.buttonText}</span>
+        <Button className="ml-auto flex items-center p-3 sm:p-6 bg-BrandPurple text-white">
+          <span className="text-md sm:text-lg">
+            {startUpPitchDeckData.buttonText}
+          </span>
           <ArrowRight className="w-[30px] h-[30px]" />
         </Button>
       </form>

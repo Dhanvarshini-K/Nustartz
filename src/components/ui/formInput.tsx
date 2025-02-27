@@ -41,8 +41,8 @@ export const FormInput = ({
         field: { onChange, value, ...rest },
         fieldState: { error },
       }) => (
-        <div className="flex flex-col gap-2">
-          <label className="text-xl font-medium text-black">
+        <div className="flex flex-col md:gap-2">
+          <label className="text-md sm:text-xl font-medium text-black">
             {label}
             {isRequired && (
               <span className="text-danger font-bold ml-2">*</span>
@@ -51,9 +51,9 @@ export const FormInput = ({
 
           {type === "file" ? (
             <div>
-              <label className="flex items-center justify-start gap-3 cursor-pointer border-2 border-inputBorder text-Gray py-3 px-5 rounded-lg hover:bg-opacity-80 transition">
+              <label className="flex items-center justify-start gap-3 cursor-pointer border-2 border-inputBorder text-Gray py-3 px-2 sm:px-5 rounded-lg hover:bg-opacity-80 transition h-[60px] ">
                 <Paperclip className="w-5 h-5" />
-                <span>{fileName ? fileName : "Attach your file/pdf/ppt"}</span>
+                <span>{fileName ? fileName : "Attach your file"}</span>
                 <input
                   type="file"
                   className="hidden"
@@ -70,7 +70,7 @@ export const FormInput = ({
           ) : type === "textarea" ? (
             <textarea
               className={cn(
-                "placeholder:text-muted-foreground focus-visible:outline-none bg-transparent min-h-[120px] text-lg sm:text-xl w-full p-3 rounded-[10px] border-2 border-inputBorder",
+                "placeholder:text-muted-foreground focus-visible:outline-none bg-transparent min-h-[120px] text-md sm:text-xl w-full p-2 rounded-[10px] border-2 border-inputBorder resize-none",
                 className
               )}
               placeholder={placeholder}
@@ -83,7 +83,7 @@ export const FormInput = ({
               placeholder={placeholder}
               onChange={onChange}
               className={cn(
-                "placeholder:text-muted-foreground focus-visible:outline-none bg-transparent h-[40px] sm:h-[60px] text-lg sm:text-xl w-full p-3 rounded-[10px] border-2 border-inputBorder",
+                "placeholder:text-muted-foreground focus-visible:outline-none bg-transparent h-[60px] text-md sm:text-xl w-full p-3 rounded-md sm:rounded-[10px] border-2 border-inputBorder",
                 className
               )}
               {...rest}

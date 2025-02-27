@@ -10,10 +10,10 @@ export const NuStartzBlogs = () => {
     (blog) => blog.image === image
   );
   return (
-    <section className="bg-custom-gradient pt-20 px-10 md:px-24">
+    <section className="bg-custom-gradient px-4 md:px-20">
       {nuStartzBlogsArticleData !== undefined ? (
         <div className="section-container py-10 sm:py-16 space-y-4 sm:space-y-8">
-          <h1 className="text-5xl sm:text-6xl text-DarkGrey font-bold">
+          <h1 className="text-4xl sm:text-6xl text-DarkGrey font-bold">
             {nuStartzBlogsArticleData?.title}
           </h1>
 
