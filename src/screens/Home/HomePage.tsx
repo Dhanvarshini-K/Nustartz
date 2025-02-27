@@ -297,7 +297,7 @@ const Home = (): JSX.Element => {
           <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-5">
             {HomePageSectionsEnum.partners}
           </h2>
-          <Marquee>
+          <Marquee direction="right">
             <div className="flex justify-center items-center gap-10 sm:gap-20">
               {ourPartners.map((partner, index) => (
                 <img
