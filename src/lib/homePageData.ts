@@ -23,7 +23,7 @@ export const heroSectionData: HeroDataType = {
 
 export const whoWeAreSectionData = {
   description: `NuStartz is your one-stop partner for startup success. We’re a committed, resilient team dedicated to meeting every need of your growing business—from development and tech support to marketing, branding, and beyond. Our mission is to provide startups with the expertise, resources, and hands-on support they need to thrive at every stage. By integrating seamlessly into your vision, we empower you to focus on what you do best: innovating and scaling your ideas. At NuStartz, we’re here to fuel your journey from launch to lasting impact.`,
-  buttonText: "Watch a video",
+  buttonText: "Watch Video",
 };
 
 type CompanyDeliveryStepDataType = {

@@ -218,7 +218,7 @@ const Home = (): JSX.Element => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-            className="w-[300px] h-[300px] sm:w-[550px] sm:h-[350px] rounded-xl relative"
+            className="w-[300px] h-[300px] sm:w-[600px] sm:h-[400px] rounded-xl relative"
           ></iframe>
         </div>
       </div>
@@ -276,7 +276,7 @@ const Home = (): JSX.Element => {
           <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-5">
             {HomePageSectionsEnum.startupPortFolio}
           </h2>
-          <Marquee pauseOnHover>
+          <Marquee>
             <div className="flex justify-center items-center gap-10 sm:gap-20">
               {startupPortfolioData.map((project, index) => (
                 <img
@@ -297,7 +297,7 @@ const Home = (): JSX.Element => {
           <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-5">
             {HomePageSectionsEnum.partners}
           </h2>
-          <Marquee pauseOnHover>
+          <Marquee>
             <div className="flex justify-center items-center gap-10 sm:gap-20">
               {ourPartners.map((partner, index) => (
                 <img

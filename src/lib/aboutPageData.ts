@@ -22,13 +22,13 @@ export const boardMembersData: BoardMembersDataType[] = [
     },
     {
         name: "Sumer Jabri",
-        role: "CTO | Crafter CMS Former CEO | Rivet Logic (acquired by Capgemini)",
+        role: "CTO Crafter CMS | Former CEO Rivet Logic (acquired by Capgemini)",
         image: `${IMAGES.boardMember2}`,
         linkedInUrl: "https://www.linkedin.com/in/sjabri/",
     },
     {
         name: "Igor Shindel",
-        role: "Former CIO | Appnexus CTO Coach for Tech Leaders",
+        role: "Former CIO Appnexus | CTO Coach for Tech Leaders",
         image: `${IMAGES.boardMember3}`,
         linkedInUrl: "https://www.linkedin.com/in/igorshindel/",
     },
@@ -57,7 +57,7 @@ export const leadersData: BoardMembersDataType[] = [
     },
     {
         name: "Sujith",
-        role: "Global Business Development Manager",
+        role: "Global Operations Manager",
         image: `${IMAGES.leader2}`,
     },
     {
