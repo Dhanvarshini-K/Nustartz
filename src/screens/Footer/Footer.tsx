@@ -30,7 +30,7 @@ const Footer = () => {
             className="h-16 sm:mb-4"
           />
         </div>
-        <div className="flex gap-5 sm:gap-10 md:gap-28 flex-wrap">
+        <div className="flex gap-5 sm:gap-20 md:gap-28 flex-wrap">
           <div className="space-y-2 sm:space-y-4 ">
             {navigationLinks.map((link) => {
               const isActive = location.pathname === link.url;
@@ -38,7 +38,7 @@ const Footer = () => {
                 <div key={link.title}>
                   <Link
                     to={link.url}
-                    className={`px-4 py-2 text-xl ${
+                    className={`sm:px-4 py-2 text-xl ${
                       isActive ? "text-BrandPurple font-bold" : "text-Gray"
                     }`}
                   >
@@ -48,7 +48,7 @@ const Footer = () => {
               );
             })}
           </div>
-          <div className="flex flex-col gap-6 ml-4 sm:ml-0">
+          <div className="flex flex-col gap-6">
             <div className="space-y-2 flex items-start flex-col">
               {footerData.map((data, index) => (
                 <p className="text-lg md:text-xl text-Gray" key={index}>

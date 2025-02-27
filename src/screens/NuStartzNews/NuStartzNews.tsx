@@ -11,7 +11,7 @@ export const NuStartzNews = () => {
   );
 
   return (
-    <section className="bg-custom-gradient px-4 md:px-20">
+    <section className="bg-custom-gradient px-4 sm:px-20">
       {nustartzNewsArticleData !== undefined ? (
         <div className="section-container py-10 sm:py-16">
           <h1 className="text-3xl sm:text-6xl font-bold mb-5 sm:mb-10">
@@ -40,7 +40,7 @@ export const NuStartzNews = () => {
             </div>
           </div>
 
-          <div className="flex gap-10 py-10 flex-col lg:flex-row justify-between">
+          <div className="flex gap-10 flex-col lg:flex-row justify-between">
             <div className="w-full flex items-center justify-center">
               <img
                 src={nustartzNewsArticleData?.image2}

@@ -11,7 +11,7 @@ export const StartupNews = (): JSX.Element => {
     (news) => news.title === title
   );
   return (
-    <section className="bg-custom-gradient px-4 md:px-20">
+    <section className="bg-custom-gradient px-4 sm:px-20">
       {startUpNewsArticleData !== undefined ? (
         <div className="section-container">
           <h1 className="pt-10 md:pt-16 text-4xl sm:text-6xl font-bold">

@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full bg-white shadow-md z-50">
-      <div className="container flex items-center justify-between py-4 px-10 max-w-[1200px] m-auto">
+      <div className="container flex items-center justify-between py-4 px-4 sm:px-10 max-w-[1200px] m-auto">
         <img
           src={IMAGES.nuStartzLogo}
           alt="NuStartz Logo"

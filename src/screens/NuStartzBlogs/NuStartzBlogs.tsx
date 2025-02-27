@@ -10,7 +10,7 @@ export const NuStartzBlogs = () => {
     (blog) => blog.image === image
   );
   return (
-    <section className="bg-custom-gradient px-4 md:px-20">
+    <section className="bg-custom-gradient px-4 sm:px-20">
       {nuStartzBlogsArticleData !== undefined ? (
         <div className="section-container py-10 sm:py-16 space-y-4 sm:space-y-8">
           <h1 className="text-4xl sm:text-6xl text-DarkGrey font-bold">
@@ -20,7 +20,7 @@ export const NuStartzBlogs = () => {
           <img
             src={`${nuStartzBlogsArticleData?.image}`}
             alt="Blog-Image"
-            className="w-[300px] sm:w-[500px]"
+            className="w-[300px] sm:w-[500px] rounded-lg"
           />
 
           <p className="text-lg sm:text-xl text-ParaGrey">

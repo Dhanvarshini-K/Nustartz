@@ -10,7 +10,7 @@ export const NuStartzEvents = () => {
     (event) => event.image === image
   );
   return (
-    <section className="bg-custom-gradient px-4 md:px-20">
+    <section className="bg-custom-gradient px-4 sm:px-20">
       {nustartzEventsArticleData !== undefined ? (
         <div className="section-container py-10 sm:py-16 flex flex-col space-y-4 sm:space-y-8">
           <h1 className="text-3xl sm:text-6xl font-bold">

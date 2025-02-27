@@ -47,7 +47,7 @@ const Home = (): JSX.Element => {
   return (
     <main className="bg-custom-gradient">
       {/* Hero Section */}
-      <section className="relative bg-heroBackground px-4 md:px-20 ">
+      <section className="relative bg-heroBackground px-4 sm:px-20 ">
         <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center items-center pt-8 sm:pt-16 pb-20 ">
           <div className="space-y-8  text-start md:w-[535px] z-10">
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-b from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none">
@@ -111,7 +111,7 @@ const Home = (): JSX.Element => {
 
       {/* How We Deliver Section */}
 
-      <section className="py-10 sm:py-16 px-4 md:px-20 bg-GhostWhite">
+      <section className="py-10 sm:py-16 px-4 sm:px-20 bg-GhostWhite">
         <h2 className="text-5xl sm:text-6xl font-bold text-center text-paragray mb-5 sm:mb-10">
           {HomePageSectionsEnum.howWeDeliver}
         </h2>

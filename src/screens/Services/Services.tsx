@@ -45,12 +45,12 @@ export const Services = (): JSX.Element => {
   return (
     <div className="bg-custom-gradient">
       {/* Hero Section */}
-      <section className="bg-heroBackground bg-opacity-40 px-4 md:px-20 relative">
+      <section className="bg-heroBackground bg-opacity-40 px-4 sm:px-20 relative">
         <div className="section-container flex flex-wrap lg:flex-nowrap justify-between gap-8 py-10 sm:py-16">
-          <div className="md:mt-16">
+          <div className="md:mt-16 mx-auto md:mx-0">
             {serviceHeroTitle?.map((title, index) => (
               <h1
-                className="text-5xl sm:text-6xl md:text-8xl font-bold text-ParaGrey leading-tight z-10"
+                className="text-6xl md:text-8xl font-bold text-ParaGrey leading-tight z-10"
                 key={index}
               >
                 {title}
@@ -72,7 +72,7 @@ export const Services = (): JSX.Element => {
       </section>
 
       {/* Services Section */}
-      <section className="bg-heroBackground py-10 sm:py-16 px-4 md:px-20 ">
+      <section className="bg-heroBackground py-10 sm:py-16 px-4 sm:px-20 ">
         <div className="section-container flex flex-col lg:flex-row justify-between gap-5 sm:gap-10">
           <div className="w-[100%] sm:w-[50%]">
             <div className="flex items-center gap-4">
@@ -106,7 +106,7 @@ export const Services = (): JSX.Element => {
       </section>
 
       {/* Tech Hub Section */}
-      <section className="py-10 sm:py-16 px-4 md:px-20">
+      <section className="py-10 sm:py-16 px-4 sm:px-20">
         <div className="section-container flex justify-between gap-16 flex-col lg:flex-row">
           <div className="flex flex-col justify-center gap-8 lg:w-[50%]">
             <h2 className="text-4xl sm:text-5xl font-semibold text-ParaGrey">
@@ -150,7 +150,7 @@ export const Services = (): JSX.Element => {
       </div>
 
       {/* Tech Fusion Hub Section */}
-      <section className="bg-heroBackground px-4 md:px-20 py-10 sm:py-16">
+      <section className="bg-heroBackground px-4 sm:px-20 py-10 sm:py-16">
         <div className="section-container">
           <h2 className="text-4xl sm:text-5xl font-semibold text-ParaGrey mb-5 sm:mb-10">
             {ServicePageSectionsEnum.techFusion}
@@ -159,7 +159,7 @@ export const Services = (): JSX.Element => {
             {ServicePageSectionsEnum.techFusionSubTitle}
           </p>
         </div>
-        <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16">
+        <div className="section-container grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-16">
           {techFusionHubSectionData.map((service) => (
             <div
               key={service.category}
@@ -187,13 +187,13 @@ export const Services = (): JSX.Element => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-10 sm:py-16 px-4 md:px-20">
+      <section className="bg-white py-10 sm:py-16 px-4 sm:px-20">
         <div className="section-container">
           <h2 className="text-4xl sm:text-5xl font-semibold text-ParaGrey mb-5 sm:mb-10">
             {ServicePageSectionsEnum.caseStudies}
           </h2>
 
-          <div className="flex flex-wrap lg:flex-nowrap gap-8">
+          <div className="flex flex-wrap md:flex-nowrap gap-8">
             {caseStudiesSectionData.map((study, index) => (
               <Card
                 key={index}

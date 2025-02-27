@@ -50,16 +50,6 @@ export const serviceSectionData: ServiceSectionType[] = [
       "We create data-driven marketing strategies to increase brand visibility, from social media and SEO to content marketing, driving engagement and growth.",
   },
   {
-    title: "Sales",
-    description:
-      "Our sales strategies boost revenue through lead generation, CRM integration, and ongoing sales training to close deals efficiently.",
-  },
-  {
-    title: "Branding",
-    description:
-      "We develop compelling branding that reflects your startup’s identity, from design to messaging, ensuring your brand leaves a lasting impression.",
-  },
-  {
     title: "From Ideas to IPO",
     description:
       "We support you from startup to scale-up, providing guidance for funding, growth, and preparing for an IPO, ensuring long-term success.",
