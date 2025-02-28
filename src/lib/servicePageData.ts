@@ -116,11 +116,11 @@ export const caseStudiesSectionData: CaseStudySectionDataType[] = [
   {
     number: "01",
     description:
-      "BeyondMedia - Revolutionizing Enterprise Search for Beyond Media Solutions with NuStartz",
+      "Revolutionizing Enterprise Search",
   },
   {
     number: "02",
     description:
-      "CareerJourney - Bridging the Gap Between Aspiration and Achievement",
+      "Bridging the Gap Between Aspiration and Achievement",
   },
 ];

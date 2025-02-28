@@ -16,13 +16,13 @@ export const NuStartzEvents = () => {
           <h1 className="text-3xl sm:text-6xl font-bold">
             {nustartzEventsArticleData?.title}
           </h1>
-          {/* <div className="flex justify-center"> */}
-          <img
-            src={nustartzEventsArticleData?.image}
-            alt="Event-Image"
-            className="w-[300px] sm:w-[500px]"
-          />
-          {/* </div> */}
+          <div className="flex justify-center">
+            <img
+              src={nustartzEventsArticleData?.image}
+              alt="Event-Image"
+              className="w-[300px] sm:w-[500px] rounded-lg"
+            />
+          </div>
           <p className="text-lg sm:text-xl text-ParaGrey">
             {nustartzEventsArticleData?.content}
           </p>

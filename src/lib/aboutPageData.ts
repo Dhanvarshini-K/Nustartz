@@ -52,7 +52,7 @@ export const foundersData: BoardMembersDataType[] = [
 export const leadersData: BoardMembersDataType[] = [
     {
         name: "Nagaraj",
-        role: "Global Director of Operations",
+        role: "Director of Operations, India",
         image: `${IMAGES.leader1}`,
     },
     {

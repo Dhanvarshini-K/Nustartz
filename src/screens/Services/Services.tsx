@@ -197,14 +197,14 @@ export const Services = (): JSX.Element => {
             {caseStudiesSectionData.map((study, index) => (
               <Card
                 key={index}
-                className="bg-Lavender bg-opacity-60 p-4 sm:p-8"
+                className="bg-Lavender bg-opacity-60 p-4 sm:p-8 w-full"
               >
                 <CardContent className="flex flex-col">
                   <div>
                     {/* <p className="text-3xl mb-2 text-ParaGrey font-semibold">
                       {TextEnum.caseStudy} ({study.number})
                     </p> */}
-                    <p className="text-lg sm:text-xl text-ParaGrey font-semibold">
+                    <p className="text-lg sm:text-2xl text-ParaGrey font-semibold">
                       {study.description}
                     </p>
                   </div>

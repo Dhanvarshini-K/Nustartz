@@ -20,7 +20,7 @@ export const NuStartzBlogs = () => {
           <img
             src={`${nuStartzBlogsArticleData?.image}`}
             alt="Blog-Image"
-            className="w-[300px] sm:w-[500px] rounded-lg"
+            className="w-[300px] sm:w-[400px] mx-auto rounded-lg"
           />
 
           <p className="text-lg sm:text-xl text-ParaGrey">

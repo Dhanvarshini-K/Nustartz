@@ -81,19 +81,19 @@ export type InsightsNewsDataType = {
 export const insightsNewsData: InsightsNewsDataType[] = [
     {
         id: 1,
-        date: "Wednesday, 09 - Oct 2024",
+        date: "Sunday, 30 - June 2024",
         title: "NuStartz at IndiaFirst Startup Expo & Conclave 2024",
         image: `${IMAGES.nustartzNewsImage1}`, 
     },
     {
         id: 2,
-        date: "Wednesday, 09 - Oct 2024",
+        date: "Sunday, 30 - June 2024",
         title: "NuStartz Wins Best Startup Knowledge Provider Award",
         image: `${IMAGES.nustartzNewsImage2}`,
     },
     {
         id: 3,
-        date: "Wednesday, 09 - Oct 2024",
+        date: "Friday, 10 - May 2024",
         title: "NuStartz Shines at the NY Tech Meetup",
         image: `${IMAGES.nustartzNewsImage3}`,
     }

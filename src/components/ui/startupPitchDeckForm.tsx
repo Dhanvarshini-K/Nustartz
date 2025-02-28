@@ -52,7 +52,7 @@ export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
     >
       <button
         onClick={handleCloseModal}
-        className="absolute top-0 right-0 hover:text-BrandPurple text-NickelGrey"
+        className="absolute top-2 right-1 hover:text-BrandPurple text-NickelGrey"
       >
         <X className="w-6 h-6" />
       </button>
@@ -102,6 +102,14 @@ export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
           label="Website url"
           placeholder="Enter your website url"
           name="websiteUrl"
+        />
+
+        <FormInput
+          control={control}
+          label="Domain"
+          placeholder="Enter your domain"
+          name="domainName"
+          isRequired
         />
 
         <FormInput

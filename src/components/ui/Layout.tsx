@@ -1,3 +1,4 @@
+import { ScrollToTopButton } from "../../customHooks/ScrollToTopButton";
 import Footer from "../../screens/Footer/Footer";
 import Header from "../../screens/Header/Header";
 
@@ -7,7 +8,8 @@ export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow pt-20">{children}</main>
+      <main className="flex-grow">{children}</main>
+      <ScrollToTopButton />
       <Footer />
     </div>
   );

@@ -210,7 +210,7 @@ const Home = (): JSX.Element => {
             onClick={() => setShowVideo(false)}
             className="absolute end-0 -top-6"
           >
-            <X className="w-8 h-7 hover:text-BrandPurple" />
+            <X className="w-8 h-7 text-white" />
           </button>
           <iframe
             src="https://www.youtube.com/embed/IfM1WIyIDGc?si=AvyGQ8eljShlJ34z"

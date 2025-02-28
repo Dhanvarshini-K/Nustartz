@@ -106,9 +106,9 @@ export const News = (): JSX.Element => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-b from-[#007AFF]/30 to-[#004999]/100"></div>
 
-                    <div className="absolute top-4 left-4  text-white px-3 py-1 rounded-md">
+                    {/* <div className="absolute top-4 left-4  text-white px-3 py-1 rounded-md">
                       <p className="text-sm font-medium">{news.date}</p>
-                    </div>
+                    </div> */}
 
                     <CardContent className="absolute bottom-0 p-6 text-white">
                       <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
