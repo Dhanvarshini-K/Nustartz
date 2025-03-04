@@ -25,7 +25,8 @@ const Header = () => {
         <img
           src={IMAGES.nuStartzLogo}
           alt="NuStartz Logo"
-          className="h-12 w-auto"
+          className="h-12 w-auto hover:cursor-pointer"
+          onClick={() => navigate("/")}
         />
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>

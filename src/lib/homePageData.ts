@@ -4,6 +4,7 @@ interface HeroDataType {
   description?: string;
   buttonText?: string;
   heroImageUrl?: string;
+  imageStand?: string;
 }
 
 export enum HomePageSectionsEnum {
@@ -13,6 +14,23 @@ export enum HomePageSectionsEnum {
   startupPortFolio = "Our Startup Portfolio",
   partners = "Our Partners",
 }
+
+export const heroSectionCarouselData: HeroDataType[] = [
+  {
+    title: "Crafting the future of Startups.",
+    description: `At NuStartz, we turn your startup vision into reality. From building high-performing teams to developing market-ready products, we provide the resources and expertise you need to grow and succeed. Let’s craft your success story together.`,
+    buttonText: "GET IN TOUCH",
+    heroImageUrl: `${IMAGES.craftingImage}`,
+  },
+  {
+    title: "Best Startup Knowledge Provider",
+    description:
+      "At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise.",
+    buttonText: "GET IN TOUCH",
+    heroImageUrl: `${IMAGES.startupAward}`,
+    imageStand: `${IMAGES.startupAwardStand}`,
+  },
+];
 
 export const heroSectionData: HeroDataType = {
   title: "Crafting the future of Startups.",
@@ -112,5 +130,5 @@ export const ourPartners: string[] = [
   IMAGES.koreAILogo,
   IMAGES.snapLogicLogo,
   IMAGES.techDayLogo,
-  IMAGES.pulseLogo
+  IMAGES.pulseLogo,
 ];

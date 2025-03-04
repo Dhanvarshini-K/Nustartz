@@ -17,7 +17,8 @@ export const nustartzNewsContents: NuStartzNewsContentsType[] = [
   {
     title:
       "NuStartz at IndiaFirst Startup Expo & Conclave 2024 – A Transformative Experience",
-      subTitle: "We had an unforgettable experience at the IndiaFirst Startup Expo & Conclave 2024, held in New Delhi from June 28 to 30! This prestigious event brought together some of the brightest minds in the startup ecosystem, offering a platform for groundbreaking innovations, insightful discussions, and unparalleled networking opportunities.",
+    subTitle:
+      "We had an unforgettable experience at the IndiaFirst Startup Expo & Conclave 2024, held in New Delhi from June 28 to 30! This prestigious event brought together some of the brightest minds in the startup ecosystem, offering a platform for groundbreaking innovations, insightful discussions, and unparalleled networking opportunities.",
     image1: `${IMAGES.nustartzNewsImage1}`,
     imageDescriptions1: [
       "As proud exhibitors at this dynamic expo, NuStartz, a part of Numentica Consulting Group, showcased our unwavering commitment to empowering startups, fostering innovation, and driving global business success. Our presence at the event reinforced our mission to help early-stage ventures scale efficiently, leverage cutting-edge technology, and navigate the challenges of expansion.",
@@ -55,17 +56,17 @@ export const nustartzNewsContents: NuStartzNewsContentsType[] = [
         newsTitle: "A Heartfelt Thank You",
         newsDescriptions: [
           "This achievement wouldn’t have been possible without the trust and collaboration of:",
-          "✅ The incredible startups that have partnered with us and entrusted us with their growth. Your success stories fuel our passion.",
-          "✅ The event organizers for creating a powerful platform that celebrates and supports entrepreneurship in India.",
-          "✅ Our dedicated team at NuStartz, whose expertise, hard work, and vision make all of this possible. Your commitment to innovation and knowledge-sharing is truly inspiring.",
+          "The incredible startups that have partnered with us and entrusted us with their growth. Your success stories fuel our passion.",
+          "The event organizers for creating a powerful platform that celebrates and supports entrepreneurship in India.",
+          "Our dedicated team at NuStartz, whose expertise, hard work, and vision make all of this possible. Your commitment to innovation and knowledge-sharing is truly inspiring.",
         ],
       },
       {
         newsTitle: "The Journey Ahead",
         newsDescriptions: [
           "This award marks a new chapter in our journey as we continue our mission to redefine startup success, bridge the gap between ideas and impactful execution, and create a global community of innovators.",
-          "🚀 Stay tuned as we expand our initiatives, introduce new mentorship opportunities, and continue to empower startups with the tools and knowledge they need to thrive!",
-          "Once again, thank you to everyone who has been part of our story. This is just the beginning—here’s to many more milestones ahead! 🎉",
+          "Stay tuned as we expand our initiatives, introduce new mentorship opportunities, and continue to empower startups with the tools and knowledge they need to thrive!",
+          "Once again, thank you to everyone who has been part of our story. This is just the beginning—here’s to many more milestones ahead!",
         ],
       },
     ],
@@ -96,10 +97,10 @@ export const nustartzNewsContents: NuStartzNewsContentsType[] = [
         newsTitle: "Building Meaningful Connections",
         newsDescriptions: [
           "The event was a fantastic opportunity to:",
-          "✅ Network with global tech leaders, investors, and entrepreneurs eager to shape the future of startups.",
-          "✅ Share insights on the evolving startup landscape, including challenges and opportunities for emerging businesses.",
-          "✅ Showcase our innovative approach to startup support, from incubation programs to tailored growth strategies.",
-          "✅ Strengthen our presence in the NYC tech community, reinforcing our role as a key enabler of startup success.",
+          "Network with global tech leaders, investors, and entrepreneurs eager to shape the future of startups.",
+          "Share insights on the evolving startup landscape, including challenges and opportunities for emerging businesses.",
+          "Showcase our innovative approach to startup support, from incubation programs to tailored growth strategies.",
+          "Strengthen our presence in the NYC tech community, reinforcing our role as a key enabler of startup success.",
         ],
       },
       {
@@ -107,15 +108,15 @@ export const nustartzNewsContents: NuStartzNewsContentsType[] = [
         newsDescriptions: [
           "At NuStartz, we believe that the right support, knowledge, and connections can accelerate startup success. Being part of such an influential gathering reinforced our mission to provide startups with the resources, guidance, and industry partnerships they need to break barriers and achieve sustainable growth.",
           "We extend our heartfelt gratitude to:",
-          "💡 The event organizers for curating such an insightful and impactful event.",
-          "💡 The visionary entrepreneurs, investors, and tech enthusiasts we had the pleasure of connecting with.",
-          "💡 Our team at NuStartz, whose dedication to innovation and startup empowerment continues to drive our success.",
+          "The event organizers for curating such an insightful and impactful event.",
+          "The visionary entrepreneurs, investors, and tech enthusiasts we had the pleasure of connecting with.",
+          "Our team at NuStartz, whose dedication to innovation and startup empowerment continues to drive our success.",
         ],
       },
       {
         newsTitle: "The Journey Continues",
         newsDescriptions: [
-          "This is just the beginning! 🚀 We are excited to leverage the momentum from NY Tech Meetup 2024 as we continue crafting impactful journeys for startups worldwide.",
+          "This is just the beginning! We are excited to leverage the momentum from NY Tech Meetup 2024 as we continue crafting impactful journeys for startups worldwide.",
           "Stay tuned for more updates, collaborations, and exciting opportunities as we push the boundaries of startup innovation!",
         ],
       },
