@@ -13,7 +13,14 @@ export const AboutUs = (): JSX.Element => {
   return (
     <main className="bg-custom-gradient">
       {/* Hero Section */}
-      <section className="bg-heroBackground px-10 sm:px-24 relative">
+      <section
+        className="px-10 sm:px-24 relative"
+        style={{
+          backgroundImage: `url(${IMAGES.carouselBackground})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <div className="section-container py-10 sm:py-16">
           <iframe
             src="https://www.youtube.com/embed/bzcN_dyizIE?si=FF1fXQfZGC0iv2hk"
