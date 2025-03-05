@@ -34,10 +34,11 @@ export const SlickCarousel = ({ handleOpenModal }: CarouselProps) => {
               className="!flex !flex-col lg:!flex-row gap-16  justify-between items-center"
             >
               <div className="space-y-8 text-start md:w-[535px] sm:ml-1">
-                {/* <img src={carousel.title} alt="" className="object-cover" /> */}
-                <h1 className="text-6xl sm:text-8xl font-bold bg-gradient-to-r from-[rgba(82,229,220,0.8)] via-[rgba(255,102,255,0.8)] to-[rgba(125,103,255,0.8)] bg-clip-text text-transparent leading-none">
-                  {carousel.titleText}
-                </h1>
+                <img
+                  src={carousel.title}
+                  alt="carousel-title"
+                  className="h-44 object-cover"
+                />
 
                 <p className="text-lg sm:text-xl text-ParaGrey">
                   {carousel.description}
@@ -50,7 +51,7 @@ export const SlickCarousel = ({ handleOpenModal }: CarouselProps) => {
                   <ArrowRight className="h-6 w-6" />
                 </Button>
               </div>
-              <div className="!mx-auto relative hidden md:block">
+              <div className="!mx-auto relative">
                 <img
                   src={carousel.heroImageUrl}
                   alt={carousel.title}
