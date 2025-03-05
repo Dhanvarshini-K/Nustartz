@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Separator } from "../../components/ui/separator";
 import {
   Tabs,
@@ -12,14 +12,31 @@ import { News } from "../News/News";
 import { InsightTabsEnum } from "../../lib/insightsPageData";
 
 export const Insights = () => {
-  const [active, setActive] = useState("blogs");
+  const getInitialTab = () => {
+    const storedTab = localStorage.getItem("activeTab");
+    return storedTab || "blogs";
+  };
+
+  const [active, setActive] = useState(getInitialTab());
+
   const handleTabChange = (tab: string) => {
     setActive(tab);
+    localStorage.setItem("activeTab", tab);
   };
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.removeItem("activeTab");
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, []);
+
   return (
     <section className="bg-custom-gradient px-4 sm:px-10 md:px-20">
       <div className="section-container py-10 sm:py-16">
-        <Tabs defaultValue="blogs">
+        <Tabs defaultValue={active}>
           <TabsList className="mb-2 sm:mb-4">
             <TabsTrigger
               value="blogs"
