@@ -11,7 +11,6 @@ import { Button } from "../../components/ui/button";
 import {
   aboutSectionData,
   companyDeliveryStepsData,
-  heroSectionCarouselData,
   HomePageSectionsEnum,
   ourPartners,
   startupPortfolioData,
@@ -20,19 +19,8 @@ import {
 } from "../../lib/homePageData";
 import { StartupPitchDeckForm } from "../../components/ui/startupPitchDeckForm";
 import Marquee from "react-fast-marquee";
-import Slider from "react-slick";
-import Images from "../../themes";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { SlickCarousel } from "../../components/ui/slickCarousel";
 
-const settings = {
-  infinite: true,
-  speed: 1000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 5000,
-};
 const Home = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
@@ -51,51 +39,7 @@ const Home = (): JSX.Element => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative px-8 sm:px-20 bg-heroBackground">
-        <div
-          className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-40"
-          style={{ backgroundImage: `url(${Images.carouselBackground})` }}
-        ></div>
-        <div className="section-container pt-8 sm:pt-16 pb-20">
-          <Slider {...settings}>
-            {heroSectionCarouselData?.map((carousel, index) => (
-              <div
-                key={index}
-                className="!flex !flex-col lg:!flex-row gap-16  justify-between items-center"
-              >
-                <div className="space-y-8 text-start md:w-[535px] sm:ml-1">
-                  <img src={carousel.title} alt="" />
-                  <p className="text-lg sm:text-xl text-ParaGrey">
-                    {carousel.description}
-                  </p>
-                  <Button
-                    className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4 z-10 ml-5 sm:ml-1"
-                    onClick={handleOpenModal}
-                  >
-                    {carousel.buttonText}
-                    <ArrowRight className="h-6 w-6" />
-                  </Button>
-                </div>
-                <div className="!mx-auto relative hidden md:block">
-                  <img
-                    src={carousel.heroImageUrl}
-                    alt={carousel.title}
-                    className={`object-cover relative ${carousel?.className}`}
-                  />
-                  {carousel?.imageStand ? (
-                    <img
-                      src={carousel.imageStand}
-                      alt={carousel.title}
-                      className="w-[280px] sm:w-[300px] absolute -bottom-2"
-                    />
-                  ) : null}
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </section>
-
+      <SlickCarousel handleOpenModal={handleOpenModal} />
       <div
         className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-500 ${
           openModal ? "opacity-100 visible" : "opacity-0 invisible"
@@ -108,7 +52,6 @@ const Home = (): JSX.Element => {
       </div>
 
       {/* How We Deliver Section */}
-
       <section className="py-10 sm:py-16 px-4 sm:px-20 bg-GhostWhite">
         <h2 className="text-5xl sm:text-6xl font-bold text-center text-paragray mb-5 sm:mb-10">
           {HomePageSectionsEnum.howWeDeliver}
