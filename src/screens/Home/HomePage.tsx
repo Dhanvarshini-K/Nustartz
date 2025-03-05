@@ -51,14 +51,11 @@ const Home = (): JSX.Element => {
   return (
     <main>
       {/* Hero Section */}
-      <section
-        className="relative px-8 sm:px-20 bg-heroBackground"
-        style={{
-          backgroundImage: `url(${Images.carouselBackground})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
+      <section className="relative px-8 sm:px-20 bg-heroBackground">
+        <div
+          className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-40"
+          style={{ backgroundImage: `url(${Images.carouselBackground})` }}
+        ></div>
         <div className="section-container pt-8 sm:pt-16 pb-20">
           <Slider {...settings}>
             {heroSectionCarouselData?.map((carousel, index) => (
