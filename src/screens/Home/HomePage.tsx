@@ -38,6 +38,7 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
+  arrows: false,
 };
 const Home = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);
@@ -57,7 +58,7 @@ const Home = (): JSX.Element => {
   return (
     <main className="bg-custom-gradient">
       {/* Hero Section */}
-      <section className="relative bg-heroBackground px-8 sm:px-20 ">
+      <section className="relative px-8 sm:px-20 ">
         <div className="section-container pt-8 sm:pt-16 pb-20">
           <Slider {...settings}>
             {heroSectionCarouselData?.map((carousel, index) => (
