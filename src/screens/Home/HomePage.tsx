@@ -1,13 +1,6 @@
 import React, { JSX, useState } from "react";
-import {
-  ArrowRight,
-  DollarSignIcon,
-  LeafIcon,
-  RocketIcon,
-  X,
-} from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 import { Button } from "../../components/ui/button";
-import { Card, CardContent } from "../../components/ui/card";
 // import {
 //   Carousel,
 //   CarouselContent,
@@ -28,6 +21,7 @@ import {
 import { StartupPitchDeckForm } from "../../components/ui/startupPitchDeckForm";
 import Marquee from "react-fast-marquee";
 import Slider from "react-slick";
+import Images from "../../themes";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -37,10 +31,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false,
-  pauseOnHover: false,
-  cssEase: "ease-in-out",
+  autoplaySpeed: 5000,
 };
 const Home = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);
@@ -58,9 +49,13 @@ const Home = (): JSX.Element => {
     setShowVideo(true);
   };
   return (
-    <main className="bg-custom-gradient">
+    <main>
       {/* Hero Section */}
-      <section className="relative px-8 sm:px-20 ">
+      <section className="relative px-8 sm:px-20 bg-heroBackground">
+        <div
+          className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-40"
+          style={{ backgroundImage: `url(${Images.carouselBackground})` }}
+        ></div>
         <div className="section-container pt-8 sm:pt-16 pb-20">
           <Slider {...settings}>
             {heroSectionCarouselData?.map((carousel, index) => (
@@ -68,10 +63,8 @@ const Home = (): JSX.Element => {
                 key={index}
                 className="!flex !flex-col lg:!flex-row gap-16  justify-between items-center"
               >
-                <div className="space-y-8  text-start md:w-[535px]">
-                  <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-b from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none">
-                    {carousel.title}
-                  </h1>
+                <div className="space-y-8 text-start md:w-[535px] sm:ml-1">
+                  <img src={carousel.title} alt="" />
                   <p className="text-lg sm:text-xl text-ParaGrey">
                     {carousel.description}
                   </p>
@@ -87,30 +80,8 @@ const Home = (): JSX.Element => {
                   <img
                     src={carousel.heroImageUrl}
                     alt={carousel.title}
-                    className={`w-[300px] sm:w-[371px] lg:w-[400px] object-cover relative ${carousel?.className}`}
+                    className={`object-cover relative ${carousel?.className}`}
                   />
-                  {carousel.index === 1 ? (
-                    <div>
-                      <Card className="absolute -left-4 -top-10 sm:top-6 sm:-left-24 lg:top-10 lg:-left-32 md:top-6 md:-left-32  xl:top-18 xl:-left-32 bg-[#90dbf6] border-8 border-white shadow-lg rounded-[30px] w-20 h-20 md:w-28 md:h-28 ">
-                        <CardContent className="p-1 md:p-5">
-                          <DollarSignIcon className="h-14 w-14 text-white" />
-                        </CardContent>
-                      </Card>
-
-                      <Card className="absolute -bottom-10 -left-4 sm:-bottom-10 sm:-left-10 lg:-bottom-10 lg:-left-10 md:-bottom-16 md:-left-14 xl:-bottom-5 xl:-left-10 bg-[#f8a8fe] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
-                        <CardContent className="p-1 md:p-5">
-                          <RocketIcon className="h-14 w-14 sm:h-20 sm:w-20 text-white" />
-                        </CardContent>
-                      </Card>
-
-                      <Card className="absolute -top-10 -right-3 sm:-top-10 sm:-right-10 lg:-top-12 lg:-right-10 md:-top-12 md:-right-20 xl:-right-0 xl:-top-10 bg-[#72dfb3] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
-                        <CardContent className="p-1 md:p-5">
-                          <LeafIcon className="h-14 w-14 sm:h-20 sm:w-20 text-white" />
-                        </CardContent>
-                      </Card>
-                    </div>
-                  ) : null}
-
                   {carousel?.imageStand ? (
                     <img
                       src={carousel.imageStand}

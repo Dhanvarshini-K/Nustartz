@@ -73,6 +73,9 @@ const IMAGES = {
   nustartzEvent1Image3: require("../assets/EventImage3.png"),
   startupAward: require("../assets/StartupAward.png"),
   startupAwardStand: require("../assets/StartupAwardStand.png"),
+  heroTitle1: require("../assets/HeroTitle1.png"),
+  heroTitle2: require("../assets/HeroTitle2.png"),
+  carouselBackground: require("../assets/CarouselBackground.png"),
 };
 
 export default IMAGES;

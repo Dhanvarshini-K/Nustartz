@@ -1,6 +1,5 @@
 import IMAGES from "../themes";
 interface HeroDataType {
-  index?: number;
   title?: string;
   description?: string;
   buttonText?: string;
@@ -19,20 +18,19 @@ export enum HomePageSectionsEnum {
 
 export const heroSectionCarouselData: HeroDataType[] = [
   {
-    index: 1,
-    title: "Crafting the future of Startups.",
+    title: `${IMAGES.heroTitle1}`,
     description: `At NuStartz, we turn your startup vision into reality. From building high-performing teams to developing market-ready products, we provide the resources and expertise you need to grow and succeed. Let’s craft your success story together.`,
     buttonText: "GET IN TOUCH",
     heroImageUrl: `${IMAGES.craftingImage}`,
   },
   {
-    title: "Best Startup Knowledge Provider",
+    title: `${IMAGES.heroTitle2}`,
     description:
       "At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise.",
     buttonText: "GET IN TOUCH",
     heroImageUrl: `${IMAGES.startupAward}`,
     imageStand: `${IMAGES.startupAwardStand}`,
-    className: "mb-20",
+    className: "w-[300px] sm:w-[371px] lg:w-[400px] mb-20",
   },
 ];
 
