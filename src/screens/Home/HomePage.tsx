@@ -18,17 +18,27 @@ import { Card, CardContent } from "../../components/ui/card";
 import {
   aboutSectionData,
   companyDeliveryStepsData,
-  heroSectionData,
+  heroSectionCarouselData,
   HomePageSectionsEnum,
   ourPartners,
   startupPortfolioData,
   // testimonialsData,
   whoWeAreSectionData,
 } from "../../lib/homePageData";
-import IMAGES from "../../themes";
 import { StartupPitchDeckForm } from "../../components/ui/startupPitchDeckForm";
 import Marquee from "react-fast-marquee";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+const settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+};
 const Home = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
@@ -47,55 +57,69 @@ const Home = (): JSX.Element => {
   return (
     <main className="bg-custom-gradient">
       {/* Hero Section */}
-      <section className="relative bg-heroBackground px-4 sm:px-20 ">
-        <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center items-center pt-8 sm:pt-16 pb-20 ">
-          <div className="space-y-8  text-start md:w-[535px] z-10">
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-b from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none">
-              {heroSectionData.title}
-            </h1>
-            <p className="text-lg sm:text-xl text-ParaGrey z-10">
-              {heroSectionData.description}
-            </p>
-            <Button
-              className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4"
-              onClick={handleOpenModal}
-            >
-              {heroSectionData.buttonText}
-              <ArrowRight className="h-6 w-6" />
-            </Button>
-          </div>
+      <section className="relative bg-heroBackground px-8 sm:px-20 ">
+        <div className="section-container pt-8 sm:pt-16 pb-20">
+          <Slider {...settings}>
+            {heroSectionCarouselData?.map((carousel, index) => (
+              <div
+                key={index}
+                className="!flex !flex-col lg:!flex-row gap-16  justify-between items-center"
+              >
+                <div className="space-y-8  text-start md:w-[535px]">
+                  <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-b from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none">
+                    {carousel.title}
+                  </h1>
+                  <p className="text-lg sm:text-xl text-ParaGrey">
+                    {carousel.description}
+                  </p>
+                  <Button
+                    className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4 z-10 ml-5 sm:ml-1"
+                    onClick={handleOpenModal}
+                  >
+                    {carousel.buttonText}
+                    <ArrowRight className="h-6 w-6" />
+                  </Button>
+                </div>
+                <div className="!mx-auto relative hidden md:block">
+                  <img
+                    src={carousel.heroImageUrl}
+                    alt={carousel.title}
+                    className={`w-[300px] sm:w-[371px] lg:w-[400px] object-cover relative ${carousel?.className}`}
+                  />
+                  {carousel.index === 1 ? (
+                    <div>
+                      <Card className="absolute -left-4 -top-10 sm:top-6 sm:-left-24 lg:top-10 lg:-left-32 md:top-6 md:-left-32  xl:top-18 xl:-left-32 bg-[#90dbf6] border-8 border-white shadow-lg rounded-[30px] w-20 h-20 md:w-28 md:h-28 ">
+                        <CardContent className="p-1 md:p-5">
+                          <DollarSignIcon className="h-14 w-14 text-white" />
+                        </CardContent>
+                      </Card>
 
-          <div className="relative z-10">
-            <img
-              src={heroSectionData.heroImageUrl}
-              alt="Hero"
-              className="w-[300px] sm:w-[371px] lg:w-[400px] object-cover"
-            />
+                      <Card className="absolute -bottom-10 -left-4 sm:-bottom-10 sm:-left-10 lg:-bottom-10 lg:-left-10 md:-bottom-16 md:-left-14 xl:-bottom-5 xl:-left-10 bg-[#f8a8fe] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
+                        <CardContent className="p-1 md:p-5">
+                          <RocketIcon className="h-14 w-14 sm:h-20 sm:w-20 text-white" />
+                        </CardContent>
+                      </Card>
 
-            <Card className="absolute -left-4 -top-10 sm:top-6 sm:-left-24 lg:top-10 lg:-left-32 md:top-6 md:-left-32  xl:top-18 xl:-left-32 bg-[#90dbf6] border-8 border-white shadow-lg rounded-[30px] w-20 h-20 md:w-28 md:h-28 ">
-              <CardContent className="p-1 md:p-5">
-                <DollarSignIcon className="h-14 w-14 text-white" />
-              </CardContent>
-            </Card>
+                      <Card className="absolute -top-10 -right-3 sm:-top-10 sm:-right-10 lg:-top-12 lg:-right-10 md:-top-12 md:-right-20 xl:-right-0 xl:-top-10 bg-[#72dfb3] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
+                        <CardContent className="p-1 md:p-5">
+                          <LeafIcon className="h-14 w-14 sm:h-20 sm:w-20 text-white" />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  ) : null}
 
-            <Card className="absolute -bottom-10 -left-4 sm:-bottom-10 sm:-left-10 lg:-bottom-10 lg:-left-10 md:-bottom-16 md:-left-14 xl:-bottom-5 xl:-left-10 bg-[#f8a8fe] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
-              <CardContent className="p-1 md:p-5">
-                <RocketIcon className="h-14 w-14 sm:h-20 sm:w-20 text-white" />
-              </CardContent>
-            </Card>
-
-            <Card className="absolute -top-10 -right-3 sm:-top-10 sm:-right-10 lg:-top-12 lg:-right-10 md:-top-12 md:-right-20 xl:-right-0 xl:-top-10 bg-[#72dfb3] border-8 border-white shadow-lg rounded-[30px] w-26 h-26 md:w-36 md:h-36">
-              <CardContent className="p-1 md:p-5">
-                <LeafIcon className="h-14 w-14 sm:h-20 sm:w-20 text-white" />
-              </CardContent>
-            </Card>
-          </div>
+                  {carousel?.imageStand ? (
+                    <img
+                      src={carousel.imageStand}
+                      alt={carousel.title}
+                      className="w-[280px] sm:w-[300px] absolute -bottom-2"
+                    />
+                  ) : null}
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
-        <img
-          src={IMAGES.homeHeroSectionBackground}
-          alt="Hero-Background"
-          className="object-cover w-full h-full absolute inset-0 opacity-40"
-        />
       </section>
 
       <div
