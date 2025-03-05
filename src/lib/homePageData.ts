@@ -1,10 +1,12 @@
 import IMAGES from "../themes";
 interface HeroDataType {
+  index?: number;
   title?: string;
   description?: string;
   buttonText?: string;
   heroImageUrl?: string;
   imageStand?: string;
+  className?: string;
 }
 
 export enum HomePageSectionsEnum {
@@ -17,6 +19,7 @@ export enum HomePageSectionsEnum {
 
 export const heroSectionCarouselData: HeroDataType[] = [
   {
+    index: 1,
     title: "Crafting the future of Startups.",
     description: `At NuStartz, we turn your startup vision into reality. From building high-performing teams to developing market-ready products, we provide the resources and expertise you need to grow and succeed. Let’s craft your success story together.`,
     buttonText: "GET IN TOUCH",
@@ -29,6 +32,7 @@ export const heroSectionCarouselData: HeroDataType[] = [
     buttonText: "GET IN TOUCH",
     heroImageUrl: `${IMAGES.startupAward}`,
     imageStand: `${IMAGES.startupAwardStand}`,
+    className: "mb-20",
   },
 ];
 

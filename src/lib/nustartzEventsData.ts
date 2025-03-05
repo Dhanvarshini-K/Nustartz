@@ -21,7 +21,7 @@ export const nuStartzEventsData: NuStartzEventsDataType[] = [
     ],
     description: [
       "NuStartz offers more than just a workspace. The facility includes a modern cafeteria, spacious lounge areas, and collaborative zones, providing the perfect balance of productivity and relaxation for teams of varied capacities. With private offices, brand-friendly spaces, and premium amenities, our new office is ideal for startups and scaling businesses looking for a professional yet inspiring environment that’s truly their own.",
-      "This new NuStartz facility reaffirms our commitment to offering exclusive, client-centered office solutions that empower teams to grow, collaborate, and succeed in comfort and style."
+      "This new NuStartz facility reaffirms our commitment to offering exclusive, client-centered office solutions that empower teams to grow, collaborate, and succeed in comfort and style.",
     ],
   },
   {

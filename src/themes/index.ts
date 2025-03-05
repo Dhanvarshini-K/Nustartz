@@ -42,6 +42,7 @@ const IMAGES = {
   leader2: require("../assets/Leader2.png"),
   leader3: require("../assets/Leader3.png"),
   leader4: require("../assets/Leader4.png"),
+  leader5: require("../assets/Leader5.png"),
   pauseIcon: require("../assets/PauseIcon.png"),
   solutionImage1: require("../assets/SolutionImage1.png"),
   solutionImage2: require("../assets/SolutionImage2.png"),
