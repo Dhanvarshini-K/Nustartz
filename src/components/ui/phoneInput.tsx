@@ -49,6 +49,8 @@ export const PhoneNumberInput = ({
             value={value || ""}
             onChange={onChange}
             placeholder={placeholder}
+            enableSearch
+            countryCodeEditable={false}
             {...rest}
           />
           {error?.message && (
