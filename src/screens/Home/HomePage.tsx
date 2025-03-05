@@ -33,12 +33,14 @@ import "slick-carousel/slick/slick-theme.css";
 
 const settings = {
   infinite: true,
-  speed: 500,
+  speed: 1000,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
   arrows: false,
+  pauseOnHover: false,
+  cssEase: "ease-in-out",
 };
 const Home = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);
