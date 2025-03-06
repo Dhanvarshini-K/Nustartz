@@ -6,6 +6,28 @@ import { heroSectionCarouselData } from "../../lib/homePageData";
 import { Button } from "./button";
 import { ArrowRight } from "lucide-react";
 
+const CustomArrow = (props: any) => {
+  const { className, style, onClick, direction } = props;
+  return (
+    <div
+      className={className}
+      onClick={onClick}
+      style={{
+        ...style,
+        display: "block",
+        borderRadius: "100%",
+        background: "#6243E1",
+        opacity: 0.3,
+        zIndex: 10,
+        position: "absolute",
+        top: "50%",
+        transform: "translateY(-50%)",
+        [direction === "left" ? "left" : "right"]: "-20px",
+      }}
+    />
+  );
+};
+
 const settings = {
   infinite: true,
   speed: 1000,
@@ -13,6 +35,8 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 5000,
+  prevArrow: <CustomArrow direction="left" />,
+  nextArrow: <CustomArrow direction="right" />,
 };
 
 type CarouselProps = {
@@ -37,7 +61,7 @@ export const SlickCarousel = ({ handleOpenModal }: CarouselProps) => {
                 <img
                   src={carousel.title}
                   alt="carousel-title"
-                  className="h-44 object-cover"
+                  className="h-32 sm:h-44 object-cover"
                 />
 
                 <p className="text-lg sm:text-xl text-ParaGrey">
