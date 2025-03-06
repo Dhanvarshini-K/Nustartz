@@ -33,7 +33,11 @@ export const nuStartzEventsData: NuStartzEventsDataType[] = [
     title: "New NuStartz Office at Coimbatore",
     image: `${IMAGES.eventImage2}`,
     eventTitle: "Moments",
-    eventImages: [`${IMAGES.eventImage2}`],
+    eventImages: [
+      `${IMAGES.eventImage2}`,
+      `${IMAGES.nustartzEvent2Image1}`,
+      `${IMAGES.nustartzEvent2Image2}`,
+    ],
     content:
       "We’re excited to announce the opening of our latest office at Karunya Institute of Technology and Sciences in Coimbatore! This new space is dedicated to delivering world-class IT product development and support while also nurturing the next generation of tech talent. At NuStartz, we believe in fostering growth from within, offering a transformative experience where students evolve into full-fledged developers, equipped with the skills and mindset needed for a successful career in tech.",
     description: [
