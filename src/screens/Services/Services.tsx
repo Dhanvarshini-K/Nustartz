@@ -25,7 +25,7 @@ enum TextEnum {
   caseStudy = "CASE STUDY",
 }
 
-const serviceHeroTitle: string[] = ["Your one", "stop shop", "for success"];
+const serviceHeroTitle: string[] = ["Your one", "stop shop", "for success."];
 
 export const Services = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);
@@ -50,7 +50,7 @@ export const Services = (): JSX.Element => {
           <div className="md:mt-16 mx-auto md:mx-0">
             {serviceHeroTitle?.map((title, index) => (
               <h1
-                className="text-6xl md:text-8xl font-bold text-ParaGrey leading-tight z-10"
+                className="text-6xl md:text-8xl font-bold text-DarkGrey leading-tight z-10 tracking-[-3px]"
                 key={index}
               >
                 {title}
@@ -81,7 +81,7 @@ export const Services = (): JSX.Element => {
                 alt="Service-Icon"
                 className="w-8"
               />
-              <h2 className="text-3xl sm:text-4xl font-medium text-ParaGrey">
+              <h2 className="text-3xl sm:text-4xl font-medium text-DarkGrey">
                 {ServicePageSectionsEnum.services}
               </h2>
             </div>
@@ -109,7 +109,7 @@ export const Services = (): JSX.Element => {
       <section className="py-10 sm:py-16 px-4 sm:px-20">
         <div className="section-container flex justify-between gap-16 flex-col lg:flex-row">
           <div className="flex flex-col justify-center gap-8 lg:w-[50%]">
-            <h2 className="text-4xl sm:text-5xl font-semibold text-ParaGrey">
+            <h2 className="text-4xl sm:text-5xl font-semibold text-DarkGrey tracking-[-1px]">
               {ServicePageSectionsEnum.techStartup}
             </h2>
             <p className="text-lg sm:text-xl text-Gray">
@@ -152,10 +152,10 @@ export const Services = (): JSX.Element => {
       {/* Tech Fusion Hub Section */}
       <section className="bg-heroBackground px-4 sm:px-20 py-10 sm:py-16">
         <div className="section-container">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-ParaGrey mb-5 sm:mb-10">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-DarkGrey mb-5 sm:mb-10 tracking-[-1px]">
             {ServicePageSectionsEnum.techFusion}
           </h2>
-          <p className="text-xl sm:text-3xl md:text-6xl text-Gray mb-5 sm:mb-10 max-w-3xl">
+          <p className="text-xl sm:text-3xl md:text-6xl text-Gray mb-5 sm:mb-10 max-w-3xl tracking-[-1px]">
             {ServicePageSectionsEnum.techFusionSubTitle}
           </p>
         </div>
@@ -189,7 +189,7 @@ export const Services = (): JSX.Element => {
       {/* Case Studies */}
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-20">
         <div className="section-container">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-ParaGrey mb-5 sm:mb-10">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-DarkGrey mb-5 sm:mb-10 tracking-[-1px]">
             {ServicePageSectionsEnum.caseStudies}
           </h2>
 

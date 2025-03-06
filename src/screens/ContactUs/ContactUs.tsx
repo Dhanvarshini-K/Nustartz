@@ -34,10 +34,10 @@ export const ContactUs = (): JSX.Element => {
   return (
     <section className="bg-custom-gradient px-4 sm:px-20">
       <div className="section-container px-0 md:px-10 lg:px-24 py-10 sm:py-16">
-        <h1 className="sm:text-center text-4xl sm:text-8xl font-bold text-DarkGrey mb-4 sm:mb-8">
+        <h1 className="sm:text-center text-4xl sm:text-8xl font-bold text-DarkGrey mb-4 sm:mb-8 tracking-[-2px]">
           {contactUsFormData.contactTitle}
         </h1>
-        <p className="max-w-[776px] mx-auto text-lg sm:text-2xl font-medium text-black mb-10">
+        <p className="max-w-[776px] mx-auto text-lg sm:text-2xl font-medium text-black mb-10 tracking-[-1px]">
           {contactUsFormData.contactDescription}
         </p>
 
@@ -67,8 +67,8 @@ export const ContactUs = (): JSX.Element => {
 
               <FormInput
                 control={control}
-                label="Email Address"
-                placeholder="Email Address"
+                label="E-mail"
+                placeholder="Enter your email address"
                 name="email"
                 isRequired
                 rules={{

@@ -58,7 +58,7 @@ export const News = (): JSX.Element => {
                     <img
                       src={news.image}
                       alt={news.title}
-                      className="w-[600px] h-[440px] object-cover transform transition duration-500 hover:scale-105"
+                      className="w-[600px] h-[440px] object-cover transform transition duration-1000 hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/90 pointer-events-none">
                       <CardContent className="absolute bottom-0 p-6 text-white">
@@ -99,7 +99,7 @@ export const News = (): JSX.Element => {
                   onClick={() => navigateToStartUpNews(news)}
                 >
                   <div
-                    className="h-[440px] bg-cover bg-center transform transition duration-500 hover:scale-105"
+                    className="h-[440px] bg-cover bg-center transform transition duration-1000 hover:scale-105"
                     style={{
                       backgroundImage: `url(${news.image})`,
                     }}

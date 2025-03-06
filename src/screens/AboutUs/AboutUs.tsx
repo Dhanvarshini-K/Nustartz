@@ -36,7 +36,7 @@ export const AboutUs = (): JSX.Element => {
       {/* Board of Advisors */}
       <section className="py-10 sm:py-16 px-10 md:px-24">
         <div className="section-container ">
-          <h2 className="text-5xl font-bold text-ParaGrey text-center mb-5 sm:mb-10">
+          <h2 className="text-5xl font-bold text-DarkGrey text-center mb-5 sm:mb-10 tracking-[-1px]">
             {AboutPageSectionEnums.boardAdvisors}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -78,7 +78,7 @@ export const AboutUs = (): JSX.Element => {
       {/* Founders */}
       <section className="py-10 sm:py-16 px-10 md:px-24">
         <div className="section-container">
-          <h2 className="text-5xl font-bold text-ParaGrey text-center mb-5 sm:mb-10">
+          <h2 className="text-5xl font-bold text-DarkGrey text-center mb-5 sm:mb-10 tracking-[-1px]">
             {AboutPageSectionEnums.founders}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[800px] mx-auto">
@@ -120,7 +120,7 @@ export const AboutUs = (): JSX.Element => {
       {/* Leaders */}
       <section className="py-10 sm:py-16 px-10 md:px-24">
         <div className="section-container">
-          <h2 className="text-5xl font-bold text-ParaGrey text-center mb-5 sm:mb-10">
+          <h2 className="text-5xl font-bold text-DarkGrey text-center mb-5 sm:mb-10 tracking-[-1px]">
             {AboutPageSectionEnums.leaders}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[800px] mx-auto">
@@ -150,7 +150,7 @@ export const AboutUs = (): JSX.Element => {
 
       {/* Call to Action */}
       <div className="px-10 md:px-24">
-        <CallToAction />
+        <CallToAction text="Want to solve your problem" />
       </div>
     </main>
   );

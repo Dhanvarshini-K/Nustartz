@@ -46,7 +46,7 @@ export const Events = (): JSX.Element => {
               >
                 <Card
                   key={event.id}
-                  className="border-none shadow-md transform transition duration-500 hover:scale-95"
+                  className="border-none shadow-md transform transition duration-1000 hover:scale-95"
                   onClick={() => navigateToNuStartzEvents(event)}
                 >
                   <CardContent className="p-0">

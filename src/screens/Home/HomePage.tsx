@@ -53,7 +53,7 @@ const Home = (): JSX.Element => {
 
       {/* How We Deliver Section */}
       <section className="py-10 sm:py-16 px-4 sm:px-20 bg-GhostWhite">
-        <h2 className="text-5xl sm:text-6xl font-bold text-center text-paragray mb-5 sm:mb-10">
+        <h2 className="text-5xl sm:text-6xl font-bold text-center text-DarkGrey mb-5 sm:mb-10 tracking-[-2px]">
           {HomePageSectionsEnum.howWeDeliver}
         </h2>
 
@@ -105,7 +105,7 @@ const Home = (): JSX.Element => {
       {/* Who We Are Section */}
       <section className="py-10 sm:py-16 px-4">
         <div className="section-container sm:text-center">
-          <h2 className="text-5xl sm:text-6xl font-bold text-paragray mb-5 sm:mb-10">
+          <h2 className="text-5xl sm:text-6xl font-bold text-DarkGrey mb-5 sm:mb-10 tracking-[-1px]">
             {HomePageSectionsEnum.whoWeAre}
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-BrandBlueHeavy mb-10 max-w-4xl mx-auto">
@@ -214,7 +214,7 @@ const Home = (): JSX.Element => {
       {/* Portfolio Section */}
       <section className="pt-10 sm:pt-16">
         <div className="section-container text-center">
-          <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-5">
+          <h2 className="text-5xl sm:text-6xl font-bold text-DarkGrey mb-5">
             {HomePageSectionsEnum.startupPortFolio}
           </h2>
           <Marquee>
@@ -235,7 +235,7 @@ const Home = (): JSX.Element => {
       {/* Partners Section */}
       <section className="py-10 sm:py-16">
         <div className="section-container text-center">
-          <h2 className="text-5xl sm:text-6xl font-bold text-ParaGrey mb-5">
+          <h2 className="text-5xl sm:text-6xl font-bold text-DarkGrey mb-5">
             {HomePageSectionsEnum.partners}
           </h2>
           <Marquee direction="right">
