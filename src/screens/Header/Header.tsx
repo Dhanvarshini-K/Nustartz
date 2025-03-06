@@ -40,6 +40,7 @@ const Header = () => {
                       isActive ? "text-GhostWhite font-semibold" : "text-white"
                     }`}
                     onClick={() => navigate("/contact-us")}
+                    key={link.title}
                   >
                     {link.title}
                   </Button>
@@ -52,7 +53,6 @@ const Header = () => {
                     className={`px-4 py-2 text-xl ${
                       isActive ? "text-BrandPurple font-bold" : "text-Gray"
                     }`}
-                    key={link.title}
                   >
                     {link.title}
                   </Link>
@@ -80,6 +80,7 @@ const Header = () => {
                 <Button
                   className="text-white bg-BrandPurple text-xl"
                   onClick={handleMobileMenu}
+                  key={link.title}
                 >
                   {link.title}
                 </Button>
