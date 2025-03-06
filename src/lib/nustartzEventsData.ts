@@ -13,7 +13,7 @@ type NuStartzEventsDataType = {
 export const nuStartzEventsData: NuStartzEventsDataType[] = [
   {
     title: "Announcing Our New Office at Spazeone Arima Wakefield",
-    videoUrl: "https://www.youtube.com/embed/52ZYMetT7mg?si=HiZCVnv9-OLtyDJX",
+    // videoUrl: "https://www.youtube.com/embed/52ZYMetT7mg?si=HiZCVnv9-OLtyDJX",
     image: `${IMAGES.eventImage1}`,
     content:
       "We’re thrilled to announce the opening of our latest NuStartz office at Spazeone Arima Wakefield, Coimbatore, an exclusive office designed to cater to multiple client teams with dedicated spaces that reflect their unique brands. Each workspace is fully customizable, enabling clients to incorporate their own logos and branding, making it a true extension of their own company.",
@@ -31,6 +31,7 @@ export const nuStartzEventsData: NuStartzEventsDataType[] = [
   },
   {
     title: "New NuStartz Office at Coimbatore",
+    videoUrl: "https://www.youtube.com/embed/52ZYMetT7mg?si=HiZCVnv9-OLtyDJX",
     image: `${IMAGES.eventImage2}`,
     eventTitle: "Moments",
     eventImages: [
@@ -46,6 +47,7 @@ export const nuStartzEventsData: NuStartzEventsDataType[] = [
   },
   {
     title: "Team Building & Fun at NuStartz Office",
+    videoUrl: "https://www.youtube.com/embed/YVgXd8b1zBQ?si=UI9At8rhiAAxudNZ",
     eventTitle: "Moments",
     eventImages: [`${IMAGES.eventImage3}`],
     image: `${IMAGES.eventImage3}`,

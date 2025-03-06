@@ -34,7 +34,7 @@ export const CallToAction = () => {
         <div className="bg-BrandPurple text-white p-4 lg:p-10 flex items-center justify-center text-2xl sm:text-5xl font-bold w-full lg:w-[400px]">
           {insightsTabData.blogsCTATitle}
         </div>
-        <div className="flex flex-1 flex-col items-start bg-gradient-to-r from-[#d2f1fb] to-[#fbd7fb] p-4 px-4 lg:px-20">
+        <div className="flex flex-1 items-center bg-gradient-to-r from-[#d2f1fb] to-[#fbd7fb] p-4 px-4 lg:px-20">
           <div className="w-full flex">
             <Input
               placeholder="Enter your email address"
