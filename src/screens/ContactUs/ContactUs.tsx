@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { JSX } from "react";
@@ -6,6 +5,7 @@ import { FormInput } from "../../components/ui/formInput";
 import { useForm } from "react-hook-form";
 import { emailRegex } from "../../lib/regex";
 import { PhoneNumberInput } from "../../components/ui/phoneInput";
+import Images from "../../themes";
 
 const contactUsFormData = {
   contactTitle: "Contact our team",
@@ -99,7 +99,9 @@ export const ContactUs = (): JSX.Element => {
                 <span className="text-lg sm:text-xl">
                   {contactUsFormData.contactButtonText}
                 </span>
-                <ArrowRight className="w-[30px] h-[30px]" />
+                <span>
+                  <img src={`${Images.rightArrow}`} alt="arrow" />
+                </span>
               </Button>
             </form>
           </CardContent>

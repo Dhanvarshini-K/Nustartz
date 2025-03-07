@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import React, { JSX, useState } from "react";
 import {
   Accordion,
@@ -18,6 +17,7 @@ import {
 } from "../../lib/servicePageData";
 import { useNavigate } from "react-router-dom";
 import { StartupPitchDeckForm } from "../../components/ui/startupPitchDeckForm";
+import Images from "../../themes";
 
 enum TextEnum {
   getInTouch = "GET IN TOUCH",
@@ -124,11 +124,13 @@ export const Services = (): JSX.Element => {
               {ServicePageSectionsEnum.techStartupContent}
             </p>
             <Button
-              className="w-fit bg-BrandPurple text-white font-normal mt-5 px-8 py-6"
+              className="w-fit bg-BrandPurple text-white text-md font-normal mt-5 px-8 py-6"
               onClick={handleOpenModal}
             >
               {TextEnum.getInTouch}
-              <ArrowRight />
+              <span>
+                <img src={`${Images.rightArrow}`} alt="arrow" />
+              </span>
             </Button>
           </div>
           <div>
@@ -209,11 +211,13 @@ export const Services = (): JSX.Element => {
                     </p>
                   </div>
                   <Button
-                    className="w-fit bg-BrandPurple text-white mt-5"
+                    className="w-fit bg-BrandPurple text-white text-md mt-5"
                     onClick={() => navigateToCaseStudy(study.number)}
                   >
                     {TextEnum.seeMore}
-                    <ArrowRight />
+                    <span>
+                      <img src={`${Images.rightArrow}`} alt="arrow" />
+                    </span>
                   </Button>
                 </CardContent>
               </Card>

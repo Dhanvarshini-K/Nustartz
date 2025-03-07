@@ -1,5 +1,5 @@
 import React, { JSX, useState } from "react";
-import { ArrowRight, X } from "lucide-react";
+import { X } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import {
   aboutSectionData,
@@ -12,6 +12,7 @@ import {
 import { StartupPitchDeckForm } from "../../components/ui/startupPitchDeckForm";
 import Marquee from "react-fast-marquee";
 import { SlickCarousel } from "../../components/ui/slickCarousel";
+import Images from "../../themes";
 
 const Home = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);
@@ -123,11 +124,13 @@ const Home = (): JSX.Element => {
           </div>
           <div className="flex justify-center">
             <Button
-              className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4 transform transition duration-300 hover:scale-105"
+              className="bg-BrandPurple text-white text-md px-8 py-6 rounded-[10px] flex items-center gap-4 transform transition duration-300 hover:scale-105"
               onClick={showYouTubeVideo}
             >
               {whoWeAreSectionData.buttonText}
-              <ArrowRight className="h-6 w-6" />
+              <span>
+                <img src={`${Images.rightArrow}`} alt="arrow" />
+              </span>
             </Button>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import IMAGES from "../themes";
 interface HeroDataType {
   title?: string;
-  titleText?: string;
+  titleText?: string[];
   description?: string;
   buttonText?: string;
   heroImageUrl?: string;
@@ -20,16 +20,21 @@ export enum HomePageSectionsEnum {
 export const heroSectionCarouselData: HeroDataType[] = [
   {
     title: `${IMAGES.heroTitle1}`,
-    titleText: "Crafting the future of Startups.",
+    titleText: ["Crafting the", "future of", "Startups."],
     description: `At NuStartz, we turn your startup vision into reality. From building high-performing teams to developing market-ready products, we provide the resources and expertise you need to grow and succeed. Let’s craft your success story together.`,
     buttonText: "GET IN TOUCH",
     heroImageUrl: `${IMAGES.craftingImage}`,
   },
   {
     title: `${IMAGES.heroTitle2}`,
-    titleText: "Best Startup Knowledge Provider",
+    titleText: [
+      "From Vision to",
+      "Reality - Build,",
+      "Scale, Succeed",
+      "with NuStartz",
+    ],
     description:
-      "At NuStartz, we are your comprehensive partner in building and scaling your tech startup from the ground up—all the way to your Initial Public Offering (IPO). Our full suite of services is designed to support every aspect of your business, helping you transform your ideas into a thriving enterprise.",
+      "Your ideas deserve more than just a plan—they need execution. At NuStartz, we empower startups with expert-driven product development, IT support, marketing, and strategic growth solutions. Whether you're launching, scaling, or optimizing, we’re here to turn your vision into a thriving reality.",
     buttonText: "GET IN TOUCH",
     heroImageUrl: `${IMAGES.startupAward}`,
     imageStand: `${IMAGES.startupAwardStand}`,

@@ -1,9 +1,10 @@
 import { useForm } from "react-hook-form";
 import { FormInput } from "./formInput";
 import { Button } from "./button";
-import { ArrowRight, X } from "lucide-react";
+import { X } from "lucide-react";
 import { emailRegex } from "../../lib/regex";
 import { SelectInput } from "./selectInput";
+import Images from "../../themes";
 
 type StartupPitchDeckType = {
   title: string;
@@ -142,7 +143,9 @@ export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
           <span className="text-md sm:text-lg">
             {startUpPitchDeckData.buttonText}
           </span>
-          <ArrowRight className="w-[30px] h-[30px]" />
+          <span>
+            <img src={`${Images.rightArrow}`} alt="arrow" />
+          </span>
         </Button>
       </form>
     </section>

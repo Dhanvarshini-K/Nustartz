@@ -78,6 +78,7 @@ const IMAGES = {
   carouselBackground: require("../assets/CarouselBackground.png"),
   nustartzEvent2Image1: require("../assets/Event2Image2.png"),
   nustartzEvent2Image2: require("../assets/Event2Image3.png"),
+  rightArrow: require("../assets/RightArrow.png"),
 };
 
 export default IMAGES;
