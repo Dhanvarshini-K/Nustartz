@@ -14,21 +14,3 @@ export const formatUSNumber = (input: string) => {
   );
   return formattedPhoneNumber;
 };
-
-export const generateColumnSpan = (index: number) => {
-  const normalizedIndex = index % 4;
-  switch (normalizedIndex) {
-    case 0:
-    case 2:
-    case 5:
-    case 6:
-      return "col-span-1";
-    case 1:
-    case 3:
-    case 4:
-    case 7:
-      return "col-span-2";
-    default:
-      return "col-span-1";
-  }
-};

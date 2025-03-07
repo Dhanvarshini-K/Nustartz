@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { nuStartzEventsData } from "../../lib/nustartzEventsData";
 import { NotFound } from "../../components/ui/notFound";
-import { cn, generateColumnSpan } from "../../lib/utils";
 
 export const NuStartzEvents = () => {
   const { state } = useLocation();
@@ -11,8 +10,15 @@ export const NuStartzEvents = () => {
     (event) => event.image === image
   );
 
-  const { content, description, eventImages, eventTitle, title, videoUrl } =
-    nustartzEventsArticleData || {};
+  const {
+    content,
+    description,
+    image: mainEventImage,
+    eventImages,
+    eventTitle,
+    title,
+    videoUrl,
+  } = nustartzEventsArticleData || {};
 
   if (!nustartzEventsArticleData) {
     return <NotFound />;
@@ -43,34 +49,9 @@ export const NuStartzEvents = () => {
           </h1>
         ) : null}
 
-        {eventImages?.length ? (
-          <div
-            className={cn(
-              "scrollbar grid h-150 auto-cols-min grid-cols-4 gap-x-2 gap-y-2 overflow-y-auto pr-4",
-              "sm:h-350",
-              "sm:w-full",
-              "md:grid-cols-2",
-              "grid-cols-1"
-            )}
-          >
-            {eventImages?.map((photos, index) => {
-              return (
-                <div
-                  key={index}
-                  className={`relative overflow-hidden rounded-2.5xl ${generateColumnSpan(
-                    index
-                  )} object-cover sm:!col-span-1 sm:w-full`}
-                >
-                  <img
-                    src={photos}
-                    alt={photos || ""}
-                    className="scale-up inset-0 h-64 w-full rounded-lg object-cover sm:relative sm:h-37.5 sm:w-full transform transition duration-500 hover:scale-105"
-                  />
-                </div>
-              );
-            })}
-          </div>
-        ) : null}
+        {mainEventImage && (
+          <img src={mainEventImage} alt="" className="w-[50%]" />
+        )}
 
         {description?.map((point, index) => (
           <p className="text-lg sm:text-xl text-ParaGrey" key={index}>
