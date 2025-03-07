@@ -1,20 +1,12 @@
 import React, { JSX, useState } from "react";
 import { ArrowRight, X } from "lucide-react";
 import { Button } from "../../components/ui/button";
-// import {
-//   Carousel,
-//   CarouselContent,
-//   CarouselItem,
-//   CarouselNext,
-//   CarouselPrevious,
-// } from "../../components/ui/carousel";
 import {
   aboutSectionData,
   companyDeliveryStepsData,
   HomePageSectionsEnum,
   ourPartners,
   startupPortfolioData,
-  // testimonialsData,
   whoWeAreSectionData,
 } from "../../lib/homePageData";
 import { StartupPitchDeckForm } from "../../components/ui/startupPitchDeckForm";
@@ -163,53 +155,6 @@ const Home = (): JSX.Element => {
           ></iframe>
         </div>
       </div>
-
-      {/* Testimonials Section */}
-      {/* <section className="bg-GhostWhite py-10 sm:py-16 px-10 md:px-24">
-        <div className="section-container">
-          <h2 className="text-5xl sm:text-6xl font-bold text-paragray text-center mb-8">
-            {HomePageSectionsEnum.testimonials}
-          </h2>
-
-          <Carousel>
-            <CarouselContent>
-              {testimonialsData.map((item, index) => (
-                <CarouselItem key={index}>
-                  <Card className="bg-DarkGrey text-white rounded-[20px] overflow-hidden">
-                    <CardContent className="p-0 flex flex-wrap md:flex-nowrap">
-                      <div className="relative">
-                        <img
-                          src={item.image}
-                          alt="Testimonial"
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent" />
-                      </div>
-                      <div className="p-3 md:p-10 space-y-8">
-                        <p className="text-lg sm:text-2xl text-white  md:w-[430px]">
-                          {item.description}
-                        </p>
-                        <div className="p-3">
-                          <p className="text-3xl sm:text-4xl">{item.name}</p>
-                          <p className="text-3xl sm:text-4xl">
-                            {item.projectName}
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            {testimonialsData.length > 1 ? (
-              <div className="mt-4 flex flex-row-reverse">
-                <CarouselPrevious />
-                <CarouselNext />
-              </div>
-            ) : null}
-          </Carousel>
-        </div>
-      </section> */}
 
       {/* Portfolio Section */}
       <section className="pt-10 sm:pt-16">

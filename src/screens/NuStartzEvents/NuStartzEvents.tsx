@@ -1,10 +1,13 @@
 import { useLocation } from "react-router-dom";
 import { nuStartzEventsData } from "../../lib/nustartzEventsData";
 import { NotFound } from "../../components/ui/notFound";
+import { X } from "lucide-react";
+import { useState } from "react";
 
 export const NuStartzEvents = () => {
   const { state } = useLocation();
   const { image } = state || {};
+  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
   const nustartzEventsArticleData = nuStartzEventsData.find(
     (event) => event.image === image
@@ -77,12 +80,28 @@ export const NuStartzEvents = () => {
                 src={eventImage}
                 alt="events"
                 className="sm:h-[300px] rounded-xl"
+                onMouseEnter={() => setHoveredImage(eventImage)}
               />
             ))}
           </div>
         ) : null}
-
         <p className="text-lg sm:text-xl text-ParaGrey">{conclusionText}</p>
+      </div>
+
+      <div
+        className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-500 ${
+          hoveredImage ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        <div className="relative">
+          <button
+            className="absolute end-0 -top-6"
+            onClick={() => setHoveredImage(null)}
+          >
+            <X className="w-8 h-7 text-white" />
+          </button>
+          <img src={hoveredImage || ""} alt="events" className="sm:h-[350px]" />
+        </div>
       </div>
     </section>
   );
