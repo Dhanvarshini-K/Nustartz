@@ -18,6 +18,8 @@ export const NuStartzEvents = () => {
     eventTitle,
     title,
     videoUrl,
+    capturedEventImage,
+    conclusionText,
   } = nustartzEventsArticleData || {};
 
   if (!nustartzEventsArticleData) {
@@ -41,23 +43,46 @@ export const NuStartzEvents = () => {
           </div>
         ) : null}
 
-        <p className="text-lg sm:text-xl text-ParaGrey">{content}</p>
+        <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-8 lg:gap-16">
+          <p className="text-lg sm:text-xl text-ParaGrey">{content}</p>
+          <img
+            src={mainEventImage}
+            alt="events"
+            className="w-[300px] sm:w-[400px] rounded-xl"
+          />
+        </div>
 
-        {eventTitle ? (
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-16">
+          {capturedEventImage && (
+            <img
+              src={capturedEventImage}
+              alt="events"
+              className="w-[300px] sm:w-[400px] rounded-xl"
+            />
+          )}
+          <p className="text-lg sm:text-xl text-ParaGrey">{description}</p>
+        </div>
+
+        {eventTitle && eventImages?.length ? (
           <h1 className="text-4xl text-BrandPurple font-semibold my-2">
             {eventTitle}
           </h1>
         ) : null}
 
-        {mainEventImage && (
-          <img src={mainEventImage} alt="" className="w-[50%]" />
-        )}
+        {eventImages?.length ? (
+          <div className="flex flex-wrap lg:flex-nowrap gap-4">
+            {eventImages.map((eventImage, index) => (
+              <img
+                key={index}
+                src={eventImage}
+                alt="events"
+                className="sm:h-[300px] rounded-xl"
+              />
+            ))}
+          </div>
+        ) : null}
 
-        {description?.map((point, index) => (
-          <p className="text-lg sm:text-xl text-ParaGrey" key={index}>
-            {point}
-          </p>
-        ))}
+        <p className="text-lg sm:text-xl text-ParaGrey">{conclusionText}</p>
       </div>
     </section>
   );
