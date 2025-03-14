@@ -8,6 +8,7 @@ export const NuStartzEvents = () => {
   const { state } = useLocation();
   const { image } = state || {};
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const nustartzEventsArticleData = nuStartzEventsData.find(
     (event) => event.image === image
@@ -28,6 +29,16 @@ export const NuStartzEvents = () => {
   if (!nustartzEventsArticleData) {
     return <NotFound />;
   }
+
+  const handleHoverImage = (eventImage: any) => {
+    setHoveredImage(eventImage);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setHoveredImage(null);
+  };
   return (
     <section className="bg-custom-gradient px-4 sm:px-20">
       <div className="section-container py-10 sm:py-16 flex flex-col space-y-4 sm:space-y-8">
@@ -79,8 +90,8 @@ export const NuStartzEvents = () => {
                 key={index}
                 src={eventImage}
                 alt="events"
-                className="sm:h-[300px] rounded-xl"
-                onMouseEnter={() => setHoveredImage(eventImage)}
+                className="sm:h-[300px] rounded-xl transform transition duration-1000 hover:scale-95 hover:cursor-pointer"
+                onClick={() => handleHoverImage(eventImage)}
               />
             ))}
           </div>
@@ -90,15 +101,15 @@ export const NuStartzEvents = () => {
 
       <div
         className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-500 ${
-          hoveredImage ? "opacity-100 visible" : "opacity-0 invisible"
+          isModalOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
         <div className="relative">
           <button
-            className="absolute end-0 -top-6"
-            onClick={() => setHoveredImage(null)}
+            className="absolute -end-2 -top-3 rounded-full bg-black p-1"
+            onClick={handleCloseModal}
           >
-            <X className="w-8 h-7 text-white" />
+            <X className="w-4 h-4 text-white" />
           </button>
           <img src={hoveredImage || ""} alt="events" className="sm:h-[350px]" />
         </div>

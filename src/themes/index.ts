@@ -79,6 +79,9 @@ const IMAGES = {
   nustartzEvent2Image1: require("../assets/Event2Image2.png"),
   nustartzEvent2Image2: require("../assets/Event2Image3.png"),
   rightArrow: require("../assets/RightArrow.png"),
+  blogsCoverImage1: require("../assets/BlogsCoverImage1.png"),
+  blogsCoverImage2: require("../assets/BlogsCoverImage2.png"),
+  blogsCoverImage3: require("../assets/BlogsCoverImage3.png"),
 };
 
 export default IMAGES;

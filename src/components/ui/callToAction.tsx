@@ -44,7 +44,7 @@ export const CallToAction = ({ text }: { text?: string }) => {
             />
             <Button
               size="sm"
-              className={`bg-BrandPurple h-[52px] w-[40px] sm:h-[68px] sm:w-[68px] rounded-none transition-opacity ${
+              className={`bg-BrandPurple h-[48px] w-[40px] sm:h-[68px] sm:w-[68px] rounded-none transition-opacity ${
                 error
                   ? "opacity-50 cursor-not-allowed"
                   : "opacity-100 cursor-pointer"

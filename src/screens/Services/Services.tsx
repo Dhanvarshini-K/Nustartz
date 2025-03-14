@@ -50,7 +50,7 @@ export const Services = (): JSX.Element => {
           <div className="md:mt-16 mx-auto md:mx-0">
             {serviceHeroTitle?.map((title, index) => (
               <h1
-                className="text-6xl md:text-8xl font-bold text-DarkGrey leading-tight z-10 tracking-[-3px]"
+                className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-tight z-10 tracking-[-3px]"
                 key={index}
               >
                 {title}
