@@ -19,7 +19,7 @@ export const nuStartzBlogsData: NuStartzBlogsDataType[] = [
     title:
       "The Significance of Building a Robust Team to Elevate Your Tech Startup's Value",
     coverImage: `${IMAGES.blogsCoverImage1}`,
-    className: "text-DarkGrey w-[60%] sm:w-[50%] top-6 md:top-4 lg:top-16",
+    className: "text-DarkGrey w-[60%] sm:w-[450px] top-6 md:top-4 lg:top-16",
     image: `${IMAGES.blogImage1}`,
     description:
       "In the dynamic landscape of the tech industry, the success of a startup often hinges on various factors, one of the most critical being the team that drives it forward. While many factors contribute to a tech startup's success, the importance of building a substantial and competent team cannot be overstated. In this blog post, we will explore why it's essential to build a formidable team to elevate your tech startup's value.",
@@ -75,7 +75,7 @@ export const nuStartzBlogsData: NuStartzBlogsDataType[] = [
     title: "Elevate Your Startup Pitch with These Three Key Strategies",
     coverImage: `${IMAGES.blogsCoverImage2}`,
     image: `${IMAGES.blogImage2}`,
-    className: "text-white w-[60%] sm:w-[50%] top-6 md:top-4 lg:top-16",
+    className: "text-white w-[50%] sm:w-[380px] top-6 md:top-4 lg:top-16",
     description:
       "In the competitive landscape of startup funding, delivering a pitch that resonates with investors is an art form. Here's a concise guide to help you master the essentials:",
     keypoints: [

@@ -19,14 +19,16 @@ export enum HomePageSectionsEnum {
 
 export const heroSectionCarouselData: HeroDataType[] = [
   {
-    title: `${IMAGES.heroTitle1}`,
+    // title: `${IMAGES.heroTitle1}`,
+    title: "Crafting the future of Startups.",
     titleText: ["Crafting the", "future of", "Startups."],
     description: `At NuStartz, we turn your startup vision into reality. From building high-performing teams to developing market-ready products, we provide the resources and expertise you need to grow and succeed. Let’s craft your success story together.`,
     buttonText: "GET IN TOUCH",
     heroImageUrl: `${IMAGES.craftingImage}`,
   },
   {
-    title: `${IMAGES.heroTitle2}`,
+    // title: `${IMAGES.heroTitle2}`,
+    title: "From Vision to Reality - Build Scale, Succeed with NuStartz",
     titleText: [
       "From Vision to",
       "Reality - Build,",
