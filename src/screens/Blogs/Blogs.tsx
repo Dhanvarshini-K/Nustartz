@@ -53,7 +53,7 @@ export const Blogs = (): JSX.Element => {
                         alt="Blog-Image"
                         className="w-[400px] h-[380px] object-cover rounded-xl"
                       />
-                      <div className="p-4 sm:p-6 bg-white rounded-xl shadow-sm h-[180px] absolute -bottom-10 w-[75%] end-3 sm:end-6">
+                      <div className="p-4 sm:p-6 bg-white rounded-xl shadow-sm h-[150px] absolute -bottom-10 w-[80%] end-3 sm:end-6">
                         <p className="text-md sm:text-lg text-ParaGrey font-semibold">
                           {post.description}
                         </p>

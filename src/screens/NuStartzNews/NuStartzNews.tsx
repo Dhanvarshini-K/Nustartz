@@ -45,13 +45,11 @@ export const NuStartzNews = () => {
           </div>
 
           <div className="flex gap-10 flex-col lg:flex-row justify-between pb-10">
-            <div className="w-full flex items-center justify-center">
-              <img
-                src={nustartzNewsArticleData?.image2}
-                alt="NustartzArticle"
-                className="w-[300px] rounded-xl"
-              />
-            </div>
+            <img
+              src={nustartzNewsArticleData?.image2}
+              alt="NustartzArticle"
+              className="w-[300px] rounded-xl"
+            />
             <div className="flex flex-col items-center justify-center gap-5">
               {nustartzNewsArticleData?.imageDescriptions2?.map(
                 (description, index) => (

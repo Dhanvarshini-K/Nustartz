@@ -1,15 +1,30 @@
-import React, { JSX } from "react";
+import React, { JSX, useState } from "react";
 import { Card, CardContent } from "../../components/ui/card";
 import {
   AboutPageSectionEnums,
   boardMembersData,
+  BoardMembersDataType,
   foundersData,
   leadersData,
 } from "../../lib/aboutPageData";
 import { CallToAction } from "../../components/ui/callToAction";
 import IMAGES from "../../themes";
+import { X } from "lucide-react";
 
 export const AboutUs = (): JSX.Element => {
+  const [advisorDetailedDescription, setAdvisorDetailDescription] =
+    useState<BoardMembersDataType | null>(null);
+
+  const leaders = leadersData.slice(0, 2);
+  const globalLeaders = leadersData.slice(2);
+
+  const handleOpenAdvisorDetails = (member: BoardMembersDataType) => {
+    setAdvisorDetailDescription(member);
+  };
+
+  const handleCloseModal = () => {
+    setAdvisorDetailDescription(null);
+  };
   return (
     <main className="bg-custom-gradient">
       {/* Hero Section */}
@@ -43,7 +58,8 @@ export const AboutUs = (): JSX.Element => {
             {boardMembersData.map((member) => (
               <Card
                 key={member.name}
-                className="bg-white rounded-[20px] shadow-md border-none transform transition duration-500 hover:scale-105 hover:shadow-xl"
+                className="bg-white rounded-[20px] shadow-md border-none transform transition duration-500 hover:scale-105 hover:shadow-xl hover:cursor-pointer"
+                onClick={() => handleOpenAdvisorDetails(member)}
               >
                 <img
                   src={member.image}
@@ -74,6 +90,43 @@ export const AboutUs = (): JSX.Element => {
           </div>
         </div>
       </section>
+
+      <div
+        className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-500 ${
+          advisorDetailedDescription
+            ? "opacity-100 visible"
+            : "opacity-0 invisible"
+        }`}
+      >
+        <div className="bg-advisor-gradient p-4  w-[320px] sm:w-[600px] rounded-lg relative">
+          <button
+            className="absolute -end-2 -top-3 rounded-full bg-black p-1"
+            onClick={handleCloseModal}
+          >
+            <X className="w-4 h-4 text-white" />
+          </button>
+          <div className="flex flex-col sm:flex-row gap-5 items-center">
+            <img
+              src={advisorDetailedDescription?.image}
+              alt={advisorDetailedDescription?.name}
+              className="w-[240px]"
+            />
+            <div className="p-2">
+              <p className="text-md text-white">
+                {advisorDetailedDescription?.description}
+              </p>
+            </div>
+          </div>
+          <div className="p-2">
+            <h3 className="text-2xl font-bold text-white">
+              {advisorDetailedDescription?.name}
+            </h3>
+            <p className="text-md text-white">
+              {advisorDetailedDescription?.role}
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Founders */}
       <section className="py-10 sm:py-16 px-10 md:px-24">
@@ -124,7 +177,7 @@ export const AboutUs = (): JSX.Element => {
             {AboutPageSectionEnums.leaders}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[800px] mx-auto">
-            {leadersData.map((leader) => (
+            {leaders.map((leader) => (
               <Card
                 key={leader.name}
                 className="bg-white rounded-[20px] shadow-md border-none transform transition duration-500 hover:scale-105 hover:shadow-xl"
@@ -146,6 +199,29 @@ export const AboutUs = (): JSX.Element => {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="section-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-10 md:px-24">
+        {globalLeaders.map((leader) => (
+          <Card
+            key={leader.name}
+            className="bg-white rounded-[20px] shadow-md border-none transform transition duration-500 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src={leader.image}
+              alt={leader.name}
+              className="w-full rounded-t-[20px]"
+            />
+            <CardContent className="p-4 md:p-6 border-none">
+              <h3 className="text-2xl font-bold text-LightPurple mb-2">
+                {leader.name}
+              </h3>
+              <p className="text-md leading-[26px] text-NickelGrey">
+                {leader.role}
+              </p>
+            </CardContent>
+          </Card>
+        ))}
       </section>
 
       {/* Call to Action */}

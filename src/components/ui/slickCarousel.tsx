@@ -16,7 +16,7 @@ const CustomArrow = (props: any) => {
         display: "block",
         borderRadius: "100%",
         background: "#6243E1",
-        opacity: 0.3,
+        opacity: 0.9,
         zIndex: 10,
         position: "absolute",
         top: "50%",

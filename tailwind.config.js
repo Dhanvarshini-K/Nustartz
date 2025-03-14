@@ -27,8 +27,8 @@ module.exports = {
         danger: "#EF4444",
       },
       backgroundImage: {
-        'app-gradient': 'linear-gradient(90deg, #53E6DC, #81D1EA, #FFA6FF, #7D68FF)',
         'custom-gradient': 'linear-gradient(100deg, rgba(83, 230, 220, 0.2), rgba(129, 209, 234, 0.2), rgba(255, 166, 255, 0.2), rgba(125, 104, 255, 0.2))',
+        'advisor-gradient': 'linear-gradient(100deg, #1A7FF7, #55AAE7)'
       },
       fontSize: {
         "2xs": "0.625rem" /* 10px */,

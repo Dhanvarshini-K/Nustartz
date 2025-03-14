@@ -13,16 +13,18 @@ export const NuStartzBlogs = () => {
     <section className="bg-custom-gradient px-4 sm:px-20">
       {nuStartzBlogsArticleData !== undefined ? (
         <div className="section-container py-10 sm:py-16 space-y-4 sm:space-y-8">
-          <h1 className="text-4xl sm:text-6xl text-DarkGrey font-bold">
-            {nuStartzBlogsArticleData?.title}
-          </h1>
-
-          <img
-            src={`${nuStartzBlogsArticleData?.image}`}
-            alt="Blog-Image"
-            className="w-[300px] sm:w-[400px] mx-auto rounded-lg"
-          />
-
+          <div className="relative">
+            <img
+              src={nuStartzBlogsArticleData?.coverImage}
+              alt={nuStartzBlogsArticleData?.coverImage}
+              className="h-[200px] sm:h-auto rounded-lg"
+            />
+            <h1
+              className={`text-xl md:text-4xl lg:text-5xl ${nuStartzBlogsArticleData?.className} font-bold absolute left-6 md:left-10`}
+            >
+              {nuStartzBlogsArticleData?.title}
+            </h1>
+          </div>
           <p className="text-lg sm:text-xl text-ParaGrey">
             {nuStartzBlogsArticleData?.description}
           </p>
