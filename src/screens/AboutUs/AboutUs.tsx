@@ -1,30 +1,28 @@
-import React, { JSX, useState } from "react";
+import React, { JSX } from "react";
 import { Card, CardContent } from "../../components/ui/card";
 import {
   AboutPageSectionEnums,
   boardMembersData,
-  BoardMembersDataType,
   foundersData,
   leadersData,
 } from "../../lib/aboutPageData";
 import { CallToAction } from "../../components/ui/callToAction";
 import IMAGES from "../../themes";
-import { X } from "lucide-react";
 
 export const AboutUs = (): JSX.Element => {
-  const [advisorDetailedDescription, setAdvisorDetailDescription] =
-    useState<BoardMembersDataType | null>(null);
+  // const [advisorDetailedDescription, setAdvisorDetailDescription] =
+  //   useState<BoardMembersDataType | null>(null);
 
   const leaders = leadersData.slice(0, 2);
   const globalLeaders = leadersData.slice(2);
 
-  const handleOpenAdvisorDetails = (member: BoardMembersDataType) => {
-    setAdvisorDetailDescription(member);
-  };
+  // const handleOpenAdvisorDetails = (member: BoardMembersDataType) => {
+  //   setAdvisorDetailDescription(member);
+  // };
 
-  const handleCloseModal = () => {
-    setAdvisorDetailDescription(null);
-  };
+  // const handleCloseModal = () => {
+  //   setAdvisorDetailDescription(null);
+  // };
   return (
     <main className="bg-custom-gradient">
       {/* Hero Section */}
@@ -58,8 +56,8 @@ export const AboutUs = (): JSX.Element => {
             {boardMembersData.map((member) => (
               <Card
                 key={member.name}
-                className="bg-white rounded-[20px] shadow-md border-none transform transition duration-500 hover:scale-105 hover:shadow-xl hover:cursor-pointer"
-                onClick={() => handleOpenAdvisorDetails(member)}
+                className="bg-white rounded-[20px] shadow-md border-none transform transition duration-500 hover:scale-105 hover:shadow-xl"
+                // onClick={() => handleOpenAdvisorDetails(member)}
               >
                 <img
                   src={member.image}
@@ -91,7 +89,7 @@ export const AboutUs = (): JSX.Element => {
         </div>
       </section>
 
-      <div
+      {/* <div
         className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-opacity duration-500 ${
           advisorDetailedDescription
             ? "opacity-100 visible"
@@ -126,7 +124,7 @@ export const AboutUs = (): JSX.Element => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Founders */}
       <section className="py-10 sm:py-16 px-10 md:px-24">
@@ -201,7 +199,7 @@ export const AboutUs = (): JSX.Element => {
         </div>
       </section>
 
-      <section className="section-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-10 md:px-24">
+      <section className="section-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-10 md:px-24 pb-10 sm:pb-16">
         {globalLeaders.map((leader) => (
           <Card
             key={leader.name}

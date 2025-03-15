@@ -25,7 +25,7 @@ enum TextEnum {
   caseStudy = "CASE STUDY",
 }
 
-const serviceHeroTitle: string[] = ["Your one", "stop shop", "for success."];
+const serviceHeroTitle = "Your one stop shop for success.";
 
 export const Services = (): JSX.Element => {
   const [openModal, setOpenModal] = useState(false);
@@ -47,15 +47,10 @@ export const Services = (): JSX.Element => {
       {/* Hero Section */}
       <section className="bg-heroBackground bg-opacity-40 px-4 sm:px-20 relative">
         <div className="section-container flex flex-wrap lg:flex-nowrap justify-between gap-8 py-10 sm:py-16">
-          <div className="md:mt-16 mx-auto md:mx-0">
-            {serviceHeroTitle?.map((title, index) => (
-              <h1
-                className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-tight z-10 tracking-[-3px]"
-                key={index}
-              >
-                {title}
-              </h1>
-            ))}
+          <div className="md:mt-16 mx-auto md:mx-0 w-[300px] sm:w-[350px]">
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-tight z-10 tracking-[-3px]">
+              {serviceHeroTitle}
+            </h1>
           </div>
           <img
             src={IMAGES.serviceImage}

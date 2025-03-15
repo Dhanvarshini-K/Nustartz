@@ -82,6 +82,7 @@ const IMAGES = {
   blogsCoverImage1: require("../assets/BlogsCoverImage1.png"),
   blogsCoverImage2: require("../assets/BlogsCoverImage2.png"),
   blogsCoverImage3: require("../assets/BlogsCoverImage3.png"),
+  bestStartupProviderImage: require("../assets/BestStartupImage.png"),
 };
 
 export default IMAGES;
