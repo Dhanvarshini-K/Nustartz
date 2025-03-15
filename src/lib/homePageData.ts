@@ -38,9 +38,9 @@ export const heroSectionCarouselData: HeroDataType[] = [
     description:
       "Your ideas deserve more than just a plan—they need execution. At NuStartz, we empower startups with expert-driven product development, IT support, marketing, and strategic growth solutions. Whether you're launching, scaling, or optimizing, we’re here to turn your vision into a thriving reality.",
     buttonText: "GET IN TOUCH",
-    heroImageUrl: `${IMAGES.startupAward}`,
-    imageStand: `${IMAGES.startupAwardStand}`,
-    className: "w-[300px] sm:w-[371px] lg:w-[400px] mb-20",
+    heroImageUrl: `${IMAGES.bestStartupProviderImage}`,
+    // imageStand: `${IMAGES.startupAwardStand}`,
+    // className: "w-[300px] sm:w-[371px] lg:w-[400px] mb-20",
   },
 ];
 

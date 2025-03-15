@@ -4,26 +4,27 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { heroSectionCarouselData } from "../../lib/homePageData";
 import { Button } from "./button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const CustomArrow = (props: any) => {
-  const { className, style, onClick, direction } = props;
+  const { onClick, direction } = props;
+
   return (
     <div
-      className={className}
+      className="absolute top-1/2 -translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center bg-[#C6B5FF] shadow-lg cursor-pointer hover:bg-[#B5A1FF] transition"
       onClick={onClick}
       style={{
-        ...style,
-        display: "block",
-        borderRadius: "100%",
-        background: "#6243E1",
-        opacity: 0.9,
-        zIndex: 10,
-        position: "absolute",
-        top: "50%",
-        transform: "translateY(-50%)",
-        [direction === "left" ? "left" : "right"]: "-20px",
+        left: direction === "left" ? "-30px" : "auto",
+        right: direction === "right" ? "-15px" : "auto",
+        boxShadow: "0px 4px 8px rgba(198, 181, 255, 0.5)",
       }}
-    />
+    >
+      {direction === "left" ? (
+        <ChevronLeft size={22} color="white" />
+      ) : (
+        <ChevronRight size={22} color="white" />
+      )}
+    </div>
   );
 };
 
@@ -85,7 +86,7 @@ export const SlickCarousel = ({ handleOpenModal }: CarouselProps) => {
                 <img
                   src={carousel.heroImageUrl}
                   alt={carousel.title}
-                  className={`object-cover relative ${carousel?.className}`}
+                  className={`object-cover relative ${carousel?.className} animate-[shake_5s_ease-in-out_infinite]`}
                 />
                 {carousel?.imageStand ? (
                   <img
