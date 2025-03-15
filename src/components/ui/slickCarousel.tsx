@@ -11,7 +11,7 @@ const CustomArrow = (props: any) => {
 
   return (
     <div
-      className="absolute top-1/2 -translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center bg-[#C6B5FF] shadow-lg cursor-pointer hover:bg-[#B5A1FF] transition"
+      className="absolute sm:top-1/2 top-auto bottom-0 sm:-translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center bg-[#C6B5FF] shadow-lg cursor-pointer hover:bg-[#B5A1FF] transition"
       onClick={onClick}
       style={{
         left: direction === "left" ? "-30px" : "auto",
@@ -57,7 +57,7 @@ export const SlickCarousel = ({ handleOpenModal }: CarouselProps) => {
               key={index}
               className="!flex !flex-col lg:!flex-row gap-16  justify-between items-center"
             >
-              <div className="space-y-8 text-start md:w-[535px] sm:ml-1">
+              <div className="space-y-8 text-start md:w-[535px] ml-1 sm:ml-1">
                 {/* <img
                   src={carousel.title}
                   alt="carousel-title"
