@@ -183,7 +183,7 @@ export const AboutUs = (): JSX.Element => {
                 <img
                   src={leader.image}
                   alt={leader.name}
-                  className="w-full rounded-t-[20px]"
+                  className="w-full lg:h-[390px] rounded-t-[20px]"
                 />
                 <CardContent className="p-4 md:p-6 border-none">
                   <h3 className="text-2xl font-bold text-LightPurple mb-2">
@@ -208,7 +208,7 @@ export const AboutUs = (): JSX.Element => {
             <img
               src={leader.image}
               alt={leader.name}
-              className="w-full rounded-t-[20px]"
+              className="w-full lg:h-[350px] rounded-t-[20px]"
             />
             <CardContent className="p-4 md:p-6 border-none">
               <h3 className="text-2xl font-bold text-LightPurple mb-2">
