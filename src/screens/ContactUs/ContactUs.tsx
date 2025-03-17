@@ -37,7 +37,7 @@ export const ContactUs = (): JSX.Element => {
         <h1 className="sm:text-center text-4xl sm:text-8xl font-bold text-DarkGrey mb-4 sm:mb-8 tracking-[-2px]">
           {contactUsFormData.contactTitle}
         </h1>
-        <p className="max-w-[776px] mx-auto text-lg sm:text-2xl font-medium text-black mb-10 tracking-[-1px]">
+        <p className="max-w-[776px] mx-auto text-lg sm:text-2xl font-medium text-black mb-10 ">
           {contactUsFormData.contactDescription}
         </p>
 
