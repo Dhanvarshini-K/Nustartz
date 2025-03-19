@@ -11,11 +11,13 @@ const CustomArrow = (props: any) => {
 
   return (
     <div
-      className="absolute sm:top-1/2 top-auto bottom-0 sm:-translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center bg-[#C6B5FF] shadow-lg cursor-pointer hover:bg-[#B5A1FF] transition"
+      className={`absolute sm:top-1/2 top-auto bottom-0 sm:-translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center bg-[#C6B5FF] shadow-lg cursor-pointer hover:bg-[#B5A1FF] transition ${
+        direction === "left"
+          ? "left-[-15px] sm:left-[-45px] lg:left-[-60px]"
+          : "right-[-15px] sm:right-[-45px] lg:right-[-60px]"
+      }`}
       onClick={onClick}
       style={{
-        left: direction === "left" ? "-30px" : "auto",
-        right: direction === "right" ? "-15px" : "auto",
         boxShadow: "0px 4px 8px rgba(198, 181, 255, 0.5)",
       }}
     >
@@ -58,11 +60,6 @@ export const SlickCarousel = ({ handleOpenModal }: CarouselProps) => {
               className="!flex !flex-col lg:!flex-row gap-16  justify-between items-center"
             >
               <div className="space-y-8 text-start md:w-[535px] ml-1 sm:ml-1">
-                {/* <img
-                  src={carousel.title}
-                  alt="carousel-title"
-                  className="h-32 sm:h-44 object-cover"
-                /> */}
                 <div className="sm:ml-1">
                   <h1 className="text-5xl md:text-8xl font-bold bg-gradient-to-r from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none tracking-[-1px]">
                     {carousel.title}
@@ -73,7 +70,7 @@ export const SlickCarousel = ({ handleOpenModal }: CarouselProps) => {
                   {carousel.description}
                 </p>
                 <Button
-                  className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4 z-10 ml-5 sm:ml-1 text-md"
+                  className="bg-BrandPurple text-white px-8 py-6 rounded-[10px] hidden md:flex items-center gap-4 z-10 ml-5 sm:ml-1 text-md"
                   onClick={handleOpenModal}
                 >
                   {carousel.buttonText}
@@ -86,15 +83,18 @@ export const SlickCarousel = ({ handleOpenModal }: CarouselProps) => {
                 <img
                   src={carousel.heroImageUrl}
                   alt={carousel.title}
-                  className={`object-cover relative ${carousel?.className} animate-[shake_5s_ease-in-out_infinite]`}
+                  className={`object-cover relative ${carousel?.className} animate-float`}
                 />
-                {carousel?.imageStand ? (
-                  <img
-                    src={carousel.imageStand}
-                    alt={carousel.title}
-                    className="w-[280px] sm:w-[300px] absolute -bottom-2"
-                  />
-                ) : null}
+
+                <Button
+                  className="md:hidden bg-BrandPurple text-white px-8 py-6 rounded-[10px] flex items-center gap-4 z-10 ml-10 text-md mx-auto"
+                  onClick={handleOpenModal}
+                >
+                  {carousel.buttonText}
+                  <span>
+                    <img src={`${Images.rightArrow}`} alt="arrow" />
+                  </span>
+                </Button>
               </div>
             </div>
           ))}
