@@ -48,7 +48,7 @@ export const Services = (): JSX.Element => {
       <section className="bg-heroBackground bg-opacity-40 px-4 sm:px-20 relative">
         <div className="section-container flex flex-wrap lg:flex-nowrap justify-between gap-8 py-10 sm:py-16">
           <div className="md:mt-16 mx-auto md:mx-0 w-[300px] sm:w-[350px]">
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-tight z-10 tracking-[-3px]">
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-tight z-10 tracking-[-2px]">
               {serviceHeroTitle}
             </h1>
           </div>
@@ -104,7 +104,7 @@ export const Services = (): JSX.Element => {
       <section className="py-10 sm:py-16 px-4 sm:px-20">
         <div className="section-container flex justify-between gap-16 flex-col lg:flex-row">
           <div className="flex flex-col justify-center gap-8 lg:w-[50%]">
-            <h2 className="text-4xl sm:text-5xl font-semibold text-DarkGrey tracking-[-1px]">
+            <h2 className="text-4xl sm:text-5xl font-semibold text-DarkGrey">
               {ServicePageSectionsEnum.techStartup}
             </h2>
             <p className="text-lg sm:text-xl text-Gray">
@@ -149,10 +149,10 @@ export const Services = (): JSX.Element => {
       {/* Tech Fusion Hub Section */}
       <section className="bg-heroBackground px-4 sm:px-20 py-10 sm:py-16">
         <div className="section-container">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-DarkGrey mb-5 sm:mb-10 tracking-[-1px]">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-DarkGrey mb-5 sm:mb-10">
             {ServicePageSectionsEnum.techFusion}
           </h2>
-          <p className="text-xl sm:text-3xl md:text-6xl text-Gray mb-5 sm:mb-10 max-w-3xl tracking-[-1px]">
+          <p className="text-xl sm:text-3xl md:text-6xl text-Gray mb-5 sm:mb-10 max-w-3xl">
             {ServicePageSectionsEnum.techFusionSubTitle}
           </p>
         </div>
@@ -186,7 +186,7 @@ export const Services = (): JSX.Element => {
       {/* Case Studies */}
       <section className="bg-white py-10 sm:py-16 px-4 sm:px-20">
         <div className="section-container">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-DarkGrey mb-5 sm:mb-10 tracking-[-1px]">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-DarkGrey mb-5 sm:mb-10">
             {ServicePageSectionsEnum.caseStudies}
           </h2>
 
