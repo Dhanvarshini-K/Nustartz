@@ -61,12 +61,12 @@ export const SlickCarousel = ({ handleOpenModal }: CarouselProps) => {
             >
               <div className="space-y-8 text-start md:w-[535px] ml-1 sm:ml-1">
                 <div className="sm:ml-1">
-                  <h1 className="text-5xl md:text-8xl font-bold bg-gradient-to-r from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none tracking-[-1px]">
+                  <h1 className="text-5xl md:text-8xl font-bold bg-gradient-to-r from-[#52E5DC] via-[#FF66FF] to-[#7D67FF] bg-clip-text text-transparent leading-none">
                     {carousel.title}
                   </h1>
                 </div>
 
-                <p className="text-lg sm:text-xl text-ParaGrey sm:ml-1">
+                <p className="text-lg sm:text-xl md:text-2xl text-ParaGrey sm:ml-1">
                   {carousel.description}
                 </p>
                 <Button
