@@ -36,7 +36,7 @@ export const AboutUs = (): JSX.Element => {
       >
         <div className="section-container py-10 sm:py-16">
           <iframe
-            src="https://www.youtube.com/embed/bzcN_dyizIE?si=FF1fXQfZGC0iv2hk"
+            src="https://www.youtube.com/embed/HqPBF7P0QY8?si=9XAb-Xyibklhf-Eu"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
