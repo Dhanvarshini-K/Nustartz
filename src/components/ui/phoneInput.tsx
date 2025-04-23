@@ -47,7 +47,10 @@ export const PhoneNumberInput = ({
           <PhoneInput
             country={"us"}
             value={value || ""}
-            onChange={onChange}
+            // onChange={onChange}
+            onChange={(phone, country, e, formattedValue) =>
+              onChange(formattedValue)
+            }
             placeholder={placeholder}
             enableSearch
             countryCodeEditable={false}

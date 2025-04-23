@@ -6,6 +6,11 @@ import { useForm } from "react-hook-form";
 import { emailRegex } from "../../lib/regex";
 import { PhoneNumberInput } from "../../components/ui/phoneInput";
 import Images from "../../themes";
+import emailjs from "@emailjs/browser";
+
+const publicAPIkey = "SDrjmF9ADy2P9sabf";
+const serviceID = "service_fl70gf2";
+const templateID = "template_25syksp";
 
 const contactUsFormData = {
   contactTitle: "Contact our team",
@@ -23,12 +28,34 @@ type FormFieldType = {
   message?: string;
 };
 
-export const ContactUs = (): JSX.Element => {
-  const { handleSubmit, reset, control } = useForm<FormFieldType>();
+const initialValues = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  phoneNumber: "",
+  message: "",
+};
 
-  const onSubmit = (data: FormFieldType) => {
-    console.log("Form submitted:", data);
-    reset();
+export const ContactUs = (): JSX.Element => {
+  const { handleSubmit, reset, control } = useForm<FormFieldType>({
+    defaultValues: initialValues,
+  });
+
+  const onSubmit = async (data: FormFieldType) => {
+    const emailParams = {
+      firstName: data.firstName,
+      lastName: data.lastName || "-",
+      email: data.email,
+      phoneNumber: data.phoneNumber,
+      message: data.message || "-",
+    };
+
+    try {
+      await emailjs.send(serviceID, templateID, emailParams, publicAPIkey);
+      reset(initialValues);
+    } catch (error) {
+      console.error("Failed to send email:", error);
+    }
   };
 
   return (
@@ -89,7 +116,7 @@ export const ContactUs = (): JSX.Element => {
 
               <FormInput
                 control={control}
-                name="textArea"
+                name="message"
                 label="Message"
                 type="textarea"
                 placeholder="Leave us a message"

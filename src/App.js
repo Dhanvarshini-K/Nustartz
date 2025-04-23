@@ -8,32 +8,43 @@ import { ContactUs } from "./screens/ContactUs/ContactUs";
 import { StartupNews } from "./screens/StartUpNews.tsx/StartUpNews";
 import { ScrollToTop } from "./customHooks/ScrollToTop";
 import { Insights } from "./screens/Insights/Insights";
-import {NuStartzNews} from "./screens/NuStartzNews/NuStartzNews";
-import {NuStartzEvents} from "./screens/NuStartzEvents/NuStartzEvents";
-import {CaseStudy} from "./screens/CaseStudy/CaseStudy";
-import {NuStartzBlogs} from "./screens/NuStartzBlogs/NuStartzBlogs";
-import {Layout} from "./components/ui/Layout";
+import { NuStartzNews } from "./screens/NuStartzNews/NuStartzNews";
+import { NuStartzEvents } from "./screens/NuStartzEvents/NuStartzEvents";
+import { CaseStudy } from "./screens/CaseStudy/CaseStudy";
+import { NuStartzBlogs } from "./screens/NuStartzBlogs/NuStartzBlogs";
+import { Layout } from "./components/ui/Layout";
+import { NotFoundPage } from "./components/ui/404Page";
 
 const App = () => {
   return (
     <div className="App">
       <Router>
-        <Layout>
+        {/* <Layout> */}
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/review" element={<Review />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/case-study" element={<CaseStudy />} />
-          <Route path="/insights/nustartz-blogs" element={<NuStartzBlogs />} />
-          <Route path="/insights/startup-news" element={<StartupNews />} />
-          <Route path="/insights/nustartz-news" element={<NuStartzNews />} />
-          <Route path="/insights/nustartz-events" element={<NuStartzEvents />} />
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/review" element={<Review />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/case-study" element={<CaseStudy />} />
+            <Route
+              path="/insights/nustartz-blogs"
+              element={<NuStartzBlogs />}
+            />
+            <Route path="/insights/startup-news" element={<StartupNews />} />
+            <Route path="/insights/nustartz-news" element={<NuStartzNews />} />
+            <Route
+              path="/insights/nustartz-events"
+              element={<NuStartzEvents />}
+            />
+          </Route>
+
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
-        </Layout>
+        {/* </Layout> */}
       </Router>
     </div>
   );

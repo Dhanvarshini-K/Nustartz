@@ -38,7 +38,7 @@ export const FormInput = ({
         ...rules,
       }}
       render={({
-        field: { onChange, value, ...rest },
+        field: { onChange, value = "", ...rest },
         fieldState: { error },
       }) => (
         <div className="flex flex-col md:gap-2">
@@ -57,6 +57,7 @@ export const FormInput = ({
                 <input
                   type="file"
                   className="hidden"
+                  // value={value}
                   accept=".pdf, .ppt, .pptx, .doc, .docx"
                   onChange={(e) => {
                     const file = e.target.files?.[0] || null;
@@ -75,6 +76,7 @@ export const FormInput = ({
               )}
               placeholder={placeholder}
               onChange={onChange}
+              value={value}
               {...rest}
             />
           ) : (
@@ -82,6 +84,7 @@ export const FormInput = ({
               type={type}
               placeholder={placeholder}
               onChange={onChange}
+              value={value}
               className={cn(
                 "placeholder:text-muted-foreground focus-visible:outline-none bg-transparent h-[60px] text-md sm:text-xl w-full p-3 rounded-md sm:rounded-[10px] border-2 border-inputBorder",
                 className

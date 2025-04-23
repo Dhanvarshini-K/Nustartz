@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 import { emailRegex } from "../../lib/regex";
 import { SelectInput } from "./selectInput";
 import Images from "../../themes";
+import emailjs from "@emailjs/browser";
 
 type StartupPitchDeckType = {
   title: string;
@@ -20,6 +21,10 @@ interface FormDataType {
   companyName?: string;
   name?: string;
   email?: string;
+  linkedInUrl?: string;
+  websiteUrl?: string;
+  domainName?: string;
+  fundingStage?: string;
   file?: File;
   productIdea?: string;
 }
@@ -33,12 +38,30 @@ const selectOptions = [
   { label: "Initial Public Offering", value: "Initial Public Offering" },
 ];
 
+const serviceID = "service_fl70gf2";
+const templateID = "template_sdieabj";
+const publicAPIkey = "SDrjmF9ADy2P9sabf";
+
 export const StartupPitchDeckForm = ({ handleCloseModal, openModal }: any) => {
   const { control, handleSubmit, reset } = useForm<FormDataType>();
 
-  const onSubmit = (data: FormDataType) => {
-    console.log("Modal Data", data);
-    reset();
+  const onSubmit = async (data: FormDataType) => {
+    const emailParams = {
+      companyName: data.companyName,
+      name: data.name,
+      email: data.email,
+      linkedInUrl: data.linkedInUrl || "-",
+      websiteUrl: data.websiteUrl || "-",
+      domainName: data.domainName,
+      fundingStage: data.fundingStage,
+      productIdea: data.productIdea,
+    };
+    try {
+      await emailjs.send(serviceID, templateID, emailParams, publicAPIkey);
+      reset();
+    } catch (error) {
+      console.error("Failed to send email:", error);
+    }
     handleCloseModal();
   };
   return (
