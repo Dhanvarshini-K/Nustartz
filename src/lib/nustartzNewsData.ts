@@ -122,4 +122,94 @@ export const nustartzNewsContents: NuStartzNewsContentsType[] = [
       },
     ],
   },
+  {
+    title: "Newsletter - Spring 2025",
+    image1: `${IMAGES.newsletterImage}`,
+    image2: "",
+    imageDescriptions1: [],
+    imageDescriptions2: [],
+  },
 ];
+
+interface NewNustartzArticleDataType {
+  title: string;
+  subTitle1: string;
+  image1: string;
+  description1: string;
+  contents: {
+    contentImage: string;
+    contentDescription: string[];
+    moralContent?: string;
+    contentLink?: string;
+  }[];
+}
+
+export const newNustartzNewsArticleData: NewNustartzArticleDataType = {
+  title: "Newsletter - Spring 2025",
+  subTitle1:
+    "The season of renewal is here - and so is the next chapter for innovators. NuStartz kicks off spring with our spring seasonal newsletter, celebrating new beginnings and big visions.",
+  image1: `${IMAGES.mainImage}`,
+  description1:
+    "This spring, we’re focused on helping startups grow - through team building, product development, and branding to unlock their full potential.",
+  contents: [
+    {
+      contentImage: `${IMAGES.newsImage2}`,
+      contentDescription: [
+        "Matthew Vann, Founder of Greenlight Grocery, faced unexpected development challenges. NuStartz stepped in to revitalize the project, delivering a scalable and efficient platform that revolutionizes procurement for restaurants.",
+        "In his own words, Matthew shares how the NuStartz team helped accelerate the journey from concept to market-ready product proving what’s possible with the right support and strategic approach.",
+      ],
+      contentLink:
+        "https://www.linkedin.com/feed/update/urn:li:activity:7314717232066883586",
+    },
+    {
+      contentImage: `${IMAGES.newsImage7}`,
+      contentDescription: [
+        "The startup landscape has dramatically shifted over the past ten years. From technological advancements to changing market dynamics, we explore these transformations and what they mean for the future.",
+        "Understanding where we’ve been helps you build where you’re going.",
+      ],
+      moralContent:
+        "This timeline is packed with founder-first insights to help you stay ahead of the curve.",
+      contentLink:
+        "https://www.linkedin.com/feed/update/urn:li:activity:7316786174700703744",
+    },
+    {
+      contentImage: `${IMAGES.newsImage3}`,
+      contentDescription: [
+        "Passion isn't always enough. We delve into common pitfalls that startups encounter from lacking a clear problem-solution fit to inadequate go-to-market strategies and how to navigate them.",
+        "Avoiding these five traps could be your startup’s greatest advantage.",
+      ],
+      moralContent:
+        "We’ve broken it down so you can course-correct early and scale smarter.",
+      contentLink:
+        "https://www.linkedin.com/feed/update/urn:li:activity:7316111582873223169",
+    },
+    {
+      contentImage: `${IMAGES.newsImage4}`,
+      contentDescription: [
+        "Turning an idea into a Minimum Viable Product (MVP) swiftly is crucial. NuStartz offers a structured 4-week program to bring your vision to life, covering research, design, development, and deployment.",
+        "Speed matters, get feedback fast and evolve smarter.",
+      ],
+      moralContent:
+        "It’s not just about launching fast, it's about launching right.",
+      contentLink:
+        "https://www.linkedin.com/feed/update/urn:li:activity:7311477541041577984",
+    },
+    {
+      contentImage: `${IMAGES.newsImage5}`,
+      contentDescription: [
+        "In this featured perspective from our cofounder Steve, we explore why building beats brainstorming and how focus, speed, and accountability turn concepts into companies.",
+        "At NuStartz, we help founders move from vision to velocity supporting your journey with the right strategy, structure, and team to make real progress, fast.",
+      ],
+      moralContent: `This one’s for the doers: it’s time to move from “thinking about it” to “getting it done.”`,
+      contentLink:
+        "https://www.linkedin.com/feed/update/urn:li:activity:7313078931039862784",
+    },
+    {
+      contentImage: `${IMAGES.newsImage6}`,
+      contentDescription: [
+        "Neo is reshaping the startup landscape by focusing on exceptional talent even before companies are founded. With a founder-first approach, Neo blends mentorship, hands-on technical assessments, and initiatives like the Neo Scholars program, which offers students a $20,000 gap semester grant. Their patient model has led to investments in breakthrough companies like Anysphere, Cognition, and Pika Labs, with some already valued in the billions. It's proof that long-term success comes from backing the right people, not just polished pitch decks.",
+        "As we move through the spring season we're reminded that while ideas spark the journey , its execution, insight, and adaptability that shape success. From MVP launches to decoding startup failures and celebrating real client wins, our focus stays grounded in helping founders build better, faster, and smarter. Let the takeaways fuel your next move. We're right here to help you make it count.",
+      ],
+    },
+  ],
+};

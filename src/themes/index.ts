@@ -83,6 +83,14 @@ const IMAGES = {
   blogsCoverImage2: require("../assets/BlogsCoverImage2.png"),
   blogsCoverImage3: require("../assets/BlogsCoverImage3.png"),
   bestStartupProviderImage: require("../assets/BestStartupImage.png"),
+  newsletterImage: require("../assets/NewsletterImage.jpg"),
+  mainImage: require("../assets/MainImage.jpg"),
+  newsImage2: require("../assets/NewsImage2.jpg"),
+  newsImage3: require("../assets/NewsImage3.jpg"),
+  newsImage4: require("../assets/NewsImage4.jpg"),
+  newsImage5: require("../assets/NewsImage5.jpg"),
+  newsImage6: require("../assets/NewsImage6.jpg"),
+  newsImage7: require("../assets/NewsImage7.png"),
 };
 
 export default IMAGES;
