@@ -13,7 +13,7 @@ export enum HomePageSectionsEnum {
   howWeDeliver = "How we deliver",
   whoWeAre = "Who we are",
   testimonials = "Testimonials",
-  startupPortFolio = "Our Startup Portfolio",
+  startupPortFolio = "Our Client Portfolio",
   partners = "Our Partners",
 }
 
@@ -136,6 +136,7 @@ export const startupPortfolioData: string[] = [
   IMAGES.careerJourneyLogo,
   IMAGES.mamentaLogo,
   IMAGES.yottaasysLogo,
+  // IMAGES.copilotLogo,
 ];
 export const ourPartners: string[] = [
   IMAGES.microsoftLogo,

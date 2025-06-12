@@ -50,7 +50,7 @@ export const foundersData: BoardMembersDataType[] = [
   },
   {
     name: "Steve Bakther",
-    role: "COO & Co Founder",
+    role: "Co Founder",
     image: `${IMAGES.founder2}`,
     linkedInUrl: "https://www.linkedin.com/in/steve-bakther-46a134168/",
   },
