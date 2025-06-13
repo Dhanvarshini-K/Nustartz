@@ -130,13 +130,13 @@ export const startupPortfolioData: string[] = [
   IMAGES.mynaLogo,
   IMAGES.beyondMediaLogo,
   IMAGES.teledoctorLogo,
+  IMAGES.copilotLogo,
   IMAGES.glgLogo,
   IMAGES.chatFinLogo,
   IMAGES.intentXLogo,
   IMAGES.careerJourneyLogo,
   IMAGES.mamentaLogo,
   IMAGES.yottaasysLogo,
-  // IMAGES.copilotLogo,
 ];
 export const ourPartners: string[] = [
   IMAGES.microsoftLogo,

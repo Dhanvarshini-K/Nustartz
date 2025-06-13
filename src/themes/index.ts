@@ -91,7 +91,7 @@ const IMAGES = {
   newsImage5: require("../assets/NewsImage5.jpg"),
   newsImage6: require("../assets/NewsImage6.jpg"),
   newsImage7: require("../assets/NewsImage7.png"),
-  copilotLogo: require("../assets/CopilotLogo.png"),
+  copilotLogo: require("../assets/copilotLogo.webp"),
 };
 
 export default IMAGES;
