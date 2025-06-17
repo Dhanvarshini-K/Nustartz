@@ -20,9 +20,9 @@ export enum HomePageSectionsEnum {
 export const heroSectionCarouselData: HeroDataType[] = [
   {
     // title: `${IMAGES.heroTitle1}`,
-    title: "Crafting the future of Startups.",
+    title: "We Engineer Success. Agile Innovation for Startups, Efficient Scaling for Enterprises.",
     titleText: ["Crafting the", "future of", "Startups."],
-    description: `At NuStartz, we turn your startup vision into reality. From building high-performing teams to developing market-ready products, we provide the resources and expertise you need to grow and succeed. Let’s craft your success story together.`,
+    description: `At NuStartz, we help ambitious startups and enterprises turn vision into measurable success. From fast-paced product launches to scalable innovation, our dedicated teams deliver tailored, market-ready solutions aligned with your goals. Let’s build your next chapter together.`,
     buttonText: "GET IN TOUCH",
     heroImageUrl: `${IMAGES.craftingImage}`,
   },
@@ -36,7 +36,7 @@ export const heroSectionCarouselData: HeroDataType[] = [
       "with NuStartz",
     ],
     description:
-      "Your ideas deserve more than just a plan—they need execution. At NuStartz, we empower startups with expert-driven product development, IT support, marketing, and strategic growth solutions. Whether you're launching, scaling, or optimizing, we’re here to turn your vision into a thriving reality.",
+      "Your ambitions deserve expert execution. At NuStartz, we deliver end-to-end solutions across product development, IT infrastructure, strategic marketing, and operations. We accelerate startups from launch to leadership and empower enterprises to innovate, scale, and maximize ROI.",
     buttonText: "GET IN TOUCH",
     heroImageUrl: `${IMAGES.bestStartupProviderImage}`,
     // imageStand: `${IMAGES.startupAwardStand}`,
@@ -52,7 +52,7 @@ export const heroSectionData: HeroDataType = {
 };
 
 export const whoWeAreSectionData = {
-  description: `NuStartz is your one-stop partner for startup success. We’re a committed, resilient team dedicated to meeting every need of your growing business—from development and tech support to marketing, branding, and beyond. Our mission is to provide startups with the expertise, resources, and hands-on support they need to thrive at every stage. By integrating seamlessly into your vision, we empower you to focus on what you do best: innovating and scaling your ideas. At NuStartz, we’re here to fuel your journey from launch to lasting impact.`,
+  description: `NuStartz is your strategic partner for growth and operational excellence. With a resilient team and scalable expertise, we support businesses at every stage - from development and tech support to marketing, branding, and beyond. We integrate with your goals to help you innovate, scale, and create lasting market impact.`,
   buttonText: "WATCH VIDEO",
 };
 
@@ -78,7 +78,7 @@ export const companyDeliveryStepsData: CompanyDeliveryStepDataType[] = [
   {
     titleImage: `${IMAGES.transferTextImage}`,
     description:
-      "When your startup is ready to take full control, we seamlessly transfer the team, knowledge, and processes to you. Our comprehensive handover, including training and ongoing support, ensures that your team can confidently manage and scale operations independently as your own.",
+      "When you are ready to take full control, we seamlessly transfer the team, knowledge, and processes to you. Our comprehensive handover, including training and ongoing support, ensures that your team can confidently manage and scale operations independently as your own.",
     image: `${IMAGES.port}`,
   },
 ];
