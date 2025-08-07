@@ -137,6 +137,8 @@ export const startupPortfolioData: string[] = [
   IMAGES.careerJourneyLogo,
   IMAGES.mamentaLogo,
   IMAGES.yottaasysLogo,
+  IMAGES.microsoftAdvertisingLogo,
+  IMAGES.xandrLogo,
 ];
 export const ourPartners: string[] = [
   IMAGES.microsoftLogo,

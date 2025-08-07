@@ -92,6 +92,8 @@ const IMAGES = {
   newsImage6: require("../assets/NewsImage6.jpg"),
   newsImage7: require("../assets/NewsImage7.png"),
   copilotLogo: require("../assets/copilotLogo.webp"),
+  microsoftAdvertisingLogo: require("../assets/Microsoft-Advertising-Logo.png"),
+  xandrLogo: require("../assets/Xandr-Logo.png"),
 };
 
 export default IMAGES;
